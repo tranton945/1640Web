@@ -1,0 +1,67 @@
+﻿@model _1640WebApp.Data.Email
+@{
+    Layout = "_Layout";
+}
+@{
+    ViewData["Title"] = "Form";
+}
+
+@if (ViewBag.Error != null)
+{
+    <h2>@ViewBag.Error</h2>
+}
+
+
+
+<div class="col-6" style="position: absolute;
+    top: 120px;
+    left: 0;
+    right: 0;
+    margin-left: 50px;">
+<form method="post" action="Form">
+    <div class="form-groub">
+        <label asp-for="To" class="control-label">To:</label>
+        <input asp-for="To" class="form-control"/>
+        <span asp-validation-for="To" class="text-danger"></span>
+        </div>
+        <div class="form-groub">
+            <label asp-for="Subject" class="control-label">Subject:</label>
+            <input asp-for="Subject" class="form-control" />
+            <span asp-validation-for="Subject" class="text-danger"></span>
+        </div>
+        <div class="form-groub">
+            <label asp-for="Body" class="control-label">Body:</label>
+            <input asp-for="Body" class="form-control" />
+            <span asp-validation-for="Body" class="text-danger"></span>
+        </div>
+     <div class="form-groub">
+        <label asp-for="From" class="control-label">Email:</label>
+        <input asp-for="From" class="form-control"/>
+        <span asp-validation-for="From" class="text-danger"></span>
+    </div>
+     <div class="form-groub visually-hidden">
+        <label asp-for="Password" class="control-label">Password:</label>
+        <input asp-for="Password" class="form-control" type="password"/>
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+    
+    <button class="btn btn-primary mt-3" type="submit">Send Message</button>
+    <span style="color:forestgreen;font-size:large">@ViewBag.Message</span>
+   @*<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <span>Receiver Email: </span><br />
+            <input type="text" name="receiverEmail" /><br />
+            <span>Subject</span><br />
+            <input type="text" name="subject" /><br />
+            <span>Message</span><br />
+            <textarea rows="10" cols="50" name="message"></textarea><br />
+            <button class="btn btn-primary" type="submit">Send Message</button>
+            </div>
+        </div>
+    </div>
+</div>*@
+
+</form>
+</div>
+

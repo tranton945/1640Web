@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "View";
+}
+
+
+
+<div class="container" style="position: absolute;
+    top: 120px;
+    left: 0;
+    right: 0;">
+    <div class="row">
+        <div class="col-md-6">
+            <span>Name: </span><br />
+            <input type="text" id="txtUser" /><br />
+            <span>Message: </span><br />
+            <textarea rows="10" cols="50" id="txtMsg"></textarea><br />
+            <button type="submit" class="btn btn-info" id="btnSend">Send</button>
+        </div>
+        <div class="col-md-6">
+            <h3>Message: </h3>
+            <ul id="list" class="alert alert-info"></ul>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/site.js"></script>
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+<script src="~/lib/jquery/dist/jquery.js"></script>

@@ -1,0 +1,113 @@
+﻿@model IEnumerable<_1640WebApp.Data.Catogory>
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<style>
+    .intro {
+        height: 100%;
+        position: absolute;
+        top: 57px;
+        right: 0;
+        left: 0;
+    }
+
+    .contain-department {
+        object-fit: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        position: fixed;
+        top: 49px;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        overflow-y: scroll !important;
+    }
+
+    table td,
+    table th {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .mask-custom {
+        background: rgba(24, 24, 16, .2);
+        border-radius: 2em;
+        backdrop-filter: blur(25px);
+        border: 2px solid rgba(255, 255, 255, 0.05);
+        background-clip: padding-box;
+        box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
+    }
+  
+</style>
+
+<section class="intro">
+    <div class="bg-image h-100 contain-department" style="background-image: url(/images/wp4003779.webp);">
+        <div class="mask d-flex h-100">
+
+            <div class="container">
+                <div class="row" style="padding-top: 100px;">
+                    <div class="col-12">
+                        <div class="card mask-custom">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-borderless text-white mb-0" style="text-align: center;">
+                                        <h2 class="text-white text-uppercase text-center mb-5">List of Categorys</h2>
+
+                                        <thead>
+                                            <tr style="border-bottom-width: 1px;">
+                                                <th scope="col" style="width: 33.333%;">Category's ID</th>
+                                                <th scope="col" style="width: 33.333%;">Category's Name</th>
+                                                <th scope="col" style="width: 33.333%;">Actions</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var catogory in Model)
+                                            {
+
+                                                <tr>
+                                                    <th>@catogory.Id</th>
+                                                    <th>@catogory.Name</th>
+                                                    <th>
+                                                        <ul class="list-inline m-0">
+                                                            <li class="list-inline-item">
+                                                                <button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                                    <a asp-controller="Catogory" asp-action="Edit" asp-route-id="@catogory.Id"><i class="fa fa-edit" style="color: white;"></i></a>
+                                                                </button>
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                <form method="post" action="@Url.Action("Delete", "Catogory", new { id = catogory.Id })" onsubmit="return confirm('Are you sure you want to delete this category?')">
+                                                                    <button type="submit" class="btn btn-danger btn-sm rounded-0" data-toggle="tooltip" data-placement="top" title="Delete">
+                                                                        <i class="fa fa-trash"></i>
+                                                                    </button>
+                                                                </form>
+                                                            </li>
+                                                        </ul>
+                                                    </th>
+                                                </tr>
+                                            }
+                                        </tbody>
+
+                                    </table>
+                                    <div class="d-flex justify-content-center mt-5">
+
+                                        <button type="button" class="btn btn-lg btn-block text-white" style="background-color: #9a9fa3;">
+                                            <a asp-controller="Catogory" asp-action="Create" style="color: white; text-decoration: none;">Create</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+            </div>
+        </div>
+    </div>
+</section>

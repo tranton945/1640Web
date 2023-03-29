@@ -1,0 +1,77 @@
+﻿@page
+@using _1640WebApp.Areas.Identity.Pages.Account.Manage;
+@{
+    ViewData["Title"] = "Chat Hub";
+}
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+</div>
+<div class="container">
+    <div id="userinfor" class="row">
+        <label for="username">Please input your User Name</label>
+        <input type="text" class="form-control" id="Id" name="username" autocomplete="off" />
+        <button type="button" class="btn btn-block" onclick="SetUserName();">Join</button>
+
+    </div>
+    <div id=" messagearea" class="row" style="display: none;">
+        <div>Joined as: <b><span id="username1">Not Set</span></b></div>
+        <hr />
+        <div class="row">
+            <div class="col-6">
+                <ul id="messagesList"></ul>
+            </div>
+        </div>
+        <hr />
+        <input type="text" id="message" autocomplete="off"/>
+        <input type="button" id="sendButton" value="Send Message"/>
+    </div>
+</div>
+
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+<script>
+    "user strict"
+    var connection = new SignaIR.HubConnectionBuilder().withUrl("/chathub").build();
+
+    //Disable send button until connection is established 
+    document.getElementById("sendButton").disabled = true;
+
+    connection.on("RecieveMessage", function (user, message){
+        var msg = message.replace(/&/g, "&amp;".replace(/</g, "&lt;".replace(/>/g, "&lt;");
+        var encodeMsg = user + " says:" + msg;
+        var li  = document.createElement("li");
+        li.textContent = encodeMsg;
+        document.getElementById("messagesList").appendChild(li);
+    });
+
+    connection.start().then(function(){
+        document.getElementById("sendButton").ariaDisabled = false;
+    }).catch(function (err) {
+        return console.error(err.toString());
+    });
+    document.getElementById("sendButton").addEventListener("click", function (event){
+        var message = document.getElementById("message").value;
+        connection.invoke("SendMessage", username, message). then(function(){
+            document.getElementById("message").value = "";
+
+        }).catch(function (err){
+            return console.error(err.toString());
+        });
+        envent.preventDefault();
+    });
+    function SetUserName() {
+        //check the username
+        var usernameinput = document.getElementById("username").value;
+        if (usernameinput === ""){
+            alert("Please enter username");
+            return;
+        }
+        username = usernameinput;
+        
+        //hide username div  and show message penal
+        document.getElementById("userinfo").style.display = 'none';
+        document.getElementById("messagearea").style.display = 'block';
+        document.getElementById("username1").innerText = usernameinput;
+    }
+</script>
+
+    

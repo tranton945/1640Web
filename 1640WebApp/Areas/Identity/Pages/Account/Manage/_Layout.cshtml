@@ -1,0 +1,59 @@
+﻿@{
+    if (ViewData.TryGetValue("ParentLayout", out var parentLayout) && parentLayout !=  null)
+    {
+        Layout = parentLayout.ToString();
+    }
+    else
+    {
+        Layout = "/Areas/Identity/Pages/_Layout.cshtml";
+    }
+}
+
+<style>
+    .overlay {
+        position: fixed;
+        top: 57px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #333;
+        opacity: 0.7;
+    }
+    .manage-account{
+        background-image: url("/images/greenwich1.jfif");
+        object-fit: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        position: fixed;
+        top: 57px;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        overflow-y: scroll!important;
+    }
+
+    .menu{
+        z-index: 1;
+    }
+
+    .inside-menu{
+        z-index: 1;
+    }
+</style>
+<div class="manage-account">
+    <div class="overlay"></div>
+    <div class="row p-5">
+        <div class="col-md-3 menu">
+            <partial name="_ManageNav" />
+        </div>
+        <div class="col-md-8 inside-menu">
+            @RenderBody()
+        </div>
+        
+    </div>
+</div>
+
+@section Scripts {
+    @RenderSection("Scripts", required: false)
+}

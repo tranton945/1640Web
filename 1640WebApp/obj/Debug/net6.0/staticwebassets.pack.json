@@ -1,0 +1,741 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\1640WebApp.bundle.scp.css",
+      "PackagePath": "staticwebassets\\1640WebApp.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\Uploads\\25911f32-0324-4afb-af46-0d40bdd90b34.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\25911f32-0324-4afb-af46-0d40bdd90b34.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\Uploads\\2d1cc70b-1cd2-4d47-a9a8-de9661bd2d26.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\2d1cc70b-1cd2-4d47-a9a8-de9661bd2d26.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\Uploads\\2d866e2d-6cbd-49a9-8e00-dd5c82a5c5ba.jpeg",
+      "PackagePath": "staticwebassets\\Uploads\\2d866e2d-6cbd-49a9-8e00-dd5c82a5c5ba.jpeg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\Uploads\\3752649c-8d9b-4530-a46d-bc997cd5e402.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\3752649c-8d9b-4530-a46d-bc997cd5e402.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\Uploads\\4f95a1e0-9031-4a1a-8a76-50848cf30ea0.jpeg",
+      "PackagePath": "staticwebassets\\Uploads\\4f95a1e0-9031-4a1a-8a76-50848cf30ea0.jpeg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\Uploads\\55022608-d36e-4255-8b54-8578463d4ca0.jpeg",
+      "PackagePath": "staticwebassets\\Uploads\\55022608-d36e-4255-8b54-8578463d4ca0.jpeg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\Uploads\\82a4519b-0e2e-402b-8e39-2ae981fa21d1.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\82a4519b-0e2e-402b-8e39-2ae981fa21d1.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\Uploads\\aa8845fc-37a1-4b18-9d1d-ea2fa39ffa41.jpeg",
+      "PackagePath": "staticwebassets\\Uploads\\aa8845fc-37a1-4b18-9d1d-ea2fa39ffa41.jpeg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\Uploads\\e3b1e28c-2c73-43a9-b5f2-f37359cd5c6e.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\e3b1e28c-2c73-43a9-b5f2-f37359cd5c6e.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\Uploads\\ef7f6045-f093-4ae5-a8a7-4a0b895fac04.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\ef7f6045-f093-4ae5-a8a7-4a0b895fac04.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserFolders\\6b8313a3-a1e6-4f3d-b44e-8558c0be4b6e.doc",
+      "PackagePath": "staticwebassets\\UserFolders\\6b8313a3-a1e6-4f3d-b44e-8558c0be4b6e.doc"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserFolders\\73dc463e-479e-4f49-81c2-141ff420b25f.pdf",
+      "PackagePath": "staticwebassets\\UserFolders\\73dc463e-479e-4f49-81c2-141ff420b25f.pdf"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserFolders\\82a4519b-0e2e-402b-8e39-2ae981fa21d1.jpg",
+      "PackagePath": "staticwebassets\\UserFolders\\82a4519b-0e2e-402b-8e39-2ae981fa21d1.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\17e24ca3-b53b-4efe-a758-1bce0a76d6bf.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\17e24ca3-b53b-4efe-a758-1bce0a76d6bf.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\1c2781ea-5b78-49ef-8ee7-47852e185ea7.png",
+      "PackagePath": "staticwebassets\\UserImages\\1c2781ea-5b78-49ef-8ee7-47852e185ea7.png"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\1f993659-8bf0-4680-a384-9394c35802bb.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\1f993659-8bf0-4680-a384-9394c35802bb.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\2723e840-b526-43ad-92fb-1750f7ef912a.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\2723e840-b526-43ad-92fb-1750f7ef912a.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\3fb71668-1d52-4daa-9f57-1a043f8d3197.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\3fb71668-1d52-4daa-9f57-1a043f8d3197.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\50b45822-8c1d-4bd1-a7cb-ab4bef6ab0bc.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\50b45822-8c1d-4bd1-a7cb-ab4bef6ab0bc.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\5e96fc44-778e-4bb4-8760-f1c94e64fb24.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\5e96fc44-778e-4bb4-8760-f1c94e64fb24.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\7e8287cd-c263-4051-9e9b-fda9a21a8752.png",
+      "PackagePath": "staticwebassets\\UserImages\\7e8287cd-c263-4051-9e9b-fda9a21a8752.png"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\82a4519b-0e2e-402b-8e39-2ae981fa21d1.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\82a4519b-0e2e-402b-8e39-2ae981fa21d1.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\92c9d7e1-323f-422e-854e-9bb0a3082608.jpeg",
+      "PackagePath": "staticwebassets\\UserImages\\92c9d7e1-323f-422e-854e-9bb0a3082608.jpeg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\9a97642e-16f8-4818-bfa6-b25d4de6cedb.png",
+      "PackagePath": "staticwebassets\\UserImages\\9a97642e-16f8-4818-bfa6-b25d4de6cedb.png"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\c557be93-7580-4442-bcab-831751eb0184.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\c557be93-7580-4442-bcab-831751eb0184.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\cd29a988-0079-4514-bff6-e6f2002f49bb.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\cd29a988-0079-4514-bff6-e6f2002f49bb.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\e0b72a14-b9a7-4929-af0a-662a63f68e3d.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\e0b72a14-b9a7-4929-af0a-662a63f68e3d.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\e284c180-42a1-4a18-a5bf-656f4ed45335.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\e284c180-42a1-4a18-a5bf-656f4ed45335.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\ecf26792-d57f-4f1a-8ed8-a645a33dd0ab.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\ecf26792-d57f-4f1a-8ed8-a645a33dd0ab.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\css\\AddIdeas.css",
+      "PackagePath": "staticwebassets\\css\\AddIdeas.css"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\css\\Footer.css",
+      "PackagePath": "staticwebassets\\css\\Footer.css"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\css\\Header.css",
+      "PackagePath": "staticwebassets\\css\\Header.css"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\css\\aboutUs.css",
+      "PackagePath": "staticwebassets\\css\\aboutUs.css"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\css\\all.min.css",
+      "PackagePath": "staticwebassets\\css\\all.min.css"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\css\\main.css",
+      "PackagePath": "staticwebassets\\css\\main.css"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\css\\main.css.map",
+      "PackagePath": "staticwebassets\\css\\main.css.map"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\css\\mainHome.css",
+      "PackagePath": "staticwebassets\\css\\mainHome.css"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\css\\reactAnimation.css",
+      "PackagePath": "staticwebassets\\css\\reactAnimation.css"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\css\\site1.css",
+      "PackagePath": "staticwebassets\\css\\site1.css"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\css\\styleGame.css",
+      "PackagePath": "staticwebassets\\css\\styleGame.css"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\css\\styleLikeF.css",
+      "PackagePath": "staticwebassets\\css\\styleLikeF.css"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\images\\background.jfif",
+      "PackagePath": "staticwebassets\\images\\background.jfif"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\images\\background_a.jpg",
+      "PackagePath": "staticwebassets\\images\\background_a.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\images\\background_b.jpg",
+      "PackagePath": "staticwebassets\\images\\background_b.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\images\\background_c.jpg",
+      "PackagePath": "staticwebassets\\images\\background_c.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\images\\background_c1.jpg",
+      "PackagePath": "staticwebassets\\images\\background_c1.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\images\\boy.jpg",
+      "PackagePath": "staticwebassets\\images\\boy.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\images\\default_picture.jfif",
+      "PackagePath": "staticwebassets\\images\\default_picture.jfif"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\images\\download.png",
+      "PackagePath": "staticwebassets\\images\\download.png"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\images\\dp.jpg",
+      "PackagePath": "staticwebassets\\images\\dp.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\images\\flowers.jpg",
+      "PackagePath": "staticwebassets\\images\\flowers.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\images\\girl.jpg",
+      "PackagePath": "staticwebassets\\images\\girl.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\images\\girl_with_light.jpg",
+      "PackagePath": "staticwebassets\\images\\girl_with_light.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\images\\greenwich.jfif",
+      "PackagePath": "staticwebassets\\images\\greenwich.jfif"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\images\\greenwich1.jfif",
+      "PackagePath": "staticwebassets\\images\\greenwich1.jfif"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\images\\herbs.jpg",
+      "PackagePath": "staticwebassets\\images\\herbs.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\images\\images.txt",
+      "PackagePath": "staticwebassets\\images\\images.txt"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\images\\logo.png",
+      "PackagePath": "staticwebassets\\images\\logo.png"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\images\\logo1-removebg-preview.png",
+      "PackagePath": "staticwebassets\\images\\logo1-removebg-preview.png"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\images\\model.jpg",
+      "PackagePath": "staticwebassets\\images\\model.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\images\\mountains.jpg",
+      "PackagePath": "staticwebassets\\images\\mountains.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\images\\shoes.jpg",
+      "PackagePath": "staticwebassets\\images\\shoes.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\images\\wp4003779.webp",
+      "PackagePath": "staticwebassets\\images\\wp4003779.webp"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\img\\1.jpg",
+      "PackagePath": "staticwebassets\\img\\1.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\img\\10.jpg",
+      "PackagePath": "staticwebassets\\img\\10.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\img\\11.jpg",
+      "PackagePath": "staticwebassets\\img\\11.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\img\\12.jpg",
+      "PackagePath": "staticwebassets\\img\\12.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\img\\13.jpg",
+      "PackagePath": "staticwebassets\\img\\13.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\img\\14.jpg",
+      "PackagePath": "staticwebassets\\img\\14.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\img\\15.jpg",
+      "PackagePath": "staticwebassets\\img\\15.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\img\\16.jpg",
+      "PackagePath": "staticwebassets\\img\\16.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\img\\17.jpg",
+      "PackagePath": "staticwebassets\\img\\17.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\img\\18.jpg",
+      "PackagePath": "staticwebassets\\img\\18.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\img\\19.jpg",
+      "PackagePath": "staticwebassets\\img\\19.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\img\\2.jpg",
+      "PackagePath": "staticwebassets\\img\\2.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\img\\20.jpg",
+      "PackagePath": "staticwebassets\\img\\20.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\img\\3.jpg",
+      "PackagePath": "staticwebassets\\img\\3.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\img\\4.jpg",
+      "PackagePath": "staticwebassets\\img\\4.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\img\\5.jpg",
+      "PackagePath": "staticwebassets\\img\\5.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\img\\6.jpg",
+      "PackagePath": "staticwebassets\\img\\6.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\img\\7.jpg",
+      "PackagePath": "staticwebassets\\img\\7.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\img\\8.jpg",
+      "PackagePath": "staticwebassets\\img\\8.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\img\\9.jpg",
+      "PackagePath": "staticwebassets\\img\\9.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\img\\background.svg",
+      "PackagePath": "staticwebassets\\img\\background.svg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\img\\bg.png",
+      "PackagePath": "staticwebassets\\img\\bg.png"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\img\\icons.svg",
+      "PackagePath": "staticwebassets\\img\\icons.svg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\js\\3dModels.js",
+      "PackagePath": "staticwebassets\\js\\3dModels.js"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\js\\Entity.js",
+      "PackagePath": "staticwebassets\\js\\Entity.js"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\js\\PERF.js",
+      "PackagePath": "staticwebassets\\js\\PERF.js"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\js\\actions.js",
+      "PackagePath": "staticwebassets\\js\\actions.js"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\js\\all.min.js",
+      "PackagePath": "staticwebassets\\js\\all.min.js"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\js\\canvas.js",
+      "PackagePath": "staticwebassets\\js\\canvas.js"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\js\\createBurst.js",
+      "PackagePath": "staticwebassets\\js\\createBurst.js"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\js\\draw.js",
+      "PackagePath": "staticwebassets\\js\\draw.js"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\js\\getTarget.js",
+      "PackagePath": "staticwebassets\\js\\getTarget.js"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\js\\globalConfig.js",
+      "PackagePath": "staticwebassets\\js\\globalConfig.js"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\js\\hud.js",
+      "PackagePath": "staticwebassets\\js\\hud.js"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\js\\index.js",
+      "PackagePath": "staticwebassets\\js\\index.js"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\js\\interaction.js",
+      "PackagePath": "staticwebassets\\js\\interaction.js"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\js\\menus.js",
+      "PackagePath": "staticwebassets\\js\\menus.js"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\js\\music.js",
+      "PackagePath": "staticwebassets\\js\\music.js"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\js\\signalr\\dist\\browser\\signalr.js",
+      "PackagePath": "staticwebassets\\js\\signalr\\dist\\browser\\signalr.js"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\js\\signalr\\dist\\browser\\signalr.min.js",
+      "PackagePath": "staticwebassets\\js\\signalr\\dist\\browser\\signalr.min.js"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\js\\sparks.js",
+      "PackagePath": "staticwebassets\\js\\sparks.js"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\js\\state.js",
+      "PackagePath": "staticwebassets\\js\\state.js"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\js\\tick.js",
+      "PackagePath": "staticwebassets\\js\\tick.js"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\js\\utils.js",
+      "PackagePath": "staticwebassets\\js\\utils.js"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\mp3\\1.mp3",
+      "PackagePath": "staticwebassets\\mp3\\1.mp3"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\mp3\\2.mp3",
+      "PackagePath": "staticwebassets\\mp3\\2.mp3"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\mp3\\3.mp3",
+      "PackagePath": "staticwebassets\\mp3\\3.mp3"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\mp3\\4.mp3",
+      "PackagePath": "staticwebassets\\mp3\\4.mp3"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\mp3\\5.mp3",
+      "PackagePath": "staticwebassets\\mp3\\5.mp3"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\mp3\\6.mp3",
+      "PackagePath": "staticwebassets\\mp3\\6.mp3"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\mp3\\7.mp3",
+      "PackagePath": "staticwebassets\\mp3\\7.mp3"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\mp3\\8.mp3",
+      "PackagePath": "staticwebassets\\mp3\\8.mp3"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\mp3\\9.mp3",
+      "PackagePath": "staticwebassets\\mp3\\9.mp3"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\tests\\expect.min.js",
+      "PackagePath": "staticwebassets\\tests\\expect.min.js"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\tests\\testRunner.js",
+      "PackagePath": "staticwebassets\\tests\\testRunner.js"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\tests\\utils.test.js",
+      "PackagePath": "staticwebassets\\tests\\utils.test.js"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.1640WebApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.1640WebApp.props",
+      "PackagePath": "build\\1640WebApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.1640WebApp.props",
+      "PackagePath": "buildMultiTargeting\\1640WebApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.1640WebApp.props",
+      "PackagePath": "buildTransitive\\1640WebApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

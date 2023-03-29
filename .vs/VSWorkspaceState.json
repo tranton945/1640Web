@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\1640WebApp",
+    "\\1640WebApp\\Controllers",
+    "\\1640WebApp\\Data",
+    "\\1640WebApp\\Views",
+    "\\1640WebApp\\Views\\Department",
+    "\\1640WebApp\\Views\\Idea",
+    "\\1640WebApp\\Views\\StaffManageByCoordinator",
+    "\\1640WebApp\\Views\\Submission",
+    "\\1640WebApp\\Views\\User"
+  ],
+  "SelectedNode": "\\1640WebApp\\Views\\StaffManageByCoordinator\\ViewSubmission.cshtml",
+  "PreviewInSolutionExplorer": false
+}

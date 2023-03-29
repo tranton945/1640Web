@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Arsenal:wght@400;700&display=swap');
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.text {
+    position: absolute;
+    text-align: center;
+    top: 15%;
+    left: 10%;
+    animation: slideDown 1s ease;
+}
+
+@keyframes slideDown {
+    from {
+        top: -300px;
+    }
+
+    to {
+        top: 15%;
+    }
+}

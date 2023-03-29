@@ -1,0 +1,79 @@
+﻿.reactions {
+    position: absolute;
+    bottom: 50px;
+    left: 10px;
+    display: flex;
+}
+
+.reaction-button {
+    border: none;
+    background: none;
+    padding: 0;
+    margin-right: 10px;
+    font-size: 20px;
+    color: gray;
+    transition: all 0.5s ease;
+}
+
+.action {
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.like-button.active {
+    color: blue;
+    animation: thumb-up 0.5s forwards;
+}
+
+.love-button.active {
+    color: red;
+    animation: heart-beat 0.5s forwards;
+}
+
+.haha-button.active {
+    color: orange;
+    animation: rotate 0.5s forwards;
+}
+
+@keyframes thumb-up {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes heart-beat {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    50% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}

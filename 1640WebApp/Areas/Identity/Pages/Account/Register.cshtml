@@ -1,0 +1,120 @@
+﻿@page
+@model RegisterModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <title>Index</title>
+    <style>
+        .form-container{
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+
+        .background {
+            width :100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h2{
+            color:#fff;
+        }
+
+        .justify-content{
+            justify-content:space-around;
+        }
+
+        .overlay{
+            position:absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            background-color: #333;
+            opacity: 0.7;
+        }
+
+        .color-white{
+            color: white;
+            
+          }
+
+        .form-control{
+            background-color: unset!important;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="form-container position-fixed">
+        <img class="background" src="~/images/greenwich1.jfif" />
+        
+        <div class="overlay"></div>
+        <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+            <div class="container h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-12 col-md-9 col-lg-7 col-xl-6" style="position: absolute;top:55px; color: white;">
+                        <div class="card" style="border-radius: 15px; background-color:unset; border: 0;">
+                            <div class="card-body p-5">
+                                <h2 class="text-uppercase text-center mb-5">Account Register</h2>
+
+                                <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                                    <div class="form-outline mb-4">
+                                        <input asp-for="Input.Email" class="form-control text-white" aria-required="true" />
+                                        <label asp-for="Input.Email"></label>
+                                        <span asp-validation-for="Input.Email" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <input asp-for="Input.Password" class="form-control text-white" autocomplete="new-password" aria-required="true" />
+                                        <label asp-for="Input.Password"></label>
+                                        <span asp-validation-for="Input.Password" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <input asp-for="Input.ConfirmPassword" class="form-control text-white" autocomplete="new-password" aria-required="true" />
+                                        <label asp-for="Input.ConfirmPassword"></label>
+                                        <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                                    </div>
+
+
+                                    <div class="d-flex justify-content mb-5">
+
+                                        <button id="registerSubmit" type="submit" class="btn btn-lg btn-block color-white" style="background-color: #9a9fa3;">Register</button>
+                                    </div>
+
+                                    <p style="text-align: center;">Already have an account? <a asp-page="./Login" asp-route-returnUrl="@Model.ReturnUrl" class="link-info">Login here</a></p>
+
+
+                                   
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        
+    </div>
+
+    @section Scripts {
+        <partial name="_ValidationScriptsPartial" />
+    }
+
+</body>
+</html>
+

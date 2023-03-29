@@ -1,0 +1,168 @@
+﻿@model IEnumerable<_1640WebApp.Data.Submission>
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<style>
+    .intro {
+        height: 100%;
+        position: absolute;
+        top: 57px;
+        right: 0;
+        left: 0;
+    }
+
+    .contain-department {
+        object-fit: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        position: fixed;
+        top: 49px;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        overflow-y: scroll !important;
+    }
+
+    table td,
+    table th {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .mask-custom {
+        background: rgba(24, 24, 16, .2);
+        border-radius: 2em;
+        backdrop-filter: blur(25px);
+        border: 2px solid rgba(255, 255, 255, 0.05);
+        background-clip: padding-box;
+        box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
+    }
+</style>
+
+<section class="intro">
+    
+    @if (TempData["IdeaNotificationTitle"] != null && TempData["IdeaNotificationMessage"] != null)
+    {
+       
+            <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+                <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                        <i class='fas fa-bell'></i>
+                        <strong class="me-auto ms-3">@TempData["IdeaNotificationTitle"]</strong>
+                        <small>11 mins ago</small>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body">
+                        @TempData["IdeaNotificationMessage"]
+                    </div>
+                </div>
+            </div>
+        
+
+    }
+    
+
+    <div class="bg-image h-100 contain-department" style="background-image: url(/images/wp4003779.webp);">
+        <div class="mask d-flex h-100">
+
+            <div class="container">
+                <div class="row" style="padding-top: 100px;">
+                    <div class="col-12">
+                        <div class="card mask-custom">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-borderless text-white mb-0" style="text-align: center;">
+                                        <h2 class="text-white text-center mb-5" style="color: #7feb7f !important;">@ViewBag.DepartmentName Department</h2>
+
+
+                                        <h3 class="text-white text-center mb-5">List of Submissions</h3>
+
+                                        <thead>
+                                            <tr style="border-bottom-width: 1px;">
+                                                <th scope="col">ID</th>
+                                                <th scope="col">Name</th>
+                                                <th scope="col">Description</th>
+                                                <th scope="col">Closure Date</th>
+                                                <th scope="col">Final Closure Time</th>
+                                                <th scope="col">Status</th>
+                                                <th scope="col"></th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var submission in Model)
+                                            {
+
+                                            <tr>
+                                                <th>@submission.Id</th>
+                                                <th>@submission.Name</th>
+                                                <th>@submission.Description</th>
+                                                <th>@submission.ClosureDate</th>
+                                                <th>@submission.FinalClosureTime</th>
+                                                <th>
+                                                    @if (submission.IsClosed)
+                                                        {
+                                                    <span class="text-danger">Closed</span>
+                                                        }
+                                                        else
+                                                        {
+                                                    <span class="text-success">Openning</span>
+                                                        }
+                                                </th>
+
+
+                                                <th>
+                                                    <ul class="list-inline m-0">
+                                                        <li class="list-inline-item">
+                                                            <button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                                <a style="color: #e9f1fb;text-decoration: none;" asp-controller="Idea" asp-action="ViewIdeas" asp-route-submissionId="@submission.Id">View Ideas</a>
+                                                            </button>
+                                                        </li>
+
+                                                    </ul>
+                                                </th>
+                                            </tr>
+                                            }
+                                        </tbody>
+
+                                    </table>
+
+                                   
+
+
+                                </div>
+
+                                <div class="text-center mt-5 mb-5">
+                                    <button type="button" class="btn" style="background-color: #5ae95a;" id="liveToastBtn">Show Notification</button>
+                                    <script>
+                                        var toastTrigger = document.getElementById('liveToastBtn')
+                                        var toastLiveExample = document.getElementById('liveToast')
+                                        if (toastTrigger) {
+                                            toastTrigger.addEventListener('click', function () {
+                                                var toast = new bootstrap.Toast(toastLiveExample)
+
+                                                toast.show()
+                                            })
+                                        }
+                                    </script>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+

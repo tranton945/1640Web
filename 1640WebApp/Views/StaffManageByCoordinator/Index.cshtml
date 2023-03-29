@@ -1,0 +1,242 @@
+﻿@model List<dynamic>
+@using Newtonsoft.Json
+
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<style>
+    .intro {
+        height: 100%;
+        position: absolute;
+        top: 57px;
+        right: 0;
+        left: 0;
+    }
+
+    .contain-department {
+        object-fit: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        position: fixed;
+        top: 49px;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        overflow-y: scroll !important;
+    }
+
+    table td,
+    table th {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .mask-custom {
+        background: rgba(24, 24, 16, .2);
+        border-radius: 2em;
+        backdrop-filter: blur(25px);
+        border: 2px solid rgba(255, 255, 255, 0.05);
+        background-clip: padding-box;
+        box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
+    }
+
+    .title-h1 {
+        margin-top: 0.5em;
+        margin-bottom: 1.4em;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        line-height: inherit;
+        color: #ffffff;
+        font-size: 38px;
+    }
+
+        .title-h1 .light {
+            font-weight: normal;
+        }
+
+        /*canvas#chart {
+          display: block;
+          margin: auto;
+          width: 50%!important;
+          height: 50%!important;
+        }*/
+    #chart-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    #chart {
+        max-width: 100%;
+        max-height: 100%;
+    }
+</style>
+
+<section class="intro">
+    <div class="bg-image h-100 contain-department" style="background-image: url(/images/wp4003779.webp);">
+        <div class="mask h-100">
+
+            <div class="container">
+                <div class="row" style="padding-top: 100px;">
+                    <div class="col-12">
+                        <div class="card mask-custom">
+                            <div class="card-body" style="margin-left: auto; margin-right: auto;">
+                                
+                                <h2 class="text-center mb-5" style="color: #7feb7f !important;"> @ViewBag.DepartmentName Department</h2>
+                                
+                                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                                <h3 class="text-white text-center mb-5">Number of Ideas Statistics</h3>
+
+
+                                <div id="chart-container">
+                                    <canvas id="chart"></canvas>
+                                </div>
+
+                                <script>
+                                    var data = @Html.Raw(JsonConvert.SerializeObject(ViewData["StaffsWithIdeaCount"]));
+
+                                    var chart = new Chart(document.getElementById("chart"), {
+                                        type: 'pie',
+                                        data: {
+                                            labels: data.Labels,
+                                            datasets: [{
+                                                data: data.Data,
+                                                backgroundColor: data.Colors,
+                                                borderWidth: 0
+                                            }]
+                                        },
+                                        options: {
+                                            responsive: true,
+                                            legend: {
+                                                position: 'bottom'
+                                            },
+                                            animation: {
+                                                animateRotate: true,
+                                                animateScale: true
+                                            }
+                                        }
+                                    });
+
+                                    function resizeChart() {
+                                        var container = document.getElementById("chart-container");
+                                        var canvas = document.getElementById("chart");
+                                        var aspectRatio = chart.aspectRatio;
+                                        canvas.style.width = Math.min(container.offsetWidth, container.offsetHeight * aspectRatio) + "px";
+                                        canvas.style.height = Math.min(container.offsetHeight, container.offsetWidth / aspectRatio) + "px";
+                                    }
+
+                                    window.addEventListener("resize", resizeChart);
+                                    resizeChart();
+                                </script>
+                                
+
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                
+                <div class="row" style="padding-top: 100px;">
+                    <div class="col-12">
+                        <div class="card mask-custom" style="overflow: auto;">
+                            <div class="card-body" style="margin-left: auto; margin-right: auto;">
+
+
+                                <div class="table-responsive">
+                                    <table class="table table-borderless text-white mb-0" style="text-align: center;">
+                                        <h3 class="text-white text-center mb-5">List of Staffs</h3>
+
+                                        <thead>
+                                            <tr style="border-bottom-width: 1px;">
+                                                <th scope="col">User Number</th>
+                                                <th scope="col">Full Name</th>
+                                                <th scope="col">Email</th>
+                                                <th scope="col">Phone Number</th>
+                                                <th scope="col">Idea contributed</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                            @foreach (var staff in Model)
+                                            {
+                                                <tr>
+                                                    <th>@staff.UserNumber</th>
+                                                    <th>@staff.UserName</th>
+                                                    <th>@staff.UserEmail</th>
+                                                    <th>@staff.UserPhoneNumber</th>
+                                                    <th>@staff.IdeaCount</th>
+                                                </tr>
+                                            }
+
+
+                                        </tbody>
+
+                                    </table>
+
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="padding-top: 100px; padding-bottom: 200px;">
+                <div class="col-12">
+                        <div class="card mask-custom" style="overflow: auto;">
+                        <div class="card-body" style="margin-left: auto; margin-right: auto;">
+
+                            <div class="table-responsive" >
+                                <table class="table table-borderless text-white mb-0" style="text-align: center;">
+                                    <h3 class="text-white text-center mb-5">List of Ideas</h3>
+
+                                    <thead>
+                                        <tr style="border-bottom-width: 1px;">
+                                            <th scope="col">User Number</th>
+                                            <th scope="col">Title</th>
+                                            <th scope="col">Text</th>
+                                            <th scope="col">File Path</th>
+                                            <th scope="col">Time Submit</th>
+                                            <th scope="col">Submission Name</th>
+
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @if (ViewData["DepartmentIdeas"] != null && ViewData["DepartmentIdeas"] is List<dynamic> departmentIdeas)
+                                        {
+                                            foreach (var idea in departmentIdeas)
+                                            {
+                                                <tr>
+                                                    <th>@idea.StaffNumber</th>
+                                                    <th>@idea.Title</th>
+                                                    <th>@idea.Text</th>
+                                                    <th>@idea.FilePath</th>
+                                                    <th>@idea.Datatime</th>
+                                                    <th>@idea.SubmissionName</th>
+
+                                                </tr>
+                                            }
+                                        }
+                                    </tbody>
+
+                                </table>
+
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+

@@ -1,0 +1,287 @@
+﻿@using System.Text;
+@model _1640WebApp.Data.Idea
+@{
+    ViewData["Title"] = "Details";
+    Layout = "";
+}
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+          integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="~/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-3qCJj3ljKRZPvHzpWwxhN1CCwnbYXyM1d43CyLWgVJj0iOWunfT/jDsoBRP+h7V2OJSrUbXVtJlztJbXXV95OA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>MediaBook</title>
+
+
+    <style>
+        .light-grey {
+            color: #000 !important;
+            background-color: #f1f1f1 !important;
+        }
+
+        .body {
+            font-family: "Raleway", sans-serif;
+            margin: 0;
+            display: block;
+        }
+
+        .img {
+            padding-top: 10px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .content {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .center {
+            text-align: center !important;
+        }
+
+        .container {
+            padding: 0.01em 10px;
+        }
+
+        .white {
+            color: #000 !important;
+            background-color: #fff !important;
+        }
+
+        .margin {
+            margin: 10px !important;
+        }
+
+        .card-4, .hover-shadow:hover {
+            box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+            border-radius: 10px;
+        }
+
+        .comment {
+            border: 1px solid black; /* Tạo viền mỏng màu đen */
+            border-radius: 10px; /* Bo góc bên phải */
+            background-color: #918de4;
+            margin: 10px !important;
+            padding: 7px;
+            color: white;
+        }
+
+        .action.idea {
+            display: flex;
+            padding-bottom: 10px;
+        }
+
+        .reaction-button {
+            padding-inline-start: 65px;
+            padding-inline-end: 45px;
+        }
+    </style>
+</head>
+
+<body class="light-grey">
+    <div class="content" style="max-width:1400px">
+
+        <!-- Header -->
+        <header class="container center">
+            <h1><b>Deatail Idea</b></h1>
+        </header>
+
+        <!-- Grid -->
+        <div class="row">
+
+            <!-- Idea entries -->
+            <div class="col l8 s12">
+                <!-- Idea entry -->
+                <div class="card-4 margin white">
+                    <div class="img">
+                        @if (Model.Img != null && Model.Img.Length > 0)
+                        {
+                            var imageSrc = $"~/UserImages/{Encoding.UTF8.GetString(Model.Img)}";
+                            <img src="@Url.Content(imageSrc)" />
+                        }
+                    </div>
+                    <div class="container">
+                        <h2 style="padding-top: 0px; margin-bottom: 10px;"><b>@Html.DisplayFor(model => model.Title)</b></h2>
+                        <h5 style="margin: 10px 0 0 10px; padding-left: 10px;">@Html.DisplayFor(model => model.Datatime)</h5>
+                    </div>
+                    <div class="container">
+                        <p>
+                            @Html.DisplayFor(model => model.Text)
+                        </p>
+                        <p>
+                            @if (Model.Data != null && Model.Data.Length > 0)
+                            {
+                                var dataSrc = $"~/UserFolders/{Encoding.UTF8.GetString(Model.Data)}";
+                                var fileExtension = System.IO.Path.GetExtension(Encoding.UTF8.GetString(Model.Data)).ToLower();
+                                var fileIcon = "";
+                                switch (fileExtension)
+                                {
+                                    case ".pdf":
+                                        fileIcon = "fa-file-pdf";
+                                        break;
+                                    case ".doc":
+                                    case ".docx":
+                                        fileIcon = "fa-file-word";
+                                        break;
+                                    case ".xls":
+                                    case ".xlsx":
+                                        fileIcon = "fa-file-excel";
+                                        break;
+                                    case ".ppt":
+                                    case ".pptx":
+                                        fileIcon = "fa-file-powerpoint";
+                                        break;
+                                    default:
+                                        fileIcon = "fa-file";
+                                        break;
+                                }
+                                <a><b>File which you need to is here: </b></a>
+                                <a href="@Url.Content(dataSrc)" download>
+                                    <i class="far @fileIcon"></i>
+                                    Download_
+                                </a>
+                                <a href="@Url.Content(dataSrc)" download>@Html.DisplayFor(modelItem => Model.FileName)</a>
+                            }
+                        </p>
+                        <p><b>@Html.DisplayNameFor(model => model.User):</b> @Html.DisplayFor(model => model.User.Id)</p>
+                        <p><b>@Html.DisplayNameFor(model => model.Submission):</b> @Html.DisplayFor(model => model.Submission.Id)</p>
+                        <p>
+                            <a><b>@Html.DisplayNameFor(model => model.Catogories): </b></a>
+                            <a>
+                                @if (Model.Catogories != null && Model.Catogories.Any())
+                                {
+                                    <p>@string.Join(", ", Model.Catogories.Select(c => c.Name))</p>
+                                }
+                                else
+                                {
+                                    <p>No category found</p>
+                                }
+                            </a>
+
+                        </p>
+
+                    </div>
+                </div>
+                <hr>
+                <div class="card-4 margin white">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col m4 hide-small">
+                                <p>
+                                    <span class="padding-large right"><b>Reaction: &nbsp;</b></span>
+                                    <div class="action idea" data-idea-id="@Model.Id">
+                                        <div class="like-button reaction-button" id="like-@Model.Id-1">
+                                            <i class="far fa-thumbs-up"></i>
+                                            <span id="like-count-@Model.Id">@Model.Reacts.Where(r=>r.Reaction==1).Count()</span>
+                                        </div>
+                                        <div class="love-button reaction-button" id="love-@Model.Id-1">
+                                            <i class="far fa-heart"></i>
+                                            <span id="love-count-@Model.Id">@Model.Reacts.Where(r=>r.Reaction==2).Count()</span>
+                                        </div>
+                                        <div class="haha-button reaction-button" id="haha-@Model.Id-1">
+                                            <i class="far fa-laugh"></i>
+                                            <span id="haha-count-@Model.Id">@Model.Reacts.Where(r=>r.Reaction==3).Count()</span>
+                                        </div>
+                                        <div class="dislike-button reaction-button" id="dislike-@Model.Id-1">
+                                            <i class="far fa-thumbs-down"></i>
+                                            <span id="dislike-count-@Model.Id">@Model.Reacts.Where(r=>r.Reaction==4).Count()</span>
+                                        </div>
+                                    </div>
+                                </p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <hr>
+                <div class="card-4 margin white">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col m4 hide-small">
+                                <p><span class="padding-large right"><b>Comments: &nbsp;</b></span></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            @if (Model != null && Model.Comments != null)
+                            {
+                                @foreach (var comment in Model.Comments)
+                                {
+                                    <ul class="comment">
+                                        <li>@comment.Text</li>
+                                    </ul>
+                                }
+                            }
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model?Idea.Id">Edit</a> |
+        <a asp-action="Index">Back to List</a>
+    </div>
+
+
+</body>
+
+<script>
+    function updateReaction(ideaId, reaction, reactionButtonId) {
+        $.ajax({
+            type: 'POST',
+            url: '/Idea/UpdateReaction',
+            data: { ideaId: ideaId, reaction: reaction },
+            success: function (data) {
+                // Update the total number of reactions for the idea
+                $('#total-reactions-' + ideaId).text(data.totalReacts);
+
+                // Update the count for the current reaction type
+                $('#like-count-' + ideaId).text(data.likeCount);
+                $('#love-count-' + ideaId).text(data.loveCount);
+                $('#haha-count-' + ideaId).text(data.hahaCount);
+                $('#dislike-count-' + ideaId).text(data.dislikeCount);
+
+                // Update the active class for the reaction button
+                $('.reaction-button').removeClass('active');
+                $('#' + reactionButtonId).addClass('active');
+
+            },
+            error: function () {
+                alert('An error occurred while updating the reaction.');
+            }
+        });
+    }
+
+    $(function () {
+        // Lấy ID của idea từ phần tử HTML
+        var ideaId = $("#idea-id").val();
+
+        // Gửi yêu cầu AJAX để lấy tất cả các comment của idea
+        $.ajax({
+            url: "/Idea/GetAllComments",
+            data: { ideaId: ideaId },
+            success: function (data) {
+                // Lặp qua tất cả các comment và hiển thị chúng trên trang web
+                var commentsHtml = "";
+                $.each(data, function (index, comment) {
+                    commentsHtml += "<div class='comment'>" + comment.content + "</div>";
+                });
+                $("#comments-container").html(commentsHtml);
+            }
+        });
+    });
+
+</script>

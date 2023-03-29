@@ -1,0 +1,265 @@
+﻿.contain-body {
+    height: 1000px;
+    margin-top: 38px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*--------------------------------------------------------------
+# Sections
+--------------------------------------------------------------*/
+/* Sections Common
+--------------------------------*/
+section {
+    overflow: hidden;
+}
+
+.section-title {
+    font-size: 32px;
+    color: #111;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+}
+
+.section-description {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title-divider {
+    width: 50px;
+    height: 3px;
+    background: #03C4EB;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+/* Get Started Section
+--------------------------------*/
+#about {
+    background: #fff;
+    padding: 30px 0;
+}
+
+    #about .about-img {
+        overflow: hidden;
+    }
+
+        #about .about-img img {
+            max-width: 100%;
+        }
+
+@media (max-width: 768px) {
+    #about .about-img {
+        height: auto;
+    }
+
+        #about .about-img img {
+            margin-left: 0;
+            padding-bottom: 30px;
+        }
+}
+
+#about .about-content {
+    background: #fff;
+}
+
+#about .about-title {
+    color: #333;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+#about .about-text {
+    line-height: 26px;
+    margin-bottom: 15px;
+}
+
+    #about .about-text:last-child {
+        margin-bottom: 0;
+    }
+
+
+/*# Team
+--------------------------------------------------------------*/
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.image {
+    flex: 1 0 calc(20% - 10px);
+    margin: 5px;
+}
+
+    .image img {
+        width: 100%;
+    }
+
+
+.team .member {
+    text-align: center;
+    margin-bottom: 20px;
+    background: #343a40;
+    position: relative;
+}
+
+    .team .member .member-info {
+        opacity: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        transition: 0.2s;
+    }
+
+    .team .member .member-info-content {
+        margin-top: -50px;
+        transition: margin 0.2s;
+    }
+
+    .team .member:hover .member-info {
+        background: rgba(0, 0, 0, 0.7);
+        opacity: 1;
+        transition: 0.4s;
+    }
+
+    .team .member:hover .member-info-content {
+        margin-top: 0;
+        transition: margin 0.4s;
+    }
+
+    .team .member h4 {
+        font-weight: 700;
+        margin-bottom: 2px;
+        font-size: 18px;
+        color: #fff;
+    }
+
+    .team .member span {
+        font-style: italic;
+        display: block;
+        font-size: 13px;
+        color: #fff;
+    }
+
+    .team .member .social {
+        margin-top: 15px;
+    }
+
+        .team .member .social a {
+            transition: color 0.3s;
+            color: #fff;
+        }
+
+            .team .member .social a:hover {
+                color: #5c9f24;
+            }
+
+        .team .member .social i {
+            font-size: 18px;
+            margin: 0 2px;
+        }
+/* Contact Section
+--------------------------------*/
+#contact {
+    background: #f7f7f7;
+    padding: 30px 0 120px 0;
+}
+
+    #contact .info {
+        color: #333333;
+    }
+
+        #contact .info i {
+            font-size: 32px;
+            color: #03C4EB;
+            float: left;
+            line-height: 0;
+        }
+
+        #contact .info p {
+            padding: 0 0 10px 50px;
+            line-height: 24px;
+        }
+
+    #contact .php-email-form .error-message {
+        display: none;
+        color: #fff;
+        background: #ed3c0d;
+        text-align: left;
+        padding: 15px;
+        font-weight: 600;
+    }
+
+        #contact .php-email-form .error-message br + br {
+            margin-top: 25px;
+        }
+
+    #contact .php-email-form .sent-message {
+        display: none;
+        color: #fff;
+        background: #18d26e;
+        text-align: center;
+        padding: 15px;
+        font-weight: 600;
+    }
+
+    #contact .php-email-form .loading {
+        display: none;
+        background: #fff;
+        text-align: center;
+        padding: 15px;
+    }
+
+        #contact .php-email-form .loading:before {
+            content: "";
+            display: inline-block;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            margin: 0 10px -6px 0;
+            border: 3px solid #18d26e;
+            border-top-color: #eee;
+            animation: animate-loading 1s linear infinite;
+        }
+
+    #contact .php-email-form input,
+    #contact .php-email-form textarea {
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+        #contact .php-email-form input::focus,
+        #contact .php-email-form textarea::focus {
+            background-color: #03C4EB;
+        }
+
+    #contact .php-email-form button[type=submit] {
+        background: #03C4EB;
+        border: 0;
+        padding: 10px 24px;
+        color: #fff;
+        transition: 0.4s;
+    }
+
+        #contact .php-email-form button[type=submit]:hover {
+            background: #25d8fc;
+        }
+
+@keyframes animate-loading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

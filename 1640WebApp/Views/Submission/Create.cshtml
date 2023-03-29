@@ -1,0 +1,74 @@
+﻿@model _1640WebApp.Data.Submission
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<h1>Create</h1>
+<h4>Submission</h4>
+<hr />
+<div class="">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+            <label asp-for="Description" class="control-label"></label>
+            <input asp-for="Description" class="form-control" />
+            <span asp-validation-for="Description" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <textarea asp-for="Description" class="tinymce" name="" class="form-control tinymce-editor"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClosureDate" class="control-label"></label>
+                <input asp-for="ClosureDate" class="form-control" />
+                <span asp-validation-for="ClosureDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FinalClosureTime" class="control-label"></label>
+                <input asp-for="FinalClosureTime" class="form-control" />
+                <span asp-validation-for="FinalClosureTime" class="text-danger"></span>
+            </div>
+            <div style="height:10px;"> </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script src="https://cdn.tiny.cloud/1/v35b6mka7tqonc1bsr1cojk8dn1zd62p2vx5v5dhdq82505k/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: '.tinymce',
+            plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss insertfile',
+            toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat | insertfile',
+            tinycomments_mode: 'embedded',
+            tinycomments_author: 'Author name',
+            mergetags_list: [
+                { value: 'First.Name', title: 'First Name' },
+                { value: 'Email', title: 'Email' },
+            ]
+        });
+    </script>
+
+
+}

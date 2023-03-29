@@ -1,0 +1,94 @@
+.post {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    height: 50px;
+    margin-right: 10px;
+    width: 50px;
+}
+
+.name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.timestamp {
+    color: #999;
+    font-size: 14px;
+}
+
+.post-content {
+    margin-bottom: 10px;
+}
+
+    .post-content p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
+
+    .post-content img {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+
+.post-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.like-button,
+.comment-button,
+.share-button {
+    border: none;
+    background: none;
+    color: #666;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    padding: 0;
+}
+
+    .like-button i,
+    .comment-button i,
+    .share-button i {
+        margin-right: 5px;
+    }
+
+.container {
+    width: 100%;
+    overflow: hidden; /* clear floats */
+}
+
+.left-column {
+    float: left;
+    width: 25%;
+    margin-right: 2%;
+}
+
+.middle-column {
+    float: left;
+    width: 70%;
+    margin-right: 2%;
+}
+
+.right-column {
+    float: left;
+    width: 25%;
+}
+

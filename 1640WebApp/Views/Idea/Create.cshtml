@@ -1,0 +1,165 @@
+﻿@model _1640WebApp.Data.Idea
+
+
+<style>
+    .contain-create {
+        background-image: url('https://media.istockphoto.com/id/1356933529/photo/futuristic-technology-wave-digital-cyberspace-abstract-wave-with-moving-particles-on.jpg?b=1&s=170667a&w=0&k=20&c=OY4o0-8rTUd2_JXj7rQAeMGioyUjuxthyqbWuYaqGVU=');
+        object-fit: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        position: absolute;
+        top: 49px;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        overflow-y: scroll !important;
+        padding-left: 70px;
+        color: white;
+        font-weight: bold;
+    }
+
+    check-box {
+        margin: 5px 5px 5px 0px !important;
+    }
+
+    .modal-content {
+        background: linear-gradient(135deg, hsl(235, 40%, 20%),hsl(300, 40%, 5%));
+    }
+</style>
+
+
+
+<div class="contain-create">
+    <div style="height:70px;"></div>
+    <h1>Create</h1>
+
+    <h4>Idea</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create" method="post" enctype="multipart/form-data" id="create-id-form">
+
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group mt-3">
+                    <label asp-for="Datatime" class="control-label"></label>
+                    <input asp-for="Datatime" class="form-control" />
+                    <span asp-validation-for="Datatime" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-3">
+                    <label asp-for="Title" class="control-label"></label>
+                    <input asp-for="Title" class="form-control" />
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-3">
+                    <label asp-for="Text" class="control-label">Description</label>
+                    <input asp-for="Text" class="form-control" />
+                    <span asp-validation-for="Text" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-3">
+                    <label for="imgInput">Choose image:</label>
+                    <input type="file" class="form-control-file" id="imgInput" name="imgInput">
+                </div>
+                <div class="form-group mt-3">
+                    <label for="dataInput">Choose data file:</label>
+                    <input type="file" class="form-control-file" id="dataInput" name="dataInput">
+                </div>
+
+              
+                <div class="form-group">
+                    <input type="hidden" asp-for="SubmissionId" name="submissionId" />
+                </div>
+                <div class="form-group mt-3">
+                    <label for="categories">Categories:</label>
+                    <select id="categories" name="categories" multiple class="form-control">
+                        @if (ViewBag.Categories != null)
+                        {
+                        @foreach (var category in ViewBag.Categories)
+                            {
+                        <option value="@category.Id">@category.Name</option>
+                            }
+                        }
+                        else
+                        {
+                        <option value="">No categories found</option>
+                        }
+                    </select>
+                </div>
+
+                <div class="form-group mt-3">
+                    <div class="checkbox form-inline">
+                        <label>
+                            <input type="checkbox" name="anonymous" value="true" />
+                            <span asp-validation-for="Anonymous" class="text-danger"></span>
+                        </label>
+                        <label asp-for="Anonymous" class="control-label">Incognito Mode</label>
+                    </div>
+                </div>
+                <div class="form-group" style="visibility: hidden">
+                    <label asp-for="UserId" class="control-label"></label>
+                    <select asp-for="UserId" class="form-control" asp-items="ViewBag.UserId"></select>
+                </div>
+                <div class="form-group" style="visibility: hidden">
+                    <label asp-for="DepartmentId" class="control-label"></label>
+                    <select asp-for="DepartmentId" class="form-control" asp-items="ViewBag.DepartmentId"></select>
+                </div>
+                <div style="height:15px;"></div>
+                <div class="form-group" style="position: absolute;top: 750px;">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <div style="height:20px;"></div>
+    <div style="position: absolute; top: 800px;">
+        <a asp-action="Index">Back to List</a>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="termsModal" tabindex="-1" role="dialog" aria-labelledby="termsModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="termsModalLabel">Terms and Conditions</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>You must ensure that your idea is creative and has not been posted anywhere on the internet or any other media.</p>
+                <p>You must ensure that your idea does not violate any laws, intellectual property rights, or other privacy rights.</p>
+                <p>You must agree that your idea may be freely used or developed by anyone, without any restrictions or requirement to pay royalties to you.</p>
+                <p>You must agree that anyone can use or develop your idea freely without needing your permission or paying you.</p>
+                <p>You must agree that you do not own any intellectual property rights related to your idea, and that you have no legal or financial rights to your idea.</p>
+                <p>You must agree that others may have similar or identical ideas to yours, and that you have no legal or financial rights to those ideas.</p>
+                <p>Please read and understand these conditions before agreeing to submit your idea. If you do not agree with any of these terms, you should not submit your idea.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="acceptTermsBtn">I Accept</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $('#create-idea-form').submit(function (e) {
+        e.preventDefault();
+        console.log("Form submitted, opening modal...");
+        $('#termsModal').modal('show');
+    });
+
+    $('#acceptTermsBtn').click(function () {
+        console.log("Accept terms button clicked, submitting form...");
+        $('#create-idea-form').submit();
+    });
+</script>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+

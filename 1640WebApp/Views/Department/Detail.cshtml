@@ -1,0 +1,315 @@
+﻿@model List<dynamic>
+@using Newtonsoft.Json
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<style>
+    .intro {
+        height: 100%;
+        position: absolute;
+        top: 57px;
+        right: 0;
+        left: 0;
+    }
+
+    .contain-department {
+        object-fit: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        position: fixed;
+        top: 57px;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        overflow-y: scroll !important;
+    }
+
+    table td,
+    table th {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .mask-custom {
+        background: rgba(24, 24, 16, .2);
+        border-radius: 2em;
+        backdrop-filter: blur(25px);
+        border: 2px solid rgba(255, 255, 255, 0.05);
+        background-clip: padding-box;
+        box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
+    }
+
+    .title-h1 {
+        margin-top: 0.5em;
+        margin-bottom: 1.4em;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        line-height: inherit;
+        color: #ffffff;
+        font-size: 38px;
+    }
+
+        .title-h1 .light {
+            font-weight: normal;
+        }
+
+        .profile{
+            width: 100px!important;
+            height: 100px!important;
+            border-radius: 100% !important;
+        }
+
+   
+
+    .middle{
+        vertical-align :middle;
+    }
+    
+
+    #myChart{
+        max-width: 450px!important;
+        max-height: 450px!important;
+    }
+    
+
+    .chart-container{
+        display: flex;
+        justify-content: center;
+    }
+
+    
+</style>
+
+<section class="intro">
+    <div class="bg-image h-100 contain-department" style="background-image: url(/images/wp4003779.webp);">
+        <div class="mask d-flex h-100">
+
+            <div class="container">
+                <div class="row" style="padding-top: 100px;">
+                    <div class="col-12">
+                        <div class="card mask-custom">
+                            <div class="card-body">
+                                <h2 class="text-center text-white mb-5">@Model[0].DepartmentName Department</h2>
+                                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                                <div class="chart-container">
+                                    <canvas id="myChart" style="background-color: #fff"></canvas>
+
+                                </div>
+                                
+                                <script>
+                                    // Get data from controller
+                                    var coordinatorCount = @Json.Serialize(Model[0].CoordinatorCount);
+                                    var staffCount = @Json.Serialize(Model[0].StaffCount);
+                                    var ideaCount = @Json.Serialize(Model[0].IdeaCount);
+
+                                    // Create a new chart
+                                    var ctx = document.getElementById('myChart').getContext('2d');
+                                    var chart = new Chart(ctx, {
+                                        type: 'bar',
+                                        data: {
+                                            labels: ['Coordinator Count', 'Staff Count', 'Idea Count'],
+                                            datasets: [{
+                                                label: 'Count',
+                                                data: [coordinatorCount, staffCount, ideaCount],
+                                                backgroundColor: [
+                                                    'rgba(249, 104, 206, 0.95)',
+                                                    'rgba(19, 211, 227, 0.8)',
+                                                    'rgba(157, 240, 37, 0.95)'
+                                                ],
+                                                borderColor: "white",
+                                                borderWidth: 1
+                                            }]
+                                        }
+                                    });
+
+                                    // Set the initial chart size
+                                    resizeChart();
+
+                                    // Resize the chart whenever the window is resized
+                                    window.addEventListener('resize', resizeChart);
+
+                                    function resizeChart() {
+                                        // Get the width of the chart container
+                                        var chartContainerWidth = document.getElementById('myChart').parentNode.offsetWidth;
+
+                                        // Calculate the new chart width and height
+                                        var newChartWidth = chartContainerWidth;
+                                        var newChartHeight = chartContainerWidth * 0.75; // 4:3 aspect ratio
+
+                                        // Set the canvas width and height to the new values
+                                        document.getElementById('myChart').width = newChartWidth;
+                                        document.getElementById('myChart').height = newChartHeight;
+
+                                        // Redraw the chart with the new size
+                                        chart.resize();
+                                    }
+                                </script>
+
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="padding-top: 100px;">
+                    <div class="col-12">
+                        <div class="card mask-custom" style="overflow: auto;">
+                            <div class="card-body" style="margin-left: auto; margin-right: auto;">
+                                
+
+                                <div class="table-responsive" >
+                                    <table class="table table-borderless text-white mb-0" style="text-align: center;">
+                                        <h2 class="text-white text-center mb-5">List of Coordinators</h2>
+
+                                        <thead>
+                                            <tr style="border-bottom-width: 1px;">
+                                                <th scope="col">Profile Image</th>
+                                                <th scope="col">User Number</th>
+                                                <th scope="col">Full Name</th>
+                                                <th scope="col">Email</th>
+                                                <th scope="col">Phone Number</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @if (ViewData["Coordinators"] != null && ViewData["Coordinators"] is List<dynamic> coordinators)
+                                            {
+                                                foreach (var coordinator in coordinators)
+                                                {
+
+                                                    <tr>
+                                                        <th>
+                                                            @if (!string.IsNullOrEmpty(coordinator.UserImage))
+                                                            {
+                                                                <div class="col-md-4">
+                                                                    <img class="profile" src="/uploads/@coordinator.UserImage" style="width: 250px; height:300px">
+                                                                </div>
+                                                            }
+                                                        </th>
+                                                        <th class="middle">@coordinator.UserNumber</th>
+                                                        <th class="middle">@coordinator.UserName</th>
+                                                        <th class="middle">@coordinator.UserEmail</th>
+                                                        <th class="middle">@coordinator.UserPhoneNumber</th>
+
+                                                    </tr>
+                                                }
+                                            }
+
+                                        </tbody>
+
+                                    </table>
+
+                                </div>
+
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="row" style="padding-top: 100px;">
+                    <div class="col-12">
+                        <div class="card mask-custom" style="overflow: auto;">
+                            <div class="card-body" style="margin-left: auto; margin-right: auto;">
+                                
+
+                                <div class="table-responsive" >
+                                    <table class="table table-borderless text-white mb-0" style="text-align: center;">
+                                        <h2 class="text-white text-center mb-5">List of Staffs</h2>
+
+                                        <thead>
+                                            <tr style="border-bottom-width: 1px;">
+                                                <th scope="col">Profile Image</th>
+                                                <th scope="col">User Number</th>
+                                                <th scope="col">Full Name</th>
+                                                <th scope="col">Email</th>
+                                                <th scope="col">Phone Number</th>
+                                                <th scope="col">Idea contributed</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @if (ViewData["Staffs"] != null && ViewData["Staffs"] is List<dynamic> staffs)
+                                            {
+                                                foreach (var staff in staffs)
+                                                {
+                                                    
+                                                    <tr>
+                                                        <th>
+                                                            @if (!string.IsNullOrEmpty(staff.UserImage))
+                                                            {
+                                                                <div class="col-md-4">
+                                                                    <img class="profile" src="/uploads/@staff.UserImage" style="width: 250px; height:300px">
+                                                                </div>
+                                                            }
+                                                        </th>
+                                                        <th class="middle">@staff.UserName</th>
+                                                        <th class="middle">@staff.UserEmail</th>
+                                                        <th class="middle">@staff.UserPhoneNumber</th>
+                                                        <th class="middle">@staff.IdeaCount</th>
+                                                    </tr>
+                                                }
+                                            }
+                                        </tbody>
+
+                                    </table>
+
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="padding-top: 100px; padding-bottom: 200px;" style="overflow: auto;">
+                    <div class="col-12">
+                        <div class="card mask-custom" style="overflow: auto;">
+                            <div class="card-body" style="margin-left: auto; margin-right: auto;">
+                                
+                                <div class="table-responsive" >
+                                    <table class="table table-borderless text-white mb-0" style="text-align: center;">
+                                        <h2 class="text-white text-center mb-5">List of Ideas</h2>
+
+                                        <thead>
+                                            <tr style="border-bottom-width: 1px;">
+                                                <th scope="col">User Number</th>
+                                                <th scope="col">Title</th>
+                                                <th scope="col">Text</th>
+                                                <th scope="col">File Path</th>
+                                                <th scope="col">Time Submit</th>
+                                                <th scope="col">Submission Name</th>
+                                                
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @if (ViewData["DepartmentIdeas"] != null && ViewData["DepartmentIdeas"] is List<dynamic> departmentIdeas)
+                                            {
+                                                foreach (var idea in departmentIdeas)
+                                                {
+                                                    <tr>
+                                                        <th>@idea.StaffNumber</th>
+                                                        <th>@idea.Title</th>
+                                                        <th>@idea.Text</th>
+                                                        <th>@idea.FilePath</th>
+                                                        <th>@idea.Datatime</th>
+                                                        <th>@idea.SubmissionName</th>
+                                                        
+                                                    </tr>
+                                                }
+                                            }
+                                        </tbody>
+
+                                    </table>
+
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
