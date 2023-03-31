@@ -127,25 +127,25 @@ namespace _1640WebApp.Areas.Identity.Pages.Account
 
                 if (result.Succeeded)
                 {
-                    if (Input.Email.Contains("@manager"))
+                    if (Input.Email.Contains("manager"))
                     {
                         _userManager.AddToRoleAsync(user, "Manager").Wait();
 
                     }
 
-                    if (Input.Email.Contains("@admin"))
+                    if (Input.Email.Contains("admin"))
                     {
                         _userManager.AddToRoleAsync(user, "Admin").Wait();
 
                     }
 
-                    if (Input.Email.Contains("@coordinator"))
+                    if (Input.Email.Contains("coordinator"))
                     {
                         _userManager.AddToRoleAsync(user, "Coordinator").Wait();
 
                     }
 
-                    if (Input.Email.Contains("@staff"))
+                    if (Input.Email.Contains("staff"))
                     {
                         _userManager.AddToRoleAsync(user, "Staff").Wait();
 

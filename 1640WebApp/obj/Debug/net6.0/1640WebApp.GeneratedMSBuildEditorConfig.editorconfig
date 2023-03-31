@@ -9,365 +9,365 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = _1640WebApp
 build_property.RootNamespace = _1640WebApp
-build_property.ProjectDir = D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\
+build_property.ProjectDir = D:\1640Web\1640WebApp\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\COMP1640\New folder (3)\1640WebApp\1640WebApp
+build_property.MSBuildProjectDirectory = D:\1640Web\1640WebApp
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Areas/Identity/Pages/Account/AccessDenied.cshtml]
+[D:/1640Web/1640WebApp/Areas/Identity/Pages/Account/AccessDenied.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Areas/Identity/Pages/Account/ConfirmEmail.cshtml]
+[D:/1640Web/1640WebApp/Areas/Identity/Pages/Account/ConfirmEmail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxDb25maXJtRW1haWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Areas/Identity/Pages/Account/ConfirmEmailChange.cshtml]
+[D:/1640Web/1640WebApp/Areas/Identity/Pages/Account/ConfirmEmailChange.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxDb25maXJtRW1haWxDaGFuZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Areas/Identity/Pages/Account/ExternalLogin.cshtml]
+[D:/1640Web/1640WebApp/Areas/Identity/Pages/Account/ExternalLogin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxFeHRlcm5hbExvZ2luLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Areas/Identity/Pages/Account/ForgotPassword.cshtml]
+[D:/1640Web/1640WebApp/Areas/Identity/Pages/Account/ForgotPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Areas/Identity/Pages/Account/ForgotPasswordConfirmation.cshtml]
+[D:/1640Web/1640WebApp/Areas/Identity/Pages/Account/ForgotPasswordConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxGb3Jnb3RQYXNzd29yZENvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Areas/Identity/Pages/Account/Lockout.cshtml]
+[D:/1640Web/1640WebApp/Areas/Identity/Pages/Account/Lockout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2Nrb3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Areas/Identity/Pages/Account/Login.cshtml]
+[D:/1640Web/1640WebApp/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Areas/Identity/Pages/Account/LoginWith2fa.cshtml]
+[D:/1640Web/1640WebApp/Areas/Identity/Pages/Account/LoginWith2fa.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbldpdGgyZmEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Areas/Identity/Pages/Account/LoginWithRecoveryCode.cshtml]
+[D:/1640Web/1640WebApp/Areas/Identity/Pages/Account/LoginWithRecoveryCode.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbldpdGhSZWNvdmVyeUNvZGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Areas/Identity/Pages/Account/Logout.cshtml]
+[D:/1640Web/1640WebApp/Areas/Identity/Pages/Account/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml]
+[D:/1640Web/1640WebApp/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcQ2hhbmdlUGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Areas/Identity/Pages/Account/Manage/DeletePersonalData.cshtml]
+[D:/1640Web/1640WebApp/Areas/Identity/Pages/Account/Manage/DeletePersonalData.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRGVsZXRlUGVyc29uYWxEYXRhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Areas/Identity/Pages/Account/Manage/Disable2fa.cshtml]
+[D:/1640Web/1640WebApp/Areas/Identity/Pages/Account/Manage/Disable2fa.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRGlzYWJsZTJmYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Areas/Identity/Pages/Account/Manage/DownloadPersonalData.cshtml]
+[D:/1640Web/1640WebApp/Areas/Identity/Pages/Account/Manage/DownloadPersonalData.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRG93bmxvYWRQZXJzb25hbERhdGEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Areas/Identity/Pages/Account/Manage/Email.cshtml]
+[D:/1640Web/1640WebApp/Areas/Identity/Pages/Account/Manage/Email.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRW1haWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Areas/Identity/Pages/Account/Manage/EnableAuthenticator.cshtml]
+[D:/1640Web/1640WebApp/Areas/Identity/Pages/Account/Manage/EnableAuthenticator.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRW5hYmxlQXV0aGVudGljYXRvci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Areas/Identity/Pages/Account/Manage/ExternalLogins.cshtml]
+[D:/1640Web/1640WebApp/Areas/Identity/Pages/Account/Manage/ExternalLogins.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRXh0ZXJuYWxMb2dpbnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Areas/Identity/Pages/Account/Manage/GenerateRecoveryCodes.cshtml]
+[D:/1640Web/1640WebApp/Areas/Identity/Pages/Account/Manage/GenerateRecoveryCodes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcR2VuZXJhdGVSZWNvdmVyeUNvZGVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Areas/Identity/Pages/Account/Manage/Index.cshtml]
+[D:/1640Web/1640WebApp/Areas/Identity/Pages/Account/Manage/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Areas/Identity/Pages/Account/Manage/PersonalData.cshtml]
+[D:/1640Web/1640WebApp/Areas/Identity/Pages/Account/Manage/PersonalData.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcUGVyc29uYWxEYXRhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Areas/Identity/Pages/Account/Manage/ResetAuthenticator.cshtml]
+[D:/1640Web/1640WebApp/Areas/Identity/Pages/Account/Manage/ResetAuthenticator.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcUmVzZXRBdXRoZW50aWNhdG9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Areas/Identity/Pages/Account/Manage/SetPassword.cshtml]
+[D:/1640Web/1640WebApp/Areas/Identity/Pages/Account/Manage/SetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcU2V0UGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Areas/Identity/Pages/Account/Manage/ShowRecoveryCodes.cshtml]
+[D:/1640Web/1640WebApp/Areas/Identity/Pages/Account/Manage/ShowRecoveryCodes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcU2hvd1JlY292ZXJ5Q29kZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Areas/Identity/Pages/Account/Manage/TwoFactorAuthentication.cshtml]
+[D:/1640Web/1640WebApp/Areas/Identity/Pages/Account/Manage/TwoFactorAuthentication.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcVHdvRmFjdG9yQXV0aGVudGljYXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Areas/Identity/Pages/Account/Manage/_Layout.cshtml]
+[D:/1640Web/1640WebApp/Areas/Identity/Pages/Account/Manage/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
+[D:/1640Web/1640WebApp/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX01hbmFnZU5hdi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Areas/Identity/Pages/Account/Manage/_StatusMessage.cshtml]
+[D:/1640Web/1640WebApp/Areas/Identity/Pages/Account/Manage/_StatusMessage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1N0YXR1c01lc3NhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
+[D:/1640Web/1640WebApp/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Areas/Identity/Pages/Account/Register.cshtml]
+[D:/1640Web/1640WebApp/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Areas/Identity/Pages/Account/RegisterConfirmation.cshtml]
+[D:/1640Web/1640WebApp/Areas/Identity/Pages/Account/RegisterConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3RlckNvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Areas/Identity/Pages/Account/ResendEmailConfirmation.cshtml]
+[D:/1640Web/1640WebApp/Areas/Identity/Pages/Account/ResendEmailConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZXNlbmRFbWFpbENvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Areas/Identity/Pages/Account/ResetPassword.cshtml]
+[D:/1640Web/1640WebApp/Areas/Identity/Pages/Account/ResetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Areas/Identity/Pages/Account/ResetPasswordConfirmation.cshtml]
+[D:/1640Web/1640WebApp/Areas/Identity/Pages/Account/ResetPasswordConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZXNldFBhc3N3b3JkQ29uZmlybWF0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Areas/Identity/Pages/Account/_StatusMessage.cshtml]
+[D:/1640Web/1640WebApp/Areas/Identity/Pages/Account/_StatusMessage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfU3RhdHVzTWVzc2FnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[D:/1640Web/1640WebApp/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Areas/Identity/Pages/Error.cshtml]
+[D:/1640Web/1640WebApp/Areas/Identity/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[D:/1640Web/1640WebApp/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Areas/Identity/Pages/_ViewImports.cshtml]
+[D:/1640Web/1640WebApp/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Areas/Identity/Pages/_ViewStart.cshtml]
+[D:/1640Web/1640WebApp/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/Catogory/Create.cshtml]
+[D:/1640Web/1640WebApp/Views/Catogory/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0b2dvcnlcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/Catogory/Edit.cshtml]
+[D:/1640Web/1640WebApp/Views/Catogory/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0b2dvcnlcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/Catogory/Index.cshtml]
+[D:/1640Web/1640WebApp/Views/Catogory/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0b2dvcnlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/ChatHub/Index.cshtml]
+[D:/1640Web/1640WebApp/Views/ChatHub/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhdEh1YlxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/ChatHub/View.cshtml]
+[D:/1640Web/1640WebApp/Views/ChatHub/View.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhdEh1YlxWaWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/Department/Create.cshtml]
+[D:/1640Web/1640WebApp/Views/Department/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/Department/Detail.cshtml]
+[D:/1640Web/1640WebApp/Views/Department/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/Department/Edit.cshtml]
+[D:/1640Web/1640WebApp/Views/Department/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/Department/Index.cshtml]
+[D:/1640Web/1640WebApp/Views/Department/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/Email/Form.cshtml]
+[D:/1640Web/1640WebApp/Views/Email/Form.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1haWxcRm9ybS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/Home/AboutUs.cshtml]
+[D:/1640Web/1640WebApp/Views/Home/AboutUs.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dFVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/Home/Chat.cshtml]
+[D:/1640Web/1640WebApp/Views/Home/Chat.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDaGF0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/Home/Index.cshtml]
+[D:/1640Web/1640WebApp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/Home/MainHome.cshtml]
+[D:/1640Web/1640WebApp/Views/Home/MainHome.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNYWluSG9tZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/Home/Privacy.cshtml]
+[D:/1640Web/1640WebApp/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/Idea/Create.cshtml]
+[D:/1640Web/1640WebApp/Views/Idea/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWRlYVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/Idea/Delete.cshtml]
+[D:/1640Web/1640WebApp/Views/Idea/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWRlYVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/Idea/Details.cshtml]
+[D:/1640Web/1640WebApp/Views/Idea/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWRlYVxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/Idea/Edit.cshtml]
+[D:/1640Web/1640WebApp/Views/Idea/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWRlYVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/Idea/Game.cshtml]
+[D:/1640Web/1640WebApp/Views/Idea/Game.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWRlYVxHYW1lLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/Idea/Index.cshtml]
+[D:/1640Web/1640WebApp/Views/Idea/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWRlYVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/Idea/Music.cshtml]
+[D:/1640Web/1640WebApp/Views/Idea/Music.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWRlYVxNdXNpYy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/Idea/ViewIdeaOnly.cshtml]
+[D:/1640Web/1640WebApp/Views/Idea/ViewIdeaOnly.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWRlYVxWaWV3SWRlYU9ubHkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/Idea/ViewIdeas.cshtml]
+[D:/1640Web/1640WebApp/Views/Idea/ViewIdeas.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWRlYVxWaWV3SWRlYXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/Shared/Error.cshtml]
+[D:/1640Web/1640WebApp/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/Shared/_LoginPartial.cshtml]
+[D:/1640Web/1640WebApp/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/1640Web/1640WebApp/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/StaffManageByCoordinator/Index.cshtml]
+[D:/1640Web/1640WebApp/Views/StaffManageByCoordinator/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhZmZNYW5hZ2VCeUNvb3JkaW5hdG9yXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/StaffManageByCoordinator/ViewIdeas.cshtml]
+[D:/1640Web/1640WebApp/Views/StaffManageByCoordinator/ViewIdeas.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhZmZNYW5hZ2VCeUNvb3JkaW5hdG9yXFZpZXdJZGVhcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/StaffManageByCoordinator/ViewSubmission.cshtml]
+[D:/1640Web/1640WebApp/Views/StaffManageByCoordinator/ViewSubmission.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhZmZNYW5hZ2VCeUNvb3JkaW5hdG9yXFZpZXdTdWJtaXNzaW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/StaffSubmissionManageByAdmin/Index.cshtml]
+[D:/1640Web/1640WebApp/Views/StaffSubmissionManageByAdmin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhZmZTdWJtaXNzaW9uTWFuYWdlQnlBZG1pblxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/SubmissionManageByAdmin/Create.cshtml]
+[D:/1640Web/1640WebApp/Views/SubmissionManageByAdmin/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VibWlzc2lvbk1hbmFnZUJ5QWRtaW5cQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/SubmissionManageByAdmin/Edit.cshtml]
+[D:/1640Web/1640WebApp/Views/SubmissionManageByAdmin/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VibWlzc2lvbk1hbmFnZUJ5QWRtaW5cRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/SubmissionManageByAdmin/Index.cshtml]
+[D:/1640Web/1640WebApp/Views/SubmissionManageByAdmin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VibWlzc2lvbk1hbmFnZUJ5QWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/Submission/AddIdeas.cshtml]
+[D:/1640Web/1640WebApp/Views/Submission/AddIdeas.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VibWlzc2lvblxBZGRJZGVhcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/Submission/Create.cshtml]
+[D:/1640Web/1640WebApp/Views/Submission/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VibWlzc2lvblxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/Submission/Delete.cshtml]
+[D:/1640Web/1640WebApp/Views/Submission/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VibWlzc2lvblxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/Submission/Details.cshtml]
+[D:/1640Web/1640WebApp/Views/Submission/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VibWlzc2lvblxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/Submission/Edit.cshtml]
+[D:/1640Web/1640WebApp/Views/Submission/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VibWlzc2lvblxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/Submission/Index.cshtml]
+[D:/1640Web/1640WebApp/Views/Submission/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VibWlzc2lvblxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/Submission/ViewIdeas.cshtml]
+[D:/1640Web/1640WebApp/Views/Submission/ViewIdeas.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VibWlzc2lvblxWaWV3SWRlYXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/SuperUser/Create.cshtml]
+[D:/1640Web/1640WebApp/Views/SuperUser/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwZXJVc2VyXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/SuperUser/Edit.cshtml]
+[D:/1640Web/1640WebApp/Views/SuperUser/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwZXJVc2VyXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/SuperUser/Index.cshtml]
+[D:/1640Web/1640WebApp/Views/SuperUser/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwZXJVc2VyXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/User/Edit.cshtml]
+[D:/1640Web/1640WebApp/Views/User/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/User/Index.cshtml]
+[D:/1640Web/1640WebApp/Views/User/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/_ViewImports.cshtml]
+[D:/1640Web/1640WebApp/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/_ViewStart.cshtml]
+[D:/1640Web/1640WebApp/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/COMP1640/New folder (3)/1640WebApp/1640WebApp/Views/Shared/_Layout.cshtml]
+[D:/1640Web/1640WebApp/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-fl3wqh6nmm

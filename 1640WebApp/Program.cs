@@ -2,11 +2,12 @@ using _1640WebApp.Data;
 using _1640WebApp.Hubs;
 using _1640WebApp.Services;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
-using System.Runtime.ConstrainedExecution;
-using TechTalk.SpecFlow.Assist;
+using SendGrid.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
+
 
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
@@ -33,6 +34,11 @@ builder.Services.AddSession(options =>
 });
 builder.Services.AddMemoryCache();
 builder.Services.AddSignalR();
+//builder.Services.AddSendGrid(option =>
+//{
+//    option.ApiKey = builder.Configuration.GetSection("SendGrindEmailSettings")
+//    .GetValue<string>("APIKey");
+//});
 
 var app = builder.Build();
 

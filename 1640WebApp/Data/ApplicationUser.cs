@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.ConstrainedExecution;
 
+
 namespace _1640WebApp.Data
 {
     public class ApplicationUser:IdentityUser
@@ -164,6 +165,19 @@ namespace _1640WebApp.Data
         public string Password = "wqefgrtfbacntumf";
 
     }
+
+    public class EmailToCoordinator
+    {
+        
+        public string To { get; set; }
+        public string Subject { get; set; }
+        public string Body { get; set; }
+        public string From = "universityofgreenwich0102@gmail.com";
+        public string Password = "123456789Aa@123456789";
+
+    }
+
+   
 
 
 

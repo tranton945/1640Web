@@ -7,13 +7,19 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 using System.Text;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Caching.Memory;
+using System.Net;
+using System.Net.Mail;
+using SendGrid;
+using SendGrid.Helpers.Mail;
+using System;
+using System.Threading.Tasks;
 
 namespace _1640WebApp.Controllers
 {
     [Authorize(Roles = "Staff, Admin, Manager, Coordinator")]
-
+    
+    
     public class IdeaController : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager;
@@ -21,6 +27,8 @@ namespace _1640WebApp.Controllers
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly IWebHostEnvironment _env;
         private readonly IMemoryCache _memoryCache;
+        //private readonly ISendGridClient _sendGridClient;
+        //private readonly IConfiguration _configuration;
 
 
         public IdeaController(IMemoryCache memoryCache, IHttpContextAccessor httpContextAccessor, IWebHostEnvironment env, ApplicationDbContext context = null, UserManager<ApplicationUser> userManager = null)
@@ -30,6 +38,7 @@ namespace _1640WebApp.Controllers
             _env = env;
             _httpContextAccessor = httpContextAccessor;
             _memoryCache = memoryCache;
+           
         }
 
         // GET: Ideas
@@ -221,7 +230,7 @@ namespace _1640WebApp.Controllers
             int departmentId = getCurrentUserDepartmentId();
             var user = await _userManager.GetUserAsync(User);
 
-            if (user.Email.Contains("@coordinator"))
+            if (user.Email.Contains("coordinator"))
             {
                 applicationDbContext = _context.Ideas
                 .Where(i => i.SubmissionId == submissionId && i.DepartmentId == departmentId)
@@ -435,6 +444,7 @@ namespace _1640WebApp.Controllers
             return View();
         }
 
+        
         // POST: Ideas/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -523,10 +533,8 @@ namespace _1640WebApp.Controllers
             await _context.SaveChangesAsync();
 
             var coordinator = _context.Users
-                .Where(u => u.Email.Contains("@coordinator") && u.DepartmentId == user.DepartmentId)
-                .ToList();
-
-            
+                .Where(u => u.Email.Contains("coordinator") && u.DepartmentId == user.DepartmentId).ToList();
+            var coordinatorEmail = coordinator.Select(u => u.Email);
 
             if (coordinator != null)
             {
@@ -538,17 +546,28 @@ namespace _1640WebApp.Controllers
 
                 _memoryCache.Set("IdeaNotification", notification, TimeSpan.FromMinutes(5));
 
+                var apiKey = "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";
+                var client = new SendGridClient(apiKey);
+                var from = new EmailAddress("navo7036@gmail.com", "nana");
+                var subject = "An Idea have just submitted";
+                var to = new EmailAddress(string.Join(",", coordinatorEmail));
+                var plainTextContent = "The Idea have just submitted";
+                var htmlContent = "<strong>Please check the Idea in Submission Link</strong>";
+                var msg = MailHelper.CreateSingleEmail(from, to, subject, plainTextContent, htmlContent);
+                var response = await client.SendEmailAsync(msg);
 
                 return RedirectToAction(nameof(Index));
             }
+
+ 
 
             return RedirectToAction(nameof(Index));
         }
 
 
 
-        // GET: Ideas/Edit/5
-        public async Task<IActionResult> Edit(int? id, int submissionId)
+            // GET: Ideas/Edit/5
+            public async Task<IActionResult> Edit(int? id, int submissionId)
         {
             var user = await _userManager.GetUserAsync(HttpContext.User);
             var currentUserId = user.Id;
