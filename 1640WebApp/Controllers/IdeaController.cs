@@ -549,7 +549,7 @@ namespace _1640WebApp.Controllers
                 var apiKey = "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";
                 var client = new SendGridClient(apiKey);
                 var from = new EmailAddress("navo7036@gmail.com", "nana");
-                var subject = "An Idea have just submitted";
+                var subject = $"A Staff named \"{user.Fullname_}\" just submitted an Idea titled \"{idea.Title}\"  ";
                 var to = new EmailAddress(string.Join(",", coordinatorEmail));
                 var plainTextContent = "The Idea have just submitted";
                 var htmlContent = "<strong>Please check the Idea in Submission Link</strong>";
