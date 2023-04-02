@@ -46,11 +46,17 @@
     }
 
     .button2 {
-        background-color: darkviolet;
+        background-color: forestgreen;
         padding: 6px;
         color: white;
         border-radius: 10px;
     }
+
+    .button3 {
+        background-color: darkred;
+        padding: 6px;
+        color: white;
+        border-radius: 10px;
 
     a:hover {
         color: red !important;
@@ -120,10 +126,25 @@
                         @Html.DisplayFor(modelItem => item.Submission.Id)
                     </td>
                     <td>
-                        <a class="button2" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                        <a class="button2" asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                        <a class="button2" asp-action="Delete" asp-route-id="@item.Id">Delete</a> |
-                        <a class="button2" asp-action="ViewIdeas" asp-route-id="@item.Id">View</a>
+                        @if (User.Identity.Name == item.CreatorEmail)
+                        {
+                            <a class="button2" asp-action="Edit" asp-route-id="@item.Id">Edit</a> 
+                        }
+                        else
+                        {
+                            <a class="button3" asp-action="Edit" asp-route-id="@item.Id">Edit</a> 
+                        }
+
+                        | <a class="button2" asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        @if (User.Identity.Name == item.CreatorEmail)
+                        {
+                            <a class="button2" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                        }
+                        else
+                        {
+                            <a class="button3" asp-action="Delete" asp-route-id="@item.Id">Delete</a> 
+                        }
+                        | <a class="button2" asp-action="ViewIdeaOnly" asp-controller="Idea" asp-route-ideaId="@item.Id">View</a>
                     </td>
                 </tr>
             }

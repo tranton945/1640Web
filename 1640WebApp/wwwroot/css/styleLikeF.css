@@ -386,3 +386,48 @@ nav {
         cursor: pointer;
         margin-left: 8px;
     }
+
+@media only screen and (max-width: 768px) { /* thay đổi này sẽ áp dụng cho các thiết bị có độ rộng màn hình tối đa là 768px, tức là điện thoại và tablet */
+    .nav-left, .nav-right, .left-panel, .right-panel, .story-section {
+        display: none !important; /* ẩn nav-left và right-panel */
+    }
+
+    .post {
+        width: 95vw !important;
+    }
+
+    .nav {
+        padding: 0 0rem;
+    }
+
+    .meo {
+        margin-left: 12% !important;
+    }
+
+    .post .post-top {
+        width: 93vw;
+    }
+
+    button {
+        margin-left: 80% !important;
+        margin-bottom: 5px;
+    }
+
+    .post .post-top > input {
+        flex: 45%;
+    }
+
+    .post .post-bottom {
+        justify-content: normal;
+        display: flex !important;
+        width: 93vw;
+    }
+
+    textarea {
+        width: 87vw !important;
+    }
+
+    .nav-middle {
+        width: 100%; /* đặt chiều rộng của nav-middle thành 100% để nó chiếm toàn bộ màn hình */
+    }
+}

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "aTTfp44q6HX+W5oOq2iYRxwbEdTPcN3A4KG3V6ErMsBhkbCX6nsX+Lgw8TsSF7RhX4bHoEDu6O4vpTsXVMGLBQ==",
+  "dgSpecHash": "+wudFnfT4W5kBaUj4nLx8WIHA9BrfhBHN0sGRfYe5zpydHKMMNALyk9PPfPpfHHiL6VxxIUPoKAy2gGgEUGbEw==",
   "success": true,
   "projectFilePath": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\1640WebApp.csproj",
   "expectedPackageFiles": [
@@ -61,6 +61,7 @@
     "C:\\Users\\trant\\.nuget\\packages\\microsoft.extensions.dependencymodel\\1.0.3\\microsoft.extensions.dependencymodel.1.0.3.nupkg.sha512",
     "C:\\Users\\trant\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\6.0.0\\microsoft.extensions.fileproviders.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\trant\\.nuget\\packages\\microsoft.extensions.fileproviders.embedded\\6.0.14\\microsoft.extensions.fileproviders.embedded.6.0.14.nupkg.sha512",
+    "C:\\Users\\trant\\.nuget\\packages\\microsoft.extensions.http\\2.1.0\\microsoft.extensions.http.2.1.0.nupkg.sha512",
     "C:\\Users\\trant\\.nuget\\packages\\microsoft.extensions.identity.core\\6.0.14\\microsoft.extensions.identity.core.6.0.14.nupkg.sha512",
     "C:\\Users\\trant\\.nuget\\packages\\microsoft.extensions.identity.stores\\6.0.14\\microsoft.extensions.identity.stores.6.0.14.nupkg.sha512",
     "C:\\Users\\trant\\.nuget\\packages\\microsoft.extensions.logging\\6.0.0\\microsoft.extensions.logging.6.0.0.nupkg.sha512",
@@ -117,8 +118,11 @@
     "C:\\Users\\trant\\.nuget\\packages\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
     "C:\\Users\\trant\\.nuget\\packages\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
     "C:\\Users\\trant\\.nuget\\packages\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
+    "C:\\Users\\trant\\.nuget\\packages\\sendgrid\\9.28.1\\sendgrid.9.28.1.nupkg.sha512",
+    "C:\\Users\\trant\\.nuget\\packages\\sendgrid.extensions.dependencyinjection\\1.0.1\\sendgrid.extensions.dependencyinjection.1.0.1.nupkg.sha512",
     "C:\\Users\\trant\\.nuget\\packages\\specflow\\3.9.74\\specflow.3.9.74.nupkg.sha512",
     "C:\\Users\\trant\\.nuget\\packages\\specflow.internal.json\\1.0.8\\specflow.internal.json.1.0.8.nupkg.sha512",
+    "C:\\Users\\trant\\.nuget\\packages\\starkbank-ecdsa\\1.3.3\\starkbank-ecdsa.1.3.3.nupkg.sha512",
     "C:\\Users\\trant\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Users\\trant\\.nuget\\packages\\system.buffers\\4.3.0\\system.buffers.4.3.0.nupkg.sha512",
     "C:\\Users\\trant\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",

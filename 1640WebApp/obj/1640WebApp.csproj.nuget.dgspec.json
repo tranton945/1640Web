@@ -83,6 +83,14 @@
               "target": "Package",
               "version": "[6.0.12, )"
             },
+            "SendGrid": {
+              "target": "Package",
+              "version": "[9.28.1, )"
+            },
+            "SendGrid.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
             "SpecFlow": {
               "target": "Package",
               "version": "[3.9.74, )"
