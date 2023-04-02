@@ -76,7 +76,7 @@
                         {
                         @foreach (var category in ViewBag.Categories)
                             {
-                        <option value="@category.Id">@category.Name</option>
+                            <option value="@category.Id">@category.Name</option>
                             }
                         }
                         else
@@ -84,6 +84,9 @@
                         <option value="">No categories found</option>
                         }
                     </select>
+                    @*<div class="form-group border text-center border-info rounded p-0" style="padding-left: 10px">
+                        @Html.DropDownList("SelectList", (IEnumerable<SelectListItem>)ViewBag.SelectList, new { @class = "form-control" })
+                    </div>*@
                 </div>
 
                 <div class="form-group mt-3">

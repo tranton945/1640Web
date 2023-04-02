@@ -9,6 +9,8 @@ using System.Security.Claims;
 using System.Text;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Caching.Memory;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+
 
 namespace _1640WebApp.Controllers
 {
@@ -33,123 +35,163 @@ namespace _1640WebApp.Controllers
         }
 
         // GET: Ideas
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? page)
         {
+            int pageSize = 5;
+            int pageNumber = (page ?? 1);
+
             var ideas = await _context.Ideas
                             .Include(i => i.Catogories)
                             .Include(i => i.Submission)
                             .Include(i => i.User)
                             .OrderByDescending(i => i.Id)
+                            .Skip((pageNumber - 1) * pageSize)
+                            .Take(pageSize)
                             .ToListAsync();
 
+            var count = await _context.Ideas.CountAsync();
+            var totalPages = (int)Math.Ceiling(count / (double)pageSize);
 
-            // Distinct() lọc kết quả trùng
-            var Catogories = await _context.Catogorys.Select(i => i.Name).Distinct().ToListAsync();
-
+            var Catogories = await _context.Catogorys.ToListAsync();
             var Submissions = await _context.Submissions.Select(i => i.Id).Distinct().ToListAsync();
-
             var latestDay = _context.Ideas.Max(n => n.Datatime);
             var earliestDay = _context.Ideas.Min(n => n.Datatime);
 
             var allOptions = new List<SelectListItem>();
             allOptions.Add(new SelectListItem { Text = " -- Select --", Value = "" });
-            //allOptions.Add(new SelectListItem { Text = " No category found", Value = " No category found" });
             foreach (var Catogory in Catogories)
             {
-                allOptions.Add(new SelectListItem { Text = Catogory, Value = Catogory });
+                allOptions.Add(new SelectListItem { Text = Catogory.Name, Value = "category=" + Catogory.Id.ToString() });
             }
             foreach (var Submission in Submissions)
             {
-                allOptions.Add(new SelectListItem { Text = $"Submission Id: " + Submission, Value = Submission.ToString() });
+                allOptions.Add(new SelectListItem { Text = $"Submission Id: " + Submission, Value = "submission=" + Submission.ToString() });
             }
             ViewBag.SelectList = allOptions;
+            ViewBag.Cate = Catogories;
+            ViewBag.TotalPages = totalPages;
+            ViewBag.CurrentPage = pageNumber;
 
             return View(ideas);
         }
         //ton
         //sort in admin/manager page
-        public async Task<IActionResult> FilterAdmin(string typeData)
+        public async Task<IActionResult> FilterAdmin(string typeData, int? page)
         {
-            var ideas = await _context.Ideas
-                .Include(i => i.Catogories)
-                .Include(i => i.Submission)
-                .Include(i => i.User)
-                .OrderByDescending(i => i.Id)
-                .ToListAsync();
+            var filterTxt = typeData.Split('=')[0];
+            int pageSize = 5;
+            int pageNumber = (page ?? 1);
 
+            var ideas = await _context.Ideas
+                            .Include(i => i.Catogories)
+                            .Include(i => i.Submission)
+                            .Include(i => i.User)
+                            .OrderByDescending(i => i.Id)
+                            .Skip((pageNumber - 1) * pageSize)
+                            .Take(pageSize)
+                            .ToListAsync();
 
             // Distinct() lọc kết quả trùng
-            var Catogories = await _context.Catogorys.Select(i => i.Name).Distinct().ToListAsync();
-
+            var Catogories = await _context.Catogorys.ToListAsync();
             var Submissions = await _context.Submissions.Select(i => i.Id).Distinct().ToListAsync();
-
             var latestDay = _context.Ideas.Max(n => n.Datatime);
             var earliestDay = _context.Ideas.Min(n => n.Datatime);
 
             var allOptions = new List<SelectListItem>();
             allOptions.Add(new SelectListItem { Text = " -- Select --", Value = "" });
-            //allOptions.Add(new SelectListItem { Text = " No category found", Value = null });
             foreach (var Catogory in Catogories)
             {
-                allOptions.Add(new SelectListItem { Text = Catogory, Value = Catogory });
+                allOptions.Add(new SelectListItem { Text = Catogory.Name, Value = "category=" + Catogory.Id.ToString() });
             }
             foreach (var Submission in Submissions)
             {
-                allOptions.Add(new SelectListItem { Text = $"Submission Id: " + Submission, Value = Submission.ToString() });
+                allOptions.Add(new SelectListItem { Text = $"Submission Id: " + Submission, Value = "submission=" + Submission.ToString() });
             }
             ViewBag.SelectList = allOptions;
 
             if (!String.IsNullOrEmpty(typeData))
             {
-                ideas = await _context.Ideas
-                        .Include(i => i.Catogories)
-                        .Include(i => i.Submission)
-                        .Include(i => i.User)
-                        .OrderByDescending(i => i.Id)
-                        .Where(i => i.Catogories.Any(c => c.Name == typeData) ||
-                                    i.Submission.Id.ToString() == typeData)
-                        .ToListAsync();
+                var filter =int.Parse(typeData.Split('=')[1]);
+                if (filterTxt == "category")
+                {
+                    ideas = await _context.Ideas
+                                .Include(i => i.Catogories)
+                                .Include(i => i.Submission)
+                                .Include(i => i.User)
+                                .Where(i => i.CatogoryId == 0)
+                                .OrderByDescending(i => i.Id)
+                                .Skip((pageNumber - 1) * pageSize)
+                                .Take(pageSize)                                
+                                .ToListAsync();
 
+                    //ideas.Where(i => i.CatogoryId == 0);
+
+                    //var applicationDbContext = await _context.Ideas
+                    //            .Include(i => i.Submission)
+                    //            .Include(i => i.Reacts)
+                    //            .Include(i => i.User)
+                    //            .OrderBy(i => i.Datatime)
+                    //            //.Where(i => i.CatogoryId == 0)
+                    //            .ToListAsync();
+                }
+                if (filterTxt == "submission")
+                {
+                    ideas = await _context.Ideas
+                                .Include(i => i.Catogories)
+                                .Include(i => i.Submission)
+                                .Include(i => i.User)
+                                .Where(i => i.SubmissionId == filter)
+                                .OrderByDescending(i => i.Id)
+                                .Skip((pageNumber - 1) * pageSize)
+                                .Take(pageSize)
+                                .ToListAsync();
+                }
+                var count = ideas.Count();
+                var totalPages = (int)Math.Ceiling(count / (double)pageSize);
+
+                ViewBag.TotalPages = totalPages;
+                ViewBag.CurrentPage = pageNumber;
             }
             return View("Index", ideas);
         }
 
         //ton
         // search in admin/manager page
-        public async Task<IActionResult> SearchAdmin(string searchString)
+        public async Task<IActionResult> SearchAdmin(string searchString, int? page)
         {
+            int pageSize = 5;
+            int pageNumber = (page ?? 1);
+
             var ideas = await _context.Ideas
-                        .Include(i => i.Catogories)
-                        .Include(i => i.Submission)
-                        .Include(i => i.User)
-                        .OrderByDescending(i => i.Id)
-                        .ToListAsync();
-
-           
-
+                            .Include(i => i.Catogories)
+                            .Include(i => i.Submission)
+                            .Include(i => i.User)
+                            .OrderByDescending(i => i.Id)
+                            .Skip((pageNumber - 1) * pageSize)
+                            .Take(pageSize)
+                            .ToListAsync();
             // Distinct() lọc kết quả trùng
-            var Catogories = await _context.Catogorys.Select(i => i.Name).Distinct().ToListAsync();
-
+            var Catogories = await _context.Catogorys.ToListAsync();
             var Submissions = await _context.Submissions.Select(i => i.Id).Distinct().ToListAsync();
-
             var latestDay = _context.Ideas.Max(n => n.Datatime);
             var earliestDay = _context.Ideas.Min(n => n.Datatime);
 
             var allOptions = new List<SelectListItem>();
             allOptions.Add(new SelectListItem { Text = " -- Select --", Value = "" });
-            //allOptions.Add(new SelectListItem { Text = " No category found", Value = null });
             foreach (var Catogory in Catogories)
             {
-                allOptions.Add(new SelectListItem { Text = Catogory, Value = Catogory });
+                allOptions.Add(new SelectListItem { Text = Catogory.Name, Value = "category=" + Catogory.Id.ToString() });
             }
             foreach (var Submission in Submissions)
             {
-                allOptions.Add(new SelectListItem { Text = $"Submission Id: " + Submission, Value = Submission.ToString() });
+                allOptions.Add(new SelectListItem { Text = $"Submission Id: " + Submission, Value = "submission=" + Submission.ToString() });
             }
             ViewBag.SelectList = allOptions;
+
+
             if (string.IsNullOrEmpty(searchString))
             {
-                return View("Index", ideas);
+                return RedirectToAction(nameof(Index));
             }
 
             // data after search
@@ -161,7 +203,13 @@ namespace _1640WebApp.Controllers
                         .Where(n => n.Title.Contains(searchString) ||
                                     n.Text.Contains(searchString))
                         .OrderByDescending(n => n.Id)
+                        .Skip((pageNumber - 1) * pageSize)
+                        .Take(pageSize)
                         .ToListAsync();
+            var count = results.Count();
+            var totalPages = (int)Math.Ceiling(count / (double)pageSize);
+            ViewBag.TotalPages = totalPages;
+            ViewBag.CurrentPage = pageNumber;
 
             return View("Index", results);
         }
@@ -193,8 +241,8 @@ namespace _1640WebApp.Controllers
             ViewBag.UserEmail = userEmail;
 
             //ton
-            var newest = _context.Ideas.Max(n => n.Datatime);
-            var oldest = _context.Ideas.Min(n => n.Datatime);
+            var newest = _context.Ideas.MaxAsync(n => n.Datatime);
+            var oldest = _context.Ideas.MinAsync(n => n.Datatime);
 
             var allOptions = new List<SelectListItem>();
             allOptions.Add(new SelectListItem { Text = " -- Select --", Value = "" });
@@ -207,9 +255,10 @@ namespace _1640WebApp.Controllers
                                             .Include(i => i.Submission)
                                             .Include(i => i.Reacts)
                                             .Include(i => i.User)
-                                            .Include(i => i.Catogories)
-                                            //.OrderByDescending(i => i.Id)
+                                            .OrderBy(i => i.Datatime)
+                                            //.Where(i => i.CatogoryId == 0)
                                             .ToListAsync();
+            // var a = ideas.Where(i => i.CatogoryId == filter) ;
             return View(applicationDbContext);
         }
 
@@ -311,7 +360,7 @@ namespace _1640WebApp.Controllers
 
             if (string.IsNullOrEmpty(searchString))
             {
-                return View("ViewIdeas", a);
+                return RedirectToAction(nameof(Index));
             }
 
             // data after search
@@ -367,11 +416,27 @@ namespace _1640WebApp.Controllers
             }
             if(typeData == "newest")
             {
-                applicationDbContext.OrderByDescending(i => i.Datatime);
+                //applicationDbContext.OrderByDescending(i => i.Datatime);
+                //applicationDbContext = applicationDbContext.OrderByDescending(i => i.Datatime).ToList();
+                var a = await _context.Ideas
+                                .Include(i => i.Submission)
+                                .Include(i => i.Reacts)
+                                .Include(i => i.User)
+                                .OrderByDescending(i => i.Datatime)
+                                .ToListAsync();
+                return View("ViewIdeas", a);
             }
             if (typeData == "oldest")
             {
-                applicationDbContext.OrderBy(i => i.Datatime);
+                //applicationDbContext = applicationDbContext.OrderBy(i => i.Datatime).ToList();
+                //applicationDbContext.OrderBy(i => i.Datatime);
+                var a = await _context.Ideas
+                .Include(i => i.Submission)
+                .Include(i => i.Reacts)
+                .Include(i => i.User)
+                .OrderBy(i => i.Datatime)
+                .ToListAsync();
+                return View("ViewIdeas", a);
             }
 
             return View("ViewIdeas", applicationDbContext);
@@ -429,6 +494,7 @@ namespace _1640WebApp.Controllers
             var departmentId = user.DepartmentId;
             ViewBag.SubmissionId = submissionId;
             ViewBag.Categories = _context.Catogorys.ToList();
+
             ViewData["UserId"] = new SelectList(new List<SelectListItem> { new SelectListItem { Value = currentUserId, Text = currentUserId } }, "Value", "Text");
             ViewData["DepartmentId"] = new SelectList(new List<SelectListItem> { new SelectListItem { Value = departmentId.ToString(), Text = departmentId.ToString() } }, "Value", "Text");
 
@@ -440,7 +506,7 @@ namespace _1640WebApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(int submissionId, Idea idea, IFormCollection form, bool anonymous)
+        public async Task<IActionResult> Create(int submissionId, Idea idea, IFormCollection form, bool anonymous, int[] categories)
         {
 
             if (form.Files.Count >  0)
@@ -480,6 +546,10 @@ namespace _1640WebApp.Controllers
             idea.UserId = currentUserId;
             idea.DepartmentId = departmentId;
             idea.CreatorEmail = User.FindFirst(ClaimTypes.Email)?.Value;
+            //ton
+            int? categoryIdSelect = categories.FirstOrDefault();
+            idea.CatogoryId = categoryIdSelect;
+            //
             var categoryIds = form["categories"].ToString().Split(",");
             idea.Catogories = new List<Catogory>(); // khởi tạo list categories trước khi thêm vào           
             foreach (var categoryId in categoryIds)
@@ -490,6 +560,7 @@ namespace _1640WebApp.Controllers
                     if (category != null)
                     {
                         idea.Catogories.Add(category);
+
                     }
                 }
             }

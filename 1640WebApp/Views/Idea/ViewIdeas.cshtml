@@ -260,16 +260,17 @@
                         <p>Favourites</p>
                     </li>
                     <li>
-                        <i class="fa fa-star"></i>
-                        <div class="form-group border text-center border-info rounded p-0 ">
-                            @Html.DropDownList("SelectLists", (IEnumerable<SelectListItem>)ViewBag.SelectList, new { @class = "form-control", @id = "filter-sort" })
+                        <i class="fa fa-sort"></i>
+                        <div class="form-group border text-center border-info rounded p-0" style="padding-left: 10px">
+                            @Html.DropDownList("SelectList", (IEnumerable<SelectListItem>)ViewBag.SelectList, new { @class = "form-control", @id = "filter-sort" })
                         </div>
                     </li>
                 </ul>
                 @*
                     script để lọc khi user chọn type sẽ trả về kết quả mà không cần nhấn submit
                     sử dụng ajax thêm nó bên dưới trên thẻ </body>
-                *@                
+                *@        
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
                 <script>
                     $(document).ready(function () {
                         $('#filter-sort').change(function () {
@@ -373,9 +374,8 @@
                 </div>
 
 
-                @foreach (var item in Model.OrderByDescending(i => i.Datatime))
-                {
-                    
+                @foreach (var item in Model)
+                {                    
                     <div class="post">
                         <div class="post-top">
                             @if (item.Anonymous == true)
@@ -387,7 +387,7 @@
                                     <p class="name">Incognito</p>
                                     <span class="time">@Html.DisplayFor(modelItem => item.Datatime)</span>
                                 </div>
-                                <div style="margin-left:200px;">
+                                <div style="margin-left:110px;">
                                     @if (User.Identity.Name == item.CreatorEmail)
                                     {
                                         <a class="lele" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
@@ -421,7 +421,7 @@
                                     <p class="name">@Html.DisplayFor(modelItem => item.User.UserName)</p>
                                     <span class="time">@Html.DisplayFor(modelItem => item.Datatime)</span>
                                 </div>
-                                <div style="margin-left:200px;">
+                                <div style="margin-left:110px;">
                                     @if (User.Identity.Name == item.CreatorEmail)
                                     {
                                         <a class="lele" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
@@ -662,7 +662,7 @@
             </div>
         </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
 </body>
 
 

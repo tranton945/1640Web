@@ -98,22 +98,22 @@
             {
                 <tr>
                     <td>
-                        @*@Html.DisplayFor(modelItem => item.Title)*@
                         <span class="truncated-text-Title">@item.Title</span>
                     </td>
                     <td>
-                        @*@Html.DisplayFor(modelItem => item.Text)*@
                         <span class="truncated-text-Text">@item.Text</span>
                     </td>
                     <td>
-                        @if (item.Catogories.FirstOrDefault() != null)
+                        @if (ViewBag.Cate != null)
                         {
-                            <p>@string.Join(", ", item.Catogories.Select(c => c.Name))</p>
-                        }
-                        else
-                        {
-                            <p>No category found</p>
-                        }
+                            foreach (var category in ViewBag.Cate)
+                            {
+                                if (item.CatogoryId == category.Id)
+                                {
+                                    <p>@category.Name</p>
+                                }
+                            }
+                        }                       
 
                     </td>
                     <td>
@@ -129,6 +129,16 @@
             }
         </tbody>
     </table>
+    <nav aria-label="...">
+        <ul class="pagination">
+            @for (int i = 1; i <= ViewBag.TotalPages; i++)
+            {
+                <li class="page-item @(i == ViewBag.CurrentPage ? "active" : "")">
+                    <a class="page-link" href="?page=@i">@i</a>
+                </li>
+            }
+        </ul>
+    </nav>
 </div>
 
 @*chuyển đổi text dài quá số lượng sang ... sử dụng jQuery *@
@@ -159,11 +169,9 @@
     $(document).ready(function () {
         $('#filter-sort-admin').change(function () {
             // lấy giá trị được chọn trong dropdown list
-            //var type = $('#filter-notification').val();
             var type = $(this).val();
             // truyền gía trị user đã chọn vào controler bằng đường link
             // Index sẽ nhận và sử lý data
-            //window.location.href = "/Notifications/Index?type=" + type;
             window.location.href = '@Url.Action("FilterAdmin", "Idea")?typeData=' + type;
         });
     });

@@ -353,7 +353,7 @@
                                     <p class="name">Incognito</p>
                                     <span class="time">@Html.DisplayFor(modelItem => item.Datatime)</span>
                                 </div>
-                                <div style="margin-left:200px;">
+                                <div style="margin-left:110px;">
                                     @if (User.Identity.Name == item.CreatorEmail)
                                     {
                                         <a class="lele" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
@@ -387,7 +387,7 @@
                                     <p class="name">@Html.DisplayFor(modelItem => item.User.Fullname_)</p>
                                     <span class="time">@Html.DisplayFor(modelItem => item.Datatime)</span>
                                 </div>
-                                <div style="margin-left:200px;">
+                                <div style="margin-left:110px;">
                                     @if (User.Identity.Name == item.CreatorEmail)
                                     {
                                         <a class="lele" asp-action="Edit" asp-route-id="@item.Id">Edit</a>

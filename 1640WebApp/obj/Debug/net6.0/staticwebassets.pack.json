@@ -45,6 +45,14 @@
       "PackagePath": "staticwebassets\\Uploads\\ef7f6045-f093-4ae5-a8a7-4a0b895fac04.jpg"
     },
     {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserFolders\\085f67c8-9372-467f-8413-d9706ea7b36d.jpg",
+      "PackagePath": "staticwebassets\\UserFolders\\085f67c8-9372-467f-8413-d9706ea7b36d.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserFolders\\18f4f6db-68d6-48c6-ae30-2be75e7424f2.png",
+      "PackagePath": "staticwebassets\\UserFolders\\18f4f6db-68d6-48c6-ae30-2be75e7424f2.png"
+    },
+    {
       "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserFolders\\6b8313a3-a1e6-4f3d-b44e-8558c0be4b6e.doc",
       "PackagePath": "staticwebassets\\UserFolders\\6b8313a3-a1e6-4f3d-b44e-8558c0be4b6e.doc"
     },
@@ -55,6 +63,26 @@
     {
       "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserFolders\\82a4519b-0e2e-402b-8e39-2ae981fa21d1.jpg",
       "PackagePath": "staticwebassets\\UserFolders\\82a4519b-0e2e-402b-8e39-2ae981fa21d1.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserFolders\\c783a0e6-4740-4aa6-a339-ca7ce558eeac.png",
+      "PackagePath": "staticwebassets\\UserFolders\\c783a0e6-4740-4aa6-a339-ca7ce558eeac.png"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserFolders\\fa6db38c-0cd3-4440-a6d3-e73db1b35fbe.jpg",
+      "PackagePath": "staticwebassets\\UserFolders\\fa6db38c-0cd3-4440-a6d3-e73db1b35fbe.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\009e79df-d1d6-4533-8178-ab7c3c96e9ae.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\009e79df-d1d6-4533-8178-ab7c3c96e9ae.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\0a4563d3-ca6e-45ec-9e99-24d97166b00c.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\0a4563d3-ca6e-45ec-9e99-24d97166b00c.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\11b368a3-500c-4c20-865c-a30782799659.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\11b368a3-500c-4c20-865c-a30782799659.jpg"
     },
     {
       "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\17e24ca3-b53b-4efe-a758-1bce0a76d6bf.jpg",
@@ -73,40 +101,168 @@
       "PackagePath": "staticwebassets\\UserImages\\2723e840-b526-43ad-92fb-1750f7ef912a.jpg"
     },
     {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\27b7b435-72ef-45c5-8770-af1312eb58b0.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\27b7b435-72ef-45c5-8770-af1312eb58b0.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\282b21b2-c406-41e1-b22f-45c299f92831.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\282b21b2-c406-41e1-b22f-45c299f92831.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\297fc7be-8019-4c64-a9f6-dd4e3a0f9465.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\297fc7be-8019-4c64-a9f6-dd4e3a0f9465.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\2d486ee2-3d3d-47b0-bce1-a79e5b7164c8.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\2d486ee2-3d3d-47b0-bce1-a79e5b7164c8.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\2f90219c-c4fa-40d2-a293-5c0cf8ff4b97.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\2f90219c-c4fa-40d2-a293-5c0cf8ff4b97.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\33e71fa7-41a7-4aff-8ee3-728fb7d8bbf8.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\33e71fa7-41a7-4aff-8ee3-728fb7d8bbf8.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\351678ea-9e98-4bed-a14c-8ba7d2532d26.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\351678ea-9e98-4bed-a14c-8ba7d2532d26.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\36125ca5-d261-4dbe-bef7-0cd85299583d.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\36125ca5-d261-4dbe-bef7-0cd85299583d.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\3b3ccbd9-4a4c-4d6f-b392-20783c2bd321.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\3b3ccbd9-4a4c-4d6f-b392-20783c2bd321.jpg"
+    },
+    {
       "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\3fb71668-1d52-4daa-9f57-1a043f8d3197.jpg",
       "PackagePath": "staticwebassets\\UserImages\\3fb71668-1d52-4daa-9f57-1a043f8d3197.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\4223706e-e4fa-4849-af8f-67f550174a7c.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\4223706e-e4fa-4849-af8f-67f550174a7c.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\44b77ab3-7e4e-437e-9b50-fe8e9a594002.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\44b77ab3-7e4e-437e-9b50-fe8e9a594002.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\4c29a21f-4bbd-400c-8463-dadebfc1bf28.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\4c29a21f-4bbd-400c-8463-dadebfc1bf28.jpg"
     },
     {
       "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\50b45822-8c1d-4bd1-a7cb-ab4bef6ab0bc.jpg",
       "PackagePath": "staticwebassets\\UserImages\\50b45822-8c1d-4bd1-a7cb-ab4bef6ab0bc.jpg"
     },
     {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\54d9065b-e441-44d4-9d41-5f4935d8c1e1.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\54d9065b-e441-44d4-9d41-5f4935d8c1e1.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\59cc7102-6fc9-4065-bef6-4ceefa918ff9.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\59cc7102-6fc9-4065-bef6-4ceefa918ff9.jpg"
+    },
+    {
       "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\5e96fc44-778e-4bb4-8760-f1c94e64fb24.jpg",
       "PackagePath": "staticwebassets\\UserImages\\5e96fc44-778e-4bb4-8760-f1c94e64fb24.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\6333952f-f7bd-4c89-b46c-c278e91a7ec4.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\6333952f-f7bd-4c89-b46c-c278e91a7ec4.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\6f5a23b2-233a-4afa-85d4-66896ca85c4e.png",
+      "PackagePath": "staticwebassets\\UserImages\\6f5a23b2-233a-4afa-85d4-66896ca85c4e.png"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\7c5d4060-2090-408e-8910-eb4523614162.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\7c5d4060-2090-408e-8910-eb4523614162.jpg"
     },
     {
       "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\7e8287cd-c263-4051-9e9b-fda9a21a8752.png",
       "PackagePath": "staticwebassets\\UserImages\\7e8287cd-c263-4051-9e9b-fda9a21a8752.png"
     },
     {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\7ecd6ce7-e739-467c-a662-87a3d5ffbaff.png",
+      "PackagePath": "staticwebassets\\UserImages\\7ecd6ce7-e739-467c-a662-87a3d5ffbaff.png"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\7f2df681-a570-4a6b-82e7-b84857ef9b9d.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\7f2df681-a570-4a6b-82e7-b84857ef9b9d.jpg"
+    },
+    {
       "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\82a4519b-0e2e-402b-8e39-2ae981fa21d1.jpg",
       "PackagePath": "staticwebassets\\UserImages\\82a4519b-0e2e-402b-8e39-2ae981fa21d1.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\88e69777-81e1-413c-982d-deeba342f087.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\88e69777-81e1-413c-982d-deeba342f087.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\8d02a5f4-aafc-453d-b817-54bef3f15f2e.png",
+      "PackagePath": "staticwebassets\\UserImages\\8d02a5f4-aafc-453d-b817-54bef3f15f2e.png"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\90135859-f756-4ed0-9912-74e0ed230916.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\90135859-f756-4ed0-9912-74e0ed230916.jpg"
     },
     {
       "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\92c9d7e1-323f-422e-854e-9bb0a3082608.jpeg",
       "PackagePath": "staticwebassets\\UserImages\\92c9d7e1-323f-422e-854e-9bb0a3082608.jpeg"
     },
     {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\957403a3-d3ae-437c-85c3-27f623d0e76a.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\957403a3-d3ae-437c-85c3-27f623d0e76a.jpg"
+    },
+    {
       "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\9a97642e-16f8-4818-bfa6-b25d4de6cedb.png",
       "PackagePath": "staticwebassets\\UserImages\\9a97642e-16f8-4818-bfa6-b25d4de6cedb.png"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\a2926949-598e-4d9d-8059-0db57bf97d44.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\a2926949-598e-4d9d-8059-0db57bf97d44.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\a5cc200c-37a9-4294-8399-088dac623a02.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\a5cc200c-37a9-4294-8399-088dac623a02.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\adaf8724-53cd-4951-b4ff-a0c342a9d087.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\adaf8724-53cd-4951-b4ff-a0c342a9d087.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\b35ff3c0-b2f5-45b0-b803-42eb0d47dadb.png",
+      "PackagePath": "staticwebassets\\UserImages\\b35ff3c0-b2f5-45b0-b803-42eb0d47dadb.png"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\bd9971b5-f1b3-4090-9c5a-a705037c1222.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\bd9971b5-f1b3-4090-9c5a-a705037c1222.jpg"
     },
     {
       "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\c557be93-7580-4442-bcab-831751eb0184.jpg",
       "PackagePath": "staticwebassets\\UserImages\\c557be93-7580-4442-bcab-831751eb0184.jpg"
     },
     {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\c9a2e0c5-b188-42ba-a297-b03891943731.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\c9a2e0c5-b188-42ba-a297-b03891943731.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\c9fb009b-84a8-40d0-b889-83ac3c334553.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\c9fb009b-84a8-40d0-b889-83ac3c334553.jpg"
+    },
+    {
       "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\cd29a988-0079-4514-bff6-e6f2002f49bb.jpg",
       "PackagePath": "staticwebassets\\UserImages\\cd29a988-0079-4514-bff6-e6f2002f49bb.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\dab2eed9-5949-434f-80e4-0fea634755af.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\dab2eed9-5949-434f-80e4-0fea634755af.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\dc0e40ed-73f6-4ed9-af7e-c13f22cce253.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\dc0e40ed-73f6-4ed9-af7e-c13f22cce253.jpg"
     },
     {
       "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\e0b72a14-b9a7-4929-af0a-662a63f68e3d.jpg",
@@ -117,8 +273,28 @@
       "PackagePath": "staticwebassets\\UserImages\\e284c180-42a1-4a18-a5bf-656f4ed45335.jpg"
     },
     {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\e5acb0be-7091-4cd7-8912-580aa8c391a1.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\e5acb0be-7091-4cd7-8912-580aa8c391a1.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\e642b49f-e020-4492-a98f-b67db1a446fc.png",
+      "PackagePath": "staticwebassets\\UserImages\\e642b49f-e020-4492-a98f-b67db1a446fc.png"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\eaf04218-36b6-449d-a761-295da4ad0e7f.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\eaf04218-36b6-449d-a761-295da4ad0e7f.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\ebdf82f5-df80-4e0f-831e-64b74fc73c0a.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\ebdf82f5-df80-4e0f-831e-64b74fc73c0a.jpg"
+    },
+    {
       "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\ecf26792-d57f-4f1a-8ed8-a645a33dd0ab.jpg",
       "PackagePath": "staticwebassets\\UserImages\\ecf26792-d57f-4f1a-8ed8-a645a33dd0ab.jpg"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\f307930c-b7b8-4380-b5a8-14540a64045f.jpg",
+      "PackagePath": "staticwebassets\\UserImages\\f307930c-b7b8-4380-b5a8-14540a64045f.jpg"
     },
     {
       "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\css\\AddIdeas.css",

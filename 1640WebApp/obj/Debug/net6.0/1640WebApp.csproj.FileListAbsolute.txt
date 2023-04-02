@@ -582,6 +582,15 @@ D:\1640WebApp\1640WebApp\bin\Debug\net6.0\System.Web.WebPages.Razor.dll
 D:\1640WebApp\1640WebApp\bin\Debug\net6.0\System.Web.WebPages.dll
 D:\1640WebApp\1640WebApp\bin\Debug\net6.0\MimeKit.dll
 D:\1640WebApp\1640WebApp\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\obj\Debug\net6.0\1640WebApp.csproj.AssemblyReference.cache
+D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\obj\Debug\net6.0\1640WebApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\obj\Debug\net6.0\1640WebApp.AssemblyInfoInputs.cache
+D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\obj\Debug\net6.0\1640WebApp.AssemblyInfo.cs
+D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\obj\Debug\net6.0\1640WebApp.csproj.CoreCompileInputs.cache
+D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\obj\Debug\net6.0\1640WebApp.MvcApplicationPartsAssemblyInfo.cs
+D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\obj\Debug\net6.0\1640WebApp.MvcApplicationPartsAssemblyInfo.cache
+D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\obj\Debug\net6.0\1640WebApp.RazorAssemblyInfo.cache
+D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\obj\Debug\net6.0\1640WebApp.RazorAssemblyInfo.cs
 D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\bin\Debug\net6.0\appsettings.Development.json
 D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\bin\Debug\net6.0\appsettings.json
 D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\bin\Debug\net6.0\1640WebApp.staticwebassets.runtime.json
@@ -856,15 +865,6 @@ D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\bin\Debug\net6.0\runtimes\win\l
 D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
-D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\obj\Debug\net6.0\1640WebApp.csproj.AssemblyReference.cache
-D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\obj\Debug\net6.0\1640WebApp.GeneratedMSBuildEditorConfig.editorconfig
-D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\obj\Debug\net6.0\1640WebApp.AssemblyInfoInputs.cache
-D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\obj\Debug\net6.0\1640WebApp.AssemblyInfo.cs
-D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\obj\Debug\net6.0\1640WebApp.csproj.CoreCompileInputs.cache
-D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\obj\Debug\net6.0\1640WebApp.MvcApplicationPartsAssemblyInfo.cs
-D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\obj\Debug\net6.0\1640WebApp.MvcApplicationPartsAssemblyInfo.cache
-D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\obj\Debug\net6.0\1640WebApp.RazorAssemblyInfo.cache
-D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\obj\Debug\net6.0\1640WebApp.RazorAssemblyInfo.cs
 D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\obj\Debug\net6.0\staticwebassets\msbuild.1640WebApp.Microsoft.AspNetCore.StaticWebAssets.props
 D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\obj\Debug\net6.0\staticwebassets\msbuild.build.1640WebApp.props
 D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.1640WebApp.props

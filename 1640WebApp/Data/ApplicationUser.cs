@@ -72,10 +72,7 @@ namespace _1640WebApp.Data
     public class Catogory
     {
         public int Id { get; set; }
-        public string? Name { get; set; } 
-
-        
-
+        public string? Name { get; set; }    
     }
 
     [Table("Departments")]
