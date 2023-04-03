@@ -83,19 +83,15 @@ namespace _1640WebApp.Controllers
         }
         //ton
         //sort in admin/manager page
-        public async Task<IActionResult> FilterAdmin(string typeData, int? page)
+        public async Task<IActionResult> FilterAdmin(string typeData)
         {
             var filterTxt = typeData.Split('=')[0];
-            int pageSize = 5;
-            int pageNumber = (page ?? 1);
 
             var ideas = await _context.Ideas
                             .Include(i => i.Catogories)
                             .Include(i => i.Submission)
                             .Include(i => i.User)
                             .OrderByDescending(i => i.Id)
-                            .Skip((pageNumber - 1) * pageSize)
-                            .Take(pageSize)
                             .ToListAsync();
 
             // Distinct() lọc kết quả trùng
@@ -125,21 +121,9 @@ namespace _1640WebApp.Controllers
                                 .Include(i => i.Catogories)
                                 .Include(i => i.Submission)
                                 .Include(i => i.User)
-                                .Where(i => i.CatogoryId == 0)
-                                .OrderByDescending(i => i.Id)
-                                .Skip((pageNumber - 1) * pageSize)
-                                .Take(pageSize)                                
+                                .Where(i => i.CatogoryId == filter)
+                                .OrderByDescending(i => i.Id)                             
                                 .ToListAsync();
-
-                    //ideas.Where(i => i.CatogoryId == 0);
-
-                    //var applicationDbContext = await _context.Ideas
-                    //            .Include(i => i.Submission)
-                    //            .Include(i => i.Reacts)
-                    //            .Include(i => i.User)
-                    //            .OrderBy(i => i.Datatime)
-                    //            //.Where(i => i.CatogoryId == 0)
-                    //            .ToListAsync();
                 }
                 if (filterTxt == "submission")
                 {
@@ -149,33 +133,23 @@ namespace _1640WebApp.Controllers
                                 .Include(i => i.User)
                                 .Where(i => i.SubmissionId == filter)
                                 .OrderByDescending(i => i.Id)
-                                .Skip((pageNumber - 1) * pageSize)
-                                .Take(pageSize)
                                 .ToListAsync();
                 }
-                var count = ideas.Count();
-                var totalPages = (int)Math.Ceiling(count / (double)pageSize);
-
-                ViewBag.TotalPages = totalPages;
-                ViewBag.CurrentPage = pageNumber;
+                var count = ideas.Count();                
+                ViewBag.Cate = Catogories;
             }
             return View("Index", ideas);
         }
 
         //ton
         // search in admin/manager page
-        public async Task<IActionResult> SearchAdmin(string searchString, int? page)
+        public async Task<IActionResult> SearchAdmin(string searchString)
         {
-            int pageSize = 5;
-            int pageNumber = (page ?? 1);
-
             var ideas = await _context.Ideas
                             .Include(i => i.Catogories)
                             .Include(i => i.Submission)
                             .Include(i => i.User)
                             .OrderByDescending(i => i.Id)
-                            .Skip((pageNumber - 1) * pageSize)
-                            .Take(pageSize)
                             .ToListAsync();
             // Distinct() lọc kết quả trùng
             var Catogories = await _context.Catogorys.ToListAsync();
@@ -210,13 +184,8 @@ namespace _1640WebApp.Controllers
                         .Where(n => n.Title.Contains(searchString) ||
                                     n.Text.Contains(searchString))
                         .OrderByDescending(n => n.Id)
-                        .Skip((pageNumber - 1) * pageSize)
-                        .Take(pageSize)
                         .ToListAsync();
             var count = results.Count();
-            var totalPages = (int)Math.Ceiling(count / (double)pageSize);
-            ViewBag.TotalPages = totalPages;
-            ViewBag.CurrentPage = pageNumber;
 
             return View("Index", results);
         }

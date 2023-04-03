@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using _1640WebApp.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace _1640WebApp.Data
@@ -17,5 +18,6 @@ namespace _1640WebApp.Data
         public DbSet<CView> CViews { get; set; }
         public DbSet<React> Reacts { get; set; }
         public DbSet<Submission> Submissions { get; set; }
+        public DbSet<tNotification> tNotifications { get; set; }
     }
 }

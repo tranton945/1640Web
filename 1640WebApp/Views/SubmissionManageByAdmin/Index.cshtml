@@ -108,6 +108,15 @@
                                                                     </button>
                                                                 </form>
                                                             </li>
+                                                            <li class="list-inline-item">
+                                                                @if (submission.IsClosed)
+                                                                {
+                                                                    <button class="btn btn-primary btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Zip">                                                                        
+                                                                        <a asp-action="Download" asp-route-id="@submission.Id"><i class="fa fa-file-archive-o" style="color: white;"></i></a>
+                                                                    </button>
+                                                                }
+                                                                
+                                                            </li>
                                                         </ul>
                                                     </th>
                                                 </tr>

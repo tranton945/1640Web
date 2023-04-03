@@ -300,3 +300,5 @@ D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\obj\Debug\net6.0\refint\1640Web
 D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\obj\Debug\net6.0\1640WebApp.pdb
 D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\obj\Debug\net6.0\1640WebApp.genruntimeconfig.cache
 D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\obj\Debug\net6.0\ref\1640WebApp.dll
+D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\bin\Debug\net6.0\DotNetZip.dll

@@ -1,8 +1,15 @@
 ﻿using _1640WebApp.Data;
+using Ionic.Zip;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Org.BouncyCastle.Crypto;
+using System.IO;
+using System.IO.Compression;
+using System.Text;
+
 
 namespace _1640WebApp.Controllers
 {
@@ -10,16 +17,53 @@ namespace _1640WebApp.Controllers
     public class SubmissionManageByAdminController : Controller
     {
         private readonly ApplicationDbContext _context;
-
-        public SubmissionManageByAdminController(ApplicationDbContext context)
+        private readonly IWebHostEnvironment _webHostEnvironment;
+        public SubmissionManageByAdminController(ApplicationDbContext context, IWebHostEnvironment webHostEnvironment)
         {
             _context = context;
+            _webHostEnvironment = webHostEnvironment;
         }
         public async Task<IActionResult> Index()
         {
             var submissions = await _context.Submissions.ToListAsync();
             return View(submissions);
         }
+
+        // downloda zip
+        public async Task<IActionResult> Download(int id) 
+        {
+            var ideas = _context.Ideas.Where(i => i.SubmissionId == id).ToList();
+
+            var fileDataList = new List<(string Name, byte[]? Data)>();
+
+            foreach (var idea in ideas)
+            {
+                if (idea.Data != null)
+                {
+                    var name = idea.FileName;
+                    var filePath = Path.Combine(_webHostEnvironment.WebRootPath, "UserFolders", Encoding.UTF8.GetString(idea.Data));
+                    var fileBytes = await System.IO.File.ReadAllBytesAsync(filePath);
+                    var extension = Path.GetExtension(idea.FilePath);
+                    var fName = $"file_{DateTime.Now:yyyyMMddHHmmssffff}{extension}";
+                    fileDataList.Add((fName, fileBytes));
+                }
+            }
+            using (var ms = new MemoryStream())
+            {
+                using (var zip = new Ionic.Zip.ZipFile())
+                {
+                    zip.UseZip64WhenSaving = Zip64Option.AsNecessary;
+                    foreach (var fileData in fileDataList)
+                    {
+                        zip.AddEntry(fileData.Name, fileData.Data);
+                    }
+                    zip.Save(ms);
+                }
+                var fileName = $"submission_{id}_files.zip";
+                return File(ms.ToArray(), "application/zip", fileName);
+            }
+        }
+
 
         public IActionResult Create()
         {
