@@ -302,3 +302,4 @@ D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\obj\Debug\net6.0\1640WebApp.gen
 D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\obj\Debug\net6.0\ref\1640WebApp.dll
 D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
 D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\bin\Debug\net6.0\DotNetZip.dll
+D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\obj\Debug\net6.0\scopedcss\Views\Shared\NewFolder\_Layout.cshtml.rz.scp.css
