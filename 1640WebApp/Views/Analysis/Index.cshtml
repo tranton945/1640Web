@@ -58,10 +58,6 @@
                             </div>
                         </div>
                         <hr class="dark horizontal my-0">
-                        <div class="card-footer p-3">
-                            @* tính % tăng/giảm so với quý trước*@
-                            <p class="mb-0"><span class="text-success text-sm font-weight-bolder">+55% </span>than last quarter</p>
-                        </div>
                     </div>
                 </div>
                 <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
@@ -76,10 +72,6 @@
                             </div>
                         </div>
                         <hr class="dark horizontal my-0">
-                        <div class="card-footer p-3">
-                            @* tính % tăng/giảm so với hôm qua*@
-                            <p class="mb-0"><span class="text-success text-sm font-weight-bolder">+3% </span>than yesterday </p>
-                        </div>
                     </div>
                 </div>
                 <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
@@ -94,10 +86,6 @@
                             </div>
                         </div>
                         <hr class="dark horizontal my-0">
-                        <div class="card-footer p-3">
-                            @* tính % tăng/giảm so với quý trước*@
-                            <p class="mb-0"><span class="text-danger text-sm font-weight-bolder">-2%</span> than last quarter</p>
-                        </div>
                     </div>
                 </div>
                 <div class="col-xl-3 col-sm-6">
@@ -112,10 +100,6 @@
                             </div>
                         </div>
                         <hr class="dark horizontal my-0">
-                        <div class="card-footer p-3">
-                            @* tính % tăng/giảm so với tháng trước*@
-                            <p class="mb-0"><span class="text-success text-sm font-weight-bolder">+5% </span>than month</p>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -133,11 +117,6 @@
                             <h6 class="mb-0 ">Submission Idea</h6>
                             <p class="text-sm ">Submission daily</p>
                             <hr class="dark horizontal">
-                            <div class="d-flex ">
-                                <i class="material-icons text-sm my-auto me-1">schedule</i>
-                                @* thời gian cuối cùng khi cập nhật chart*@
-                                <p class="mb-0 text-sm"> updated 2 days ago </p>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -151,14 +130,9 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <h6 class="mb-0 "> Daily Sales </h6>
-                            <p class="text-sm "> (<span class="font-weight-bolder">+15%</span>) increase in today sales. </p>
+                            <h6 class="mb-0 "> Submission Idea In Month </h6>
+                            <p class="text-sm "> Statistics of Ideas of the Month</p>
                             <hr class="dark horizontal">
-                            <div class="d-flex ">
-                                <i class="material-icons text-sm my-auto me-1">schedule</i>
-                                @* thời gian cuối cùng khi cập nhật chart*@
-                                <p class="mb-0 text-sm"> updated 4 min ago </p>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -172,14 +146,9 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <h6 class="mb-0 ">Completed Tasks</h6>
-                            <p class="text-sm ">Last Campaign Performance</p>
+                            <h6 class="mb-0 ">Completed Submission</h6>
+                            <p class="text-sm ">Data based on the final deadline of submission</p>
                             <hr class="dark horizontal">
-                            <div class="d-flex ">
-                                <i class="material-icons text-sm my-auto me-1">schedule</i>
-                                @* thời gian cuối cùng khi cập nhật chart*@
-                                <p class="mb-0 text-sm">just updated</p>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -194,22 +163,23 @@
     <script src="~/managerassets/js/plugins/smooth-scrollbar.min.js"></script>
     <script src="~/managerassets/js/plugins/chartjs.min.js"></script>
     <script>
+        var salesData = [5201, 4322, 1000, 5631, 735, 952, 422];
         var ctx = document.getElementById("chart-bars").getContext("2d");
-
         //pink chart
         new Chart(ctx, {
             type: "bar",
             data: {
-                labels: ["M", "T", "W", "T", "F", "S", "S"],
+                //labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+                labels: @Html.Raw(Json.Serialize(ViewBag.DayNames)),
                 datasets: [{
-                    label: "Sales",
+                    label: "Ideas",
                     tension: 0.4,
                     borderWidth: 0,
                     borderRadius: 4,
                     borderSkipped: false,
                     backgroundColor: "rgba(255, 255, 255, .8)",
                     //enter data here
-                    data: [5201, 4322, 1000, 5631, 5735, 8952, 1422],
+                    data: @Html.Raw(Json.Serialize(ViewBag.ideaData)),
                     maxBarThickness: 6
                 },],
             },
@@ -282,7 +252,8 @@
         new Chart(ctx2, {
             type: "line",
             data: {
-                labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                //labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                labels: @Html.Raw(Json.Serialize(ViewBag.MonthNames)),
                 datasets: [{
                     label: "Mobile apps",
                     tension: 0,
@@ -296,7 +267,8 @@
                     backgroundColor: "transparent",
                     fill: true,
                     //enter data here
-                    data: [50, 40, 300, 320, 500, 350, 200, 230, 500],
+                    //data: [50, 40, 300, 320, 500, 350, 200, 230, 500],
+                    data: @Html.Raw(Json.Serialize(ViewBag.IdeaInMonth)),
                     maxBarThickness: 6
 
                 }],
@@ -379,7 +351,8 @@
                     backgroundColor: "transparent",
                     fill: true,
                     //enter data here
-                    data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
+                    //data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
+                    data: @Html.Raw(Json.Serialize(ViewBag.SubmissionInMonth)),
                     maxBarThickness: 6
 
                 }],

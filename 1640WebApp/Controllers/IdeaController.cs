@@ -463,8 +463,23 @@ namespace _1640WebApp.Controllers
         }
 
         // GET: Ideas/Create
-        public async Task< IActionResult> Create(int submissionId, int fileId)
+        //public async Task< IActionResult> Create(int submissionId, int fileId)
+        //{
+        //    var user = await _userManager.GetUserAsync(HttpContext.User);
+        //    var currentUserId = user.Id;
+        //    var departmentId = user.DepartmentId;
+        //    ViewBag.SubmissionId = submissionId;
+        //    ViewBag.Categories = _context.Catogorys.ToList();
+        //    ViewData["UserId"] = new SelectList(new List<SelectListItem> { new SelectListItem { Value = currentUserId, Text = currentUserId } }, "Value", "Text");
+        //    ViewData["DepartmentId"] = new SelectList(new List<SelectListItem> { new SelectListItem { Value = departmentId.ToString(), Text = departmentId.ToString() } }, "Value", "Text");
+
+        //    return View();
+        //}
+        // GET: Ideas/Create
+        public async Task<IActionResult> Create(int submissionId, int fileId)
         {
+            var idea = new Idea();
+            idea.Datatime = DateTime.Now;
             var user = await _userManager.GetUserAsync(HttpContext.User);
             var currentUserId = user.Id;
             var departmentId = user.DepartmentId;
@@ -473,10 +488,10 @@ namespace _1640WebApp.Controllers
             ViewData["UserId"] = new SelectList(new List<SelectListItem> { new SelectListItem { Value = currentUserId, Text = currentUserId } }, "Value", "Text");
             ViewData["DepartmentId"] = new SelectList(new List<SelectListItem> { new SelectListItem { Value = departmentId.ToString(), Text = departmentId.ToString() } }, "Value", "Text");
 
-            return View();
+            return View(idea);
         }
 
-        
+
         // POST: Ideas/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.

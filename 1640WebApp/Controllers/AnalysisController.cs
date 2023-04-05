@@ -6,9 +6,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using _1640WebApp.Data;
+using Microsoft.Ajax.Utilities;
+using Microsoft.AspNetCore.Authorization;
+using System.Globalization;
 
 namespace _1640WebApp.Controllers
 {
+    [Authorize(Roles = "Admin, Manager")]
     public class AnalysisController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -32,6 +36,77 @@ namespace _1640WebApp.Controllers
             ViewBag.todaySubIdea = todaySubIdea.Count;
             ViewBag.totalSubIdea = idea.Count;
             ViewBag.totlaSubmission = totlaSubmission.Count;
+
+            //====================================
+            // tạo data cho pink chart
+            // Lấy ngày đầu tiên của tuần hiện tại
+            DateTime startOfWeek = DateTime.Today.AddDays(-(int)DateTime.Today.DayOfWeek);
+
+            // Lọc các idea với ngày tạo trong tuần
+            List<Idea> ideas = _context.Ideas
+                .Where(i => i.Datatime >= startOfWeek && i.Datatime < startOfWeek.AddDays(7))
+                .ToList();
+
+            // Tạo mảng salesData từ list idea ở trên
+            int[] ideaData = new int[7];
+            for (int i = 0; i < 7; i++)
+            {
+                DateTime dayOfWeek = startOfWeek.AddDays(i);
+                int count = ideas.Count(i => i.Datatime.Date == dayOfWeek.Date);
+                ideaData[i] = count;
+            }
+            ViewBag.IdeaData = ideaData;
+            //lấy tên các ngày dựa theo setting ngày của hệ thống
+            // AbbreviatedDayNames lấy tên ngày ngắn gọn
+            // DayNames lấy tên ngày đầy đủ
+            ViewBag.DayNames = System.Globalization.DateTimeFormatInfo.CurrentInfo.AbbreviatedDayNames;
+            
+            //=================================
+
+            //=================================
+            // idea in month
+            var ideasByMonth = _context.Ideas
+                .GroupBy(i => new { i.Datatime.Year, i.Datatime.Month })
+                .Select(g => new { Month = g.Key.Month, Count = g.Count() })
+                .ToList();
+
+            var currentDate = DateTime.Today;
+            var dataIdeas = new int[12];
+
+            for (int i = 0; i < 12; i++)
+            {
+                var month = i + 1;
+                var year = currentDate.Year;
+                var count = ideasByMonth.FirstOrDefault(m => m.Month == month)?.Count ?? 0;
+                dataIdeas[i] = count;
+            }
+            ViewBag.IdeaInMonth = dataIdeas;
+            // dùng where vì trong cách select DateTimeFormatInfo.CurrentInfo.AbbreviatedMonthNames
+            // kết quả là mảng 13 giá trị với giá trị cuối là rỗng
+            var MonthNames = DateTimeFormatInfo.CurrentInfo.AbbreviatedMonthNames
+                    .Where(m => !string.IsNullOrEmpty(m)).Take(12).ToArray();
+            ViewBag.MonthNames = MonthNames;
+            //=================================
+
+            //=================================
+            // Completed Submission
+            var submissionByMonth = _context.Submissions
+                .Where(s => s.FinalClosureTime != null)
+                .GroupBy(s => new { s.FinalClosureTime.Value.Year, s.FinalClosureTime.Value.Month })
+                .Select(g => new { Month = g.Key.Month, Count = g.Count() })
+                .ToList();
+            // code select tương tự như IdeaInMonth nhưng FinalClosureTime có kiểu dữ liệu DateTime? cho phép null nên dùng s.FinalClosureTime.Value.Year
+            var dataSubmission = new int[12];
+            for (int i = 0; i < 12; i++)
+            {
+                var month = i + 1;
+                var year = currentDate.Year;
+                var count = submissionByMonth.FirstOrDefault(m => m.Month == month)?.Count ?? 0;
+                dataSubmission[i] = count;
+            }
+            ViewBag.SubmissionInMonth = dataSubmission;
+
+            //=================================
 
             var applicationDbContext = _context.Ideas.Include(i => i.Submission).Include(i => i.User);
             return View(await applicationDbContext.ToListAsync());
