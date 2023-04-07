@@ -1,6 +1,10 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "Hash": "C5V04Twx6oHhh+ffesOhq8SuapVecDXNLE8IcZPY3Tw=",
+=======
+  "Hash": "PWsBSG0o58rwPs+8InL2eeUiEy6RnFhTAUx2Gz9r5hA=",
+>>>>>>> 647b76f33f399386707f964f5f0d9ab6bc91a9d3
   "Source": "1640WebApp",
   "BasePath": "_content/1640WebApp",
   "Mode": "Default",
@@ -8619,7 +8623,28 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\aa8845fc-37a1-4b18-9d1d-ea2fa39ffa41.jpeg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\1640Web\\1640WebApp\\wwwroot\\Uploads\\cfa0f2bc-496a-4589-bfc4-8d1734af4c42.jpg",
+=======
+      "Identity": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\Uploads\\b181bab3-8f5f-4185-a82e-644b5a10bb6c.jpg",
+      "SourceId": "1640WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\",
+      "BasePath": "_content/1640WebApp",
+      "RelativePath": "Uploads/b181bab3-8f5f-4185-a82e-644b5a10bb6c.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\b181bab3-8f5f-4185-a82e-644b5a10bb6c.jpg"
+    },
+    {
+      "Identity": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\Uploads\\cfa0f2bc-496a-4589-bfc4-8d1734af4c42.jpg",
+>>>>>>> 647b76f33f399386707f964f5f0d9ab6bc91a9d3
       "SourceId": "1640WebApp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\1640Web\\1640WebApp\\wwwroot\\",
@@ -8942,7 +8967,28 @@
       "OriginalItemSpec": "wwwroot\\UserFolders\\73dc463e-479e-4f49-81c2-141ff420b25f.pdf"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\1640Web\\1640WebApp\\wwwroot\\UserFolders\\82a4519b-0e2e-402b-8e39-2ae981fa21d1.jpg",
+=======
+      "Identity": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserFolders\\828e6321-974b-4ff8-b4cd-5587d5bf711c.zip",
+      "SourceId": "1640WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\",
+      "BasePath": "_content/1640WebApp",
+      "RelativePath": "UserFolders/828e6321-974b-4ff8-b4cd-5587d5bf711c.zip",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\UserFolders\\828e6321-974b-4ff8-b4cd-5587d5bf711c.zip"
+    },
+    {
+      "Identity": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserFolders\\82a4519b-0e2e-402b-8e39-2ae981fa21d1.jpg",
+>>>>>>> 647b76f33f399386707f964f5f0d9ab6bc91a9d3
       "SourceId": "1640WebApp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\1640Web\\1640WebApp\\wwwroot\\",
@@ -8959,7 +9005,45 @@
       "OriginalItemSpec": "wwwroot\\UserFolders\\82a4519b-0e2e-402b-8e39-2ae981fa21d1.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\1640Web\\1640WebApp\\wwwroot\\UserFolders\\c783a0e6-4740-4aa6-a339-ca7ce558eeac.png",
+=======
+      "Identity": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserFolders\\a5012116-2928-4c0c-bee9-3f95fce67a6a.jpg",
+      "SourceId": "1640WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\",
+      "BasePath": "_content/1640WebApp",
+      "RelativePath": "UserFolders/a5012116-2928-4c0c-bee9-3f95fce67a6a.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\UserFolders\\a5012116-2928-4c0c-bee9-3f95fce67a6a.jpg"
+    },
+    {
+      "Identity": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserFolders\\c35bc3ec-7b57-4c62-9a16-4004b2410eca.jpg",
+      "SourceId": "1640WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\",
+      "BasePath": "_content/1640WebApp",
+      "RelativePath": "UserFolders/c35bc3ec-7b57-4c62-9a16-4004b2410eca.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\UserFolders\\c35bc3ec-7b57-4c62-9a16-4004b2410eca.jpg"
+    },
+    {
+      "Identity": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserFolders\\c783a0e6-4740-4aa6-a339-ca7ce558eeac.png",
+>>>>>>> 647b76f33f399386707f964f5f0d9ab6bc91a9d3
       "SourceId": "1640WebApp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\1640Web\\1640WebApp\\wwwroot\\",
@@ -8976,7 +9060,28 @@
       "OriginalItemSpec": "wwwroot\\UserFolders\\c783a0e6-4740-4aa6-a339-ca7ce558eeac.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\1640Web\\1640WebApp\\wwwroot\\UserFolders\\ee84e9aa-de6f-45e4-9929-3408d89ab3d4.jpg",
+=======
+      "Identity": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserFolders\\da90523d-4eb9-4a66-9561-17da66d47f95.jpg",
+      "SourceId": "1640WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\",
+      "BasePath": "_content/1640WebApp",
+      "RelativePath": "UserFolders/da90523d-4eb9-4a66-9561-17da66d47f95.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\UserFolders\\da90523d-4eb9-4a66-9561-17da66d47f95.jpg"
+    },
+    {
+      "Identity": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserFolders\\ee84e9aa-de6f-45e4-9929-3408d89ab3d4.jpg",
+>>>>>>> 647b76f33f399386707f964f5f0d9ab6bc91a9d3
       "SourceId": "1640WebApp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\1640Web\\1640WebApp\\wwwroot\\",
@@ -9503,7 +9608,28 @@
       "OriginalItemSpec": "wwwroot\\UserImages\\6333952f-f7bd-4c89-b46c-c278e91a7ec4.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\1640Web\\1640WebApp\\wwwroot\\UserImages\\67f124e9-3c60-4632-ab2b-af1db65676c6.jpg",
+=======
+      "Identity": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\66d6a10b-af43-4212-ba4c-496d721be9ff.jpg",
+      "SourceId": "1640WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\",
+      "BasePath": "_content/1640WebApp",
+      "RelativePath": "UserImages/66d6a10b-af43-4212-ba4c-496d721be9ff.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\UserImages\\66d6a10b-af43-4212-ba4c-496d721be9ff.jpg"
+    },
+    {
+      "Identity": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\67f124e9-3c60-4632-ab2b-af1db65676c6.jpg",
+>>>>>>> 647b76f33f399386707f964f5f0d9ab6bc91a9d3
       "SourceId": "1640WebApp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\1640Web\\1640WebApp\\wwwroot\\",
@@ -9877,7 +10003,28 @@
       "OriginalItemSpec": "wwwroot\\UserImages\\bd9971b5-f1b3-4090-9c5a-a705037c1222.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\1640Web\\1640WebApp\\wwwroot\\UserImages\\c557be93-7580-4442-bcab-831751eb0184.jpg",
+=======
+      "Identity": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\c500ed4a-d178-4555-b859-cf3d6ed894fa.jpg",
+      "SourceId": "1640WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\",
+      "BasePath": "_content/1640WebApp",
+      "RelativePath": "UserImages/c500ed4a-d178-4555-b859-cf3d6ed894fa.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\UserImages\\c500ed4a-d178-4555-b859-cf3d6ed894fa.jpg"
+    },
+    {
+      "Identity": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\c557be93-7580-4442-bcab-831751eb0184.jpg",
+>>>>>>> 647b76f33f399386707f964f5f0d9ab6bc91a9d3
       "SourceId": "1640WebApp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\1640Web\\1640WebApp\\wwwroot\\",
@@ -9996,7 +10143,28 @@
       "OriginalItemSpec": "wwwroot\\UserImages\\dc0e40ed-73f6-4ed9-af7e-c13f22cce253.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\1640Web\\1640WebApp\\wwwroot\\UserImages\\e090b5e8-49f0-4850-aac9-9d251c564548.png",
+=======
+      "Identity": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\dcb5406e-c23c-457f-9bf1-e65c3d9c17a7.jpg",
+      "SourceId": "1640WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\",
+      "BasePath": "_content/1640WebApp",
+      "RelativePath": "UserImages/dcb5406e-c23c-457f-9bf1-e65c3d9c17a7.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\UserImages\\dcb5406e-c23c-457f-9bf1-e65c3d9c17a7.jpg"
+    },
+    {
+      "Identity": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\e090b5e8-49f0-4850-aac9-9d251c564548.png",
+>>>>>>> 647b76f33f399386707f964f5f0d9ab6bc91a9d3
       "SourceId": "1640WebApp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\1640Web\\1640WebApp\\wwwroot\\",
@@ -10081,7 +10249,28 @@
       "OriginalItemSpec": "wwwroot\\UserImages\\e642b49f-e020-4492-a98f-b67db1a446fc.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\1640Web\\1640WebApp\\wwwroot\\UserImages\\eaf04218-36b6-449d-a761-295da4ad0e7f.jpg",
+=======
+      "Identity": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\ea191452-122c-46ea-949a-5ca835b88ee8.jpg",
+      "SourceId": "1640WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\",
+      "BasePath": "_content/1640WebApp",
+      "RelativePath": "UserImages/ea191452-122c-46ea-949a-5ca835b88ee8.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\UserImages\\ea191452-122c-46ea-949a-5ca835b88ee8.jpg"
+    },
+    {
+      "Identity": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\eaf04218-36b6-449d-a761-295da4ad0e7f.jpg",
+>>>>>>> 647b76f33f399386707f964f5f0d9ab6bc91a9d3
       "SourceId": "1640WebApp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\1640Web\\1640WebApp\\wwwroot\\",
@@ -10166,7 +10355,28 @@
       "OriginalItemSpec": "wwwroot\\UserImages\\f33e0af3-896b-4fef-a0f2-db04f463f684.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Admin\\Desktop\\1640Web\\1640WebApp\\wwwroot\\UserImages\\f8162dc9-896a-46b2-b480-bf7e22ee5e5e.jpg",
+=======
+      "Identity": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\f42d14aa-7b1b-42e3-992a-0f1cceb62b17.jpg",
+      "SourceId": "1640WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\",
+      "BasePath": "_content/1640WebApp",
+      "RelativePath": "UserImages/f42d14aa-7b1b-42e3-992a-0f1cceb62b17.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\UserImages\\f42d14aa-7b1b-42e3-992a-0f1cceb62b17.jpg"
+    },
+    {
+      "Identity": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\f8162dc9-896a-46b2-b480-bf7e22ee5e5e.jpg",
+>>>>>>> 647b76f33f399386707f964f5f0d9ab6bc91a9d3
       "SourceId": "1640WebApp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Desktop\\1640Web\\1640WebApp\\wwwroot\\",

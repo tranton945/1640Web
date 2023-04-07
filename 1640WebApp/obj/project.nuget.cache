@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "jfeVHI3m87xuaHoJXJ8+CzupOPRC67fLFatbGoag5PheOD0rLbOTx0ctp5ok11L3k8PrwRpl8vzaewERzyy6WQ==",
+  "dgSpecHash": "MN3ownxQVjDaBWWMq6sdb2EoNX28Kf7Wr1m7DpMhIysVRAD7oddUtXzo+RMMUspGRPx6bbduHkKl6x9xTolLdw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Admin\\Desktop\\1640Web\\1640WebApp\\1640WebApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\antlr\\3.4.1.9004\\antlr.3.4.1.9004.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\bodi\\1.5.0\\bodi.1.5.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\dotnetzip\\1.16.0\\dotnetzip.1.16.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\gherkin\\19.0.3\\gherkin.19.0.3.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
@@ -211,6 +212,12 @@
     "C:\\Users\\Admin\\.nuget\\packages\\webgrease\\1.5.2\\webgrease.1.5.2.nupkg.sha512"
   ],
   "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Admin\\Desktop\\1640Web\\1640WebApp\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    },
     {
       "code": "NU1701",
       "level": "Warning",
