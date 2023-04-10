@@ -1625,6 +1625,10 @@
       "PackagePath": "staticwebassets\\css\\reactAnimation.css"
     },
     {
+      "Id": "C:\\Users\\Admin\\Desktop\\1640Web\\1640WebApp\\wwwroot\\css\\responsive.css",
+      "PackagePath": "staticwebassets\\css\\responsive.css"
+    },
+    {
       "Id": "C:\\Users\\Admin\\Desktop\\1640Web\\1640WebApp\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

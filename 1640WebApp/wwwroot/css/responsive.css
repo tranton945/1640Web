@@ -1,0 +1,5 @@
+﻿@media (max-width: 768px) {
+    .contain-create {
+        padding: 4px !important; /* Xóa giá trị padding-left */
+    }
+}

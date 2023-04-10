@@ -81,12 +81,12 @@
                     <div class="album-info__name">{{ currentTrack.artist }}</div>
                     <div class="album-info__track">{{ currentTrack.name }}</div>
                 </div>
-                <div class="progress__duration">{{ duration }}</div>
+                <div class="progress__duration2">{{ duration }}</div>
             </div>
-            <div class="progress__bar" v-on:click="clickProgress">
-                <div class="progress__current" :style="{ width : barWidth }"></div>
+            <div class="progress__bar2" v-on:click="clickProgress">
+                <div class="progress__current2" :style="{ width : barWidth }"></div>
             </div>
-            <div class="progress__time">{{ currentTime }}</div>
+            <div class="progress__time2">{{ currentTime }}</div>
         </div>
         <div v-cloak></div>
     </div>
