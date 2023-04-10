@@ -168,8 +168,7 @@ namespace _1640WebApp.Data
         public string To { get; set; }
         public string Subject { get; set; }
         public string Body { get; set; }
-        public string From = "universityofgreenwich0102@gmail.com";
-        public string Password = "123456789Aa@123456789";
+        
 
     }
 
