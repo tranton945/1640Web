@@ -38,7 +38,40 @@
             margin-right: auto;
             text-align: center;
             border-radius: 10px;
+            width: 500px;
+            height: 300px;
+            overflow: hidden;
+            max-width: 90%;
+            max-height: 50%
         }
+
+        .cover-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .action.idea {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .reaction-button {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+        }
+
+            .reaction-button i {
+                margin-right: 5px;
+            }
+
+            .reaction-button span {
+                margin-left: 5px;
+            }
 
         .content {
             margin-left: auto;
@@ -107,12 +140,12 @@
                         @if (Model.Img != null && Model.Img.Length > 0)
                         {
                             var imageSrc = $"~/UserImages/{Encoding.UTF8.GetString(Model.Img)}";
-                            <img src="@Url.Content(imageSrc)" />
+                            <img src="@Url.Content(imageSrc)" class="cover-image" />
                         }
                     </div>
-                    <div class="container">
-                        <h2 style="padding-top: 0px; margin-bottom: 10px;"><b>@Html.DisplayFor(model => model.Title)</b></h2>
-                        <h5 style="margin: 10px 0 0 10px; padding-left: 10px;">@Html.DisplayFor(model => model.Datatime)</h5>
+                    <div class="container" style="display: flex; align-items: center; justify-content: space-between;">
+                        <h2 style="flex: 1; padding-top: 0px; margin-bottom: 10px;"><b>@Html.DisplayFor(model => model.Title)</b></h2>
+                        <h5 style="flex: 0 0 auto; margin: 0 0 0 10px; padding-left: 10px;">@Html.DisplayFor(model => model.Datatime)</h5>
                     </div>
                     <div class="container">
                         <p>
@@ -176,7 +209,7 @@
                 <div class="card-4 margin white">
                     <div class="container">
                         <div class="row">
-                            <div class="col m4 hide-small">
+                            <div class="col s12 m4">
                                 <p>
                                     <span class="padding-large right"><b>Reaction: &nbsp;</b></span>
                                     <div class="action idea" data-idea-id="@Model.Id">
@@ -213,9 +246,9 @@
                             </div>
                         </div>
                         <div class="row">
-                            @if (Model != null && Model.Comments != null)
+                            @if (ViewBag.Comments != null)
                             {
-                                @foreach (var comment in Model.Comments)
+                                foreach (var comment in ViewBag.Comments)
                                 {
                                     <ul class="comment">
                                         <li>@comment.Text</li>

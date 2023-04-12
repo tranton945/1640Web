@@ -1,0 +1,111 @@
+﻿@model IEnumerable<_1640WebApp.Data.Vote>
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <style>
+        body {
+            background-image: url("https://i.pinimg.com/564x/27/b5/d3/27b5d38b2a5ccb57f454dd3a7f38594b.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .table {
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: 1rem;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-collapse: collapse;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+            .table thead {
+                background-color: transparent;
+                color: white;
+            }
+
+        .table-striped tbody tr:nth-of-type(odd) {
+            background-color: rgba(0, 0, 0, 0.1);
+            border-bottom: 2px solid #dee2e6;
+            color: azure;
+        }
+
+        .table tbody {
+            color: azure;
+        }
+
+        .table td,
+        .table th {
+            padding: 0.75rem;
+            vertical-align: middle;
+            border-top: 1px solid #dee2e6;
+        }
+
+        .table th {
+            font-weight: bold;
+            text-align: inherit;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .badge {
+            font-size: 90%;
+            font-weight: 600;
+            line-height: 1;
+            display: inline-block;
+            padding: 0.25em 0.4em;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: baseline;
+            border-radius: 0.25rem;
+        }
+    </style>
+
+</head>
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="text-center mb-4">List of Vote</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>VoteId</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Closure Date</th>
+                            <th>Final Closure Time</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var vote in Model)
+                        {
+                            <tr>
+                                <td>@vote.IdVote</td>
+                                <td>@vote.Title</td>
+                                <td>@vote.Description</td>
+                                <td>@vote.CreatedDate</td>
+                                <td>@vote.ClosedDate</td>
+                                <td>
+                                    <div class="btn-group" role="group">
+                                       <a style="color: #e9f1fb;text-decoration: none;" asp-controller="Vote" asp-action="ViewVoteDetail" asp-route-id="@vote.IdVote" class="btn btn-primary"><i class="bi bi-eye"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

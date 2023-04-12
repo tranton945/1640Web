@@ -432,6 +432,7 @@ namespace _1640WebApp.Controllers
                 .Include(i => i.Submission)
                 .Include(i => i.User)
                 .Include(i => i.Reacts)
+                .Include(i => i.Comments)
                 .FirstOrDefaultAsync(m => m.Id == id);
 
             if (ideas == null)
@@ -458,6 +459,12 @@ namespace _1640WebApp.Controllers
             // Add the visit to the database
             _context.CViews.Add(visit);
             await _context.SaveChangesAsync();
+
+            var comments = await _context.Comments
+                .Where(c => c.IdeaId == id)
+                .ToListAsync();
+
+            ViewBag.Comments = comments;
 
             return View(ideas);
         }
@@ -615,8 +622,8 @@ namespace _1640WebApp.Controllers
 
 
 
-            // GET: Ideas/Edit/5
-            public async Task<IActionResult> Edit(int? id, int submissionId)
+        // GET: Ideas/Edit/5
+        public async Task<IActionResult> Edit(int? id, int submissionId)
         {
             var user = await _userManager.GetUserAsync(HttpContext.User);
             var currentUserId = user.Id;

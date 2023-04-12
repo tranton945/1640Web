@@ -172,6 +172,51 @@ namespace _1640WebApp.Data
 
     }
 
+    [Table("VoteOptions")]
+    public class VoteOption
+    {
+        public int Id { get; set; }
+        public string Options { get; set; }
+        public int VoteCount { get; set; }
+        public string? UserId { get; set; }
+        public virtual ApplicationUser? User { get; set; }
+        public DateTime DateTime { get; set; }
+
+
+    }
+
+
+    [Table("Votes")]
+    public class Vote
+    {
+        [Key]
+        public int IdVote { get; set; }
+        public string? Title { get; set; }
+        public string? Description { get; set; }
+        public DateTime? CreatedDate { get; set; }
+        public DateTime? ClosedDate { get; set; }
+        public bool? IsClosed { get; set; }
+        public virtual ICollection<VoteOption>? Options { get; set; }
+
+        public string? Option1 { get; set; }
+
+        public string? Option2 { get; set; }
+
+        public string? Option3 { get; set; }
+
+        public string? Option4 { get; set; }
+        public int Option1Count { get; set; }
+
+        public int Option2Count { get; set; }
+        public int Option3Count { get; set; }
+        public int Option4Count { get; set; }
+
+
+    }
+
+
+
+
 
 
 

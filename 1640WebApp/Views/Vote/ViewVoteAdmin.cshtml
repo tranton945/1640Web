@@ -1,0 +1,103 @@
+﻿@model List<dynamic>
+
+<style>
+     body {
+            background-image: url("https://i.pinimg.com/564x/27/b5/d3/27b5d38b2a5ccb57f454dd3a7f38594b.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+            margin-top: 100px;
+     }
+
+    .vote-progress {
+        height: 20px;
+        margin-bottom: 10px;
+        overflow: hidden;
+        background-color: #f5f5f5;
+        border-radius: 5px;
+    }
+
+    .progress-bar {
+        height: 100%;
+        width: 0;
+        background-color: #007bff;
+        border-radius: 5px;
+        transition: width 0.6s ease;
+    }
+
+    .vote-container:hover .progress-bar {
+        width: 100%;
+    }
+
+    .vote-dates {
+        font-size: 14px;
+        color: #6c757d;
+        margin-bottom: 0;
+    }
+
+    .vote-option {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+        .vote-option span {
+            margin-left: 5px;
+        }
+
+    .vote-count {
+        margin-left: auto;
+        font-size: 14px;
+        color: #6c757d;
+    }
+
+    .card {
+        margin: auto;
+        width: 90%;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+    }
+
+    .card-header {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+</style>
+
+<div class="container">
+     <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">Vote Results</div>
+                @foreach (var vote in Model)
+                {
+                    <h1 class=" mt-5">Vote Title: @vote.Title</h1>
+                    <p>Vote Description: @vote.Description</p>
+                    <p>Vote Created Date: @vote.CreatedDate</p>
+                    <p>Vote Closed Date: @vote.ClosedDate</p>
+                    <p>Option 1: @vote.Option1   <span class="badge badge-primary">@vote.Option1Count votes</span></p>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: @vote.Option1Count%" aria-valuenow="@vote.Option1Count" aria-valuemin="0" aria-valuemax="100">@vote.Option1Count%</div>
+                    </div>
+                    <p>Option 2: @vote.Option2   <span class="badge badge-primary">@vote.Option2Count votes</span></p>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: @vote.Option2Count%" aria-valuenow="@vote.Option2Count" aria-valuemin="0" aria-valuemax="100">@vote.Option2Count%</div>
+                    </div>
+                    <p>Option 3: @vote.Option3   <span class="badge badge-primary">@vote.Option3Count votes</span></p>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: @vote.Option3Count%" aria-valuenow="@vote.Option3Count" aria-valuemin="0" aria-valuemax="100">@vote.Option3Count%</div>
+                    </div>
+                    <p>Option 4: @vote.Option4   <span class="badge badge-primary">@vote.Option4Count votes</span></p>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: @vote.Option4Count%" aria-valuenow="@vote.Option4Count" aria-valuemin="0" aria-valuemax="100">@vote.Option4Count%</div>
+                    </div>
+                }
+            </div>
+        </div>
+     </div>
+</div>
+
+
+
+                                                }
