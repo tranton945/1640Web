@@ -19,5 +19,8 @@ namespace _1640WebApp.Data
         public DbSet<React> Reacts { get; set; }
         public DbSet<Submission> Submissions { get; set; }
         public DbSet<tNotification> tNotifications { get; set; }
+
+        public DbSet<Vote> Votes { get; set; }
+        public DbSet<VoteOption> VoteOptions { get; set; }
     }
 }
