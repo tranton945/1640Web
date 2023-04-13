@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "63bmhxjVBKv47NkPbT/DpzVyQgaShFPxspG6Hc0RoHo=",
+  "Hash": "7gBgzzj3p1eRvY7/QG2EZSPw76FAY52iLTjyeiA84Fw=",
   "Source": "1640WebApp",
   "BasePath": "_content/1640WebApp",
   "Mode": "Default",
@@ -9297,6 +9297,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\UserImages\\154e9fa9-b3cb-4e16-b5c5-193775203724.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Admin\\Desktop\\1640Web\\1640WebApp\\wwwroot\\UserImages\\17325b59-1d32-4b8b-93b7-054d9854022b.png",
+      "SourceId": "1640WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\Desktop\\1640Web\\1640WebApp\\wwwroot\\",
+      "BasePath": "_content/1640WebApp",
+      "RelativePath": "UserImages/17325b59-1d32-4b8b-93b7-054d9854022b.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\UserImages\\17325b59-1d32-4b8b-93b7-054d9854022b.png"
     },
     {
       "Identity": "C:\\Users\\Admin\\Desktop\\1640Web\\1640WebApp\\wwwroot\\UserImages\\17e24ca3-b53b-4efe-a758-1bce0a76d6bf.jpg",
