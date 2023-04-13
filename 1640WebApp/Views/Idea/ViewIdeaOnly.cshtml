@@ -155,6 +155,10 @@
             background-color: darkred;
             font-size: 13px;
         }
+        
+        .left-justify{
+            margin-left:15vw;
+        }
 
     </style>
 
@@ -353,24 +357,24 @@
                                     <p class="name">Incognito</p>
                                     <span class="time">@Html.DisplayFor(modelItem => item.Datatime)</span>
                                 </div>
-                                <div style="margin-left:110px;">
+                                <div class="left-justify">
                                     @if (User.Identity.Name == item.CreatorEmail)
                                     {
-                                        <a class="lele" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                                        <a class="lele" asp-action="Edit" asp-route-id="@item.Id"><i class="fas fa-edit "></i></a>
                                     }
                                     else
                                     {
-                                        <a class="lele1" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                                        <a class="lele1" asp-action="Edit" asp-route-id="@item.Id"><i class="fas fa-edit "></i></a>
                                     }
 
-                                    <a class="lele" asp-action="Details" asp-route-id="@item.Id">View</a>
+                                    <a class="lele" asp-action="Details" asp-route-id="@item.Id"><i class="fas fa-info-circle"></i></a>
                                     @if (User.Identity.Name == item.CreatorEmail)
                                     {
-                                        <a class="lele" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                                        <a class="lele" asp-action="Delete" asp-route-id="@item.Id"><i class="fas fa-trash-alt "></i></a>
                                     }
                                     else
                                     {
-                                        <a class="lele1" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                                        <a class="lele1" asp-action="Delete" asp-route-id="@item.Id"><i class="fas fa-trash-alt "></i></a>
                                     }
                                 </div>
 
@@ -387,24 +391,24 @@
                                     <p class="name">@Html.DisplayFor(modelItem => item.User.Fullname_)</p>
                                     <span class="time">@Html.DisplayFor(modelItem => item.Datatime)</span>
                                 </div>
-                                <div style="margin-left:110px;">
+                                <div class="left-justify">
                                     @if (User.Identity.Name == item.CreatorEmail)
                                     {
-                                        <a class="lele" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                                        <a class="lele" asp-action="Edit" asp-route-id="@item.Id"><i class="fas fa-edit "></i></a>
                                     }
                                     else
                                     {
-                                        <a class="lele1" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                                        <a class="lele1" asp-action="Edit" asp-route-id="@item.Id"><i class="fas fa-edit "></i></a>
                                     }
 
-                                    <a class="lele" asp-action="Details" asp-route-id="@item.Id">View</a>
+                                    <a class="lele" asp-action="Details" asp-route-id="@item.Id"><i class="fas fa-info-circle"></i></a>
                                     @if (User.Identity.Name == item.CreatorEmail)
                                     {
-                                        <a class="lele" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                                        <a class="lele" asp-action="Delete" asp-route-id="@item.Id"><i class="fas fa-trash-alt "></i></a>
                                     }
                                     else
                                     {
-                                        <a class="lele1" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                                        <a class="lele1" asp-action="Delete" asp-route-id="@item.Id"><i class="fas fa-trash-alt "></i></a>
                                     }
                                 </div>
                             }
@@ -483,13 +487,9 @@
                                     <span>@item.ViewCount</span>
                                 </div>
                             </div>
-                            <div class="action">
-                                <i class="far fa-comment"></i>
-                                <span>Comment</span>
-                            </div>
-                            <div class="action">
+                            <div class="action" style="opacity:55%;">
                                 <i class="fa fa-share"></i>
-                                <span>Share</span>
+                                <span> Share</span>
                             </div>
                         </div>
                         <div>

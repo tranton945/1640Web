@@ -1149,10 +1149,6 @@
       "PackagePath": "staticwebassets\\Uploads\\25911f32-0324-4afb-af46-0d40bdd90b34.jpg"
     },
     {
-      "Id": "C:\\Users\\Admin\\Desktop\\1640Web\\1640WebApp\\wwwroot\\Uploads\\28df302c-224b-4590-91b1-f756f19fe2c5.jpg",
-      "PackagePath": "staticwebassets\\Uploads\\28df302c-224b-4590-91b1-f756f19fe2c5.jpg"
-    },
-    {
       "Id": "C:\\Users\\Admin\\Desktop\\1640Web\\1640WebApp\\wwwroot\\Uploads\\2d1cc70b-1cd2-4d47-a9a8-de9661bd2d26.jpg",
       "PackagePath": "staticwebassets\\Uploads\\2d1cc70b-1cd2-4d47-a9a8-de9661bd2d26.jpg"
     },
@@ -1195,6 +1191,10 @@
     {
       "Id": "C:\\Users\\Admin\\Desktop\\1640Web\\1640WebApp\\wwwroot\\Uploads\\ef7f6045-f093-4ae5-a8a7-4a0b895fac04.jpg",
       "PackagePath": "staticwebassets\\Uploads\\ef7f6045-f093-4ae5-a8a7-4a0b895fac04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\1640Web\\1640WebApp\\wwwroot\\Uploads\\fbe3298b-d11b-4673-8133-1bd54f9b8660.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\fbe3298b-d11b-4673-8133-1bd54f9b8660.jpg"
     },
     {
       "Id": "C:\\Users\\Admin\\Desktop\\1640Web\\1640WebApp\\wwwroot\\UserFolders\\016d9b99-6322-4388-8f11-625ff57c5a79.jpg",

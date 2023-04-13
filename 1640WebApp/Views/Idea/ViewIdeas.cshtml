@@ -156,10 +156,8 @@
             font-size: 13px;
         }
 
-        .post .post-top .dp > img {
-            width: 100%;
-            cursor: pointer;
-            height: 100%;
+        .left-justify {
+            margin-left: 15vw;
         }
 
     </style>
@@ -171,10 +169,10 @@
     <div>
         <nav>
             <div class="nav-left">
-                <img src="~/images/logo.png" alt="Logo">
-                <form method="get" action="@Url.Action("Search", "Idea")" style="margin: 5px">
-                    <input type="text" placeholder="Search here" name="searchString" style="padding: 6px 12px; border-radius: 12px; border: 1px solid gray;">
-                </form>
+                <a href="/Home/MainHome">
+                    <img style="width: 40px;" src="~/images/logo.png" alt="Logo">
+                </a>
+                <input type="text" placeholder="Search Mediabook..">
             </div>
 
             <div class="nav-middle">
@@ -259,29 +257,7 @@
                         <i class="fa fa-star"></i>
                         <p>Favourites</p>
                     </li>
-                    <li>
-                        <i class="fa fa-sort"></i>
-                        <div class="form-group border text-center border-info rounded p-0" style="padding-left: 10px">
-                            @Html.DropDownList("SelectList", (IEnumerable<SelectListItem>)ViewBag.SelectList, new { @class = "form-control", @id = "filter-sort" })
-                        </div>
-                    </li>
                 </ul>
-                @*
-                    script để lọc khi user chọn type sẽ trả về kết quả mà không cần nhấn submit
-                    sử dụng ajax thêm nó bên dưới trên thẻ </body>
-                *@        
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-                <script>
-                    $(document).ready(function () {
-                        $('#filter-sort').change(function () {
-                            // lấy giá trị được chọn trong dropdown list      
-                            var type = $(this).val();
-                            // truyền gía trị user đã chọn vào controler bằng đường link
-                            // Filter sẽ nhận và sử lý data
-                            window.location.href = '@Url.Action("Filter", "Idea")?typeData=' + type;
-                        });
-                    });
-                </script>
 
 
             </div>
@@ -335,76 +311,70 @@
                     </div>
                 </div>
 
-                @if(@ViewBag.UserEmail.Contains("@coordinator")){
+
+                @foreach (var item in Model.OrderByDescending(i => i.Datatime))
+                {
                     <div class="post create">
-                        <h1 style="text-align: center;">@ViewBag.DepartmentName Department</h1>
-                    </div>
-                }
-
-
-                <div class="post create">
-                    <div class="post-top">
-
-                        <div class="dp">
-                            @if (ViewBag.UserImage != null)
+                        <div class="post-top">
+                            @if (SignInManager.IsSignedIn(User))
                             {
-                                <img src="@Url.Content("~/uploads/" + ViewBag.UserImage)" alt="User Image" />
+                                var user = await UserManager.GetUserAsync(User);
+                                if (!string.IsNullOrEmpty(user.Image))
+                                {
+                                    <div class="dp">
+                                        <img class="profile" src="/uploads/@user.Image">
+                                    </div>
+                                }
+                                <input type="text" placeholder="What's on your mind, @if(@user.Fullname_!=null){
+                        @user.Fullname_
+}else{}?" />
                             }
+                        </div>
 
-                        </div>
-                        <input type="text" placeholder="What's on your mind, @ViewBag.UserName ?" />
-                        
-                        
-                    </div>
-
-                    <div class="post-bottom">
-                        <div class="action">
-                            <i class="fa fa-video"></i>
-                            <span>Live video</span>
-                        </div>
-                        <div class="action">
-                            <i class="fa fa-image"></i>
-                            <span>Photo/Video</span>
-                        </div>
-                        <div class="action">
-                            <i class="fa fa-smile"></i>
-                            <span>Feeling/Activity</span>
+                        <div class="post-bottom">
+                            <div class="action">
+                                <i class="fa fa-video"></i>
+                                <span>Live video</span>
+                            </div>
+                            <div class="action">
+                                <i class="fa fa-image"></i>
+                                <span>Photo/Video</span>
+                            </div>
+                            <div class="action">
+                                <i class="fa fa-smile"></i>
+                                <span>Feeling/Activity</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-
-                @foreach (var item in Model)
-                {                    
                     <div class="post">
                         <div class="post-top">
                             @if (item.Anonymous == true)
                             {
                                 <div class="dp">
-                                    <img src="~/images/download.png" alt="" style="height: 100%; width: 100%">
+                                    <img src="~/images/download.png" alt="">
                                 </div>
                                 <div class="post-info">
                                     <p class="name">Incognito</p>
                                     <span class="time">@Html.DisplayFor(modelItem => item.Datatime)</span>
                                 </div>
-                                <div style="margin-left:110px;">
+                                <div class="left-justify">
                                     @if (User.Identity.Name == item.CreatorEmail)
                                     {
-                                        <a class="lele" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                                        <a class="lele" asp-action="Edit" asp-route-id="@item.Id"><i class="fas fa-edit "></i></a>
                                     }
                                     else
                                     {
-                                        <a class="lele1" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                                        <a class="lele1" asp-action="Edit" asp-route-id="@item.Id"><i class="fas fa-edit "></i></a>
                                     }
 
-                                    <a class="lele" asp-action="Details" asp-route-id="@item.Id">View</a>
+                                    <a class="lele" asp-action="Details" asp-route-id="@item.Id"><i class="fas fa-info-circle"></i></a>
                                     @if (User.Identity.Name == item.CreatorEmail)
                                     {
-                                        <a class="lele" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                                        <a class="lele" asp-action="Delete" asp-route-id="@item.Id"><i class="fas fa-trash-alt "></i></a>
                                     }
                                     else
                                     {
-                                        <a class="lele1" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                                        <a class="lele1" asp-action="Delete" asp-route-id="@item.Id"><i class="fas fa-trash-alt "></i></a>
                                     }
                                 </div>
 
@@ -414,31 +384,31 @@
                                 <div class="dp">
                                     @if (!string.IsNullOrEmpty(item.User.Image))
                                     {
-                                        <img class="profile" src="/uploads/@item.User.Image" style="height: 100%; width: 100%">
+                                        <img class="profile" src="/uploads/@item.User.Image">
                                     }
                                 </div>
                                 <div class="post-info">
                                     <p class="name">@Html.DisplayFor(modelItem => item.User.Fullname_)</p>
                                     <span class="time">@Html.DisplayFor(modelItem => item.Datatime)</span>
                                 </div>
-                                <div style="margin-left:110px;">
+                                <div class="left-justify">
                                     @if (User.Identity.Name == item.CreatorEmail)
                                     {
-                                        <a class="lele" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                                        <a class="lele" asp-action="Edit" asp-route-id="@item.Id"><i class="fas fa-edit "></i></a>
                                     }
                                     else
                                     {
-                                        <a class="lele1" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                                        <a class="lele1" asp-action="Edit" asp-route-id="@item.Id"><i class="fas fa-edit "></i></a>
                                     }
 
-                                    <a class="lele" asp-action="Details" asp-route-id="@item.Id">View</a>
+                                    <a class="lele" asp-action="Details" asp-route-id="@item.Id"><i class="fas fa-info-circle"></i></a>
                                     @if (User.Identity.Name == item.CreatorEmail)
                                     {
-                                        <a class="lele" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                                        <a class="lele" asp-action="Delete" asp-route-id="@item.Id"><i class="fas fa-trash-alt "></i></a>
                                     }
                                     else
                                     {
-                                        <a class="lele1" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                                        <a class="lele1" asp-action="Delete" asp-route-id="@item.Id"><i class="fas fa-trash-alt "></i></a>
                                     }
                                 </div>
                             }
@@ -517,13 +487,9 @@
                                     <span>@item.ViewCount</span>
                                 </div>
                             </div>
-                            <div class="action">
-                                <i class="far fa-comment"></i>
-                                <span>Comment</span>
-                            </div>
-                            <div class="action">
+                            <div class="action" style="opacity:55%;">
                                 <i class="fa fa-share"></i>
-                                <span>Share</span>
+                                <span> Share</span>
                             </div>
                         </div>
                         <div>
@@ -657,12 +623,11 @@
                         </a>
                     }
 
-
                 </div>
             </div>
         </div>
     </div>
-    
+
 </body>
 
 

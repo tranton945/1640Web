@@ -1,8 +1,13 @@
-﻿@media (max-width: 768px) {
+﻿
+@media screen and (max-width: 576px), (max-height: 500px) {
     .contain-create {
-        padding: 4px !important; /* Xóa giá trị padding-left */
+        padding: 4px !important;
     }
-    .button2 {
-        margin: 30px !important;
+
+    .fas{
+        margin:0.66rem 0.3rem;
+    }
+    .re-div{
+        margin:5vw;
     }
 }

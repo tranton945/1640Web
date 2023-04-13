@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7gBgzzj3p1eRvY7/QG2EZSPw76FAY52iLTjyeiA84Fw=",
+  "Hash": "41uD0csKATm+CUwJI/4b4S3D5/4tXFlL0wGw5EJcM0U=",
   "Source": "1640WebApp",
   "BasePath": "_content/1640WebApp",
   "Mode": "Default",
@@ -8500,23 +8500,6 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\25911f32-0324-4afb-af46-0d40bdd90b34.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Desktop\\1640Web\\1640WebApp\\wwwroot\\Uploads\\28df302c-224b-4590-91b1-f756f19fe2c5.jpg",
-      "SourceId": "1640WebApp",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\Desktop\\1640Web\\1640WebApp\\wwwroot\\",
-      "BasePath": "_content/1640WebApp",
-      "RelativePath": "Uploads/28df302c-224b-4590-91b1-f756f19fe2c5.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Uploads\\28df302c-224b-4590-91b1-f756f19fe2c5.jpg"
-    },
-    {
       "Identity": "C:\\Users\\Admin\\Desktop\\1640Web\\1640WebApp\\wwwroot\\Uploads\\2d1cc70b-1cd2-4d47-a9a8-de9661bd2d26.jpg",
       "SourceId": "1640WebApp",
       "SourceType": "Discovered",
@@ -8702,6 +8685,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Uploads\\ef7f6045-f093-4ae5-a8a7-4a0b895fac04.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Admin\\Desktop\\1640Web\\1640WebApp\\wwwroot\\Uploads\\fbe3298b-d11b-4673-8133-1bd54f9b8660.jpg",
+      "SourceId": "1640WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\Desktop\\1640Web\\1640WebApp\\wwwroot\\",
+      "BasePath": "_content/1640WebApp",
+      "RelativePath": "Uploads/fbe3298b-d11b-4673-8133-1bd54f9b8660.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\fbe3298b-d11b-4673-8133-1bd54f9b8660.jpg"
     },
     {
       "Identity": "C:\\Users\\Admin\\Desktop\\1640Web\\1640WebApp\\wwwroot\\UserFolders\\016d9b99-6322-4388-8f11-625ff57c5a79.jpg",

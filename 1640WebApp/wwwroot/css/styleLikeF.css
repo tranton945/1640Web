@@ -271,6 +271,7 @@ nav {
             .post .post-top .dp > img {
                 width: 100%;
                 cursor: pointer;
+                height: 100%;
             }
 
         .post .post-top .post-info {
