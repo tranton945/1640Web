@@ -222,8 +222,10 @@ namespace _1640WebApp.Controllers
 
             var allOptions = new List<SelectListItem>();
             allOptions.Add(new SelectListItem { Text = " -- Select --", Value = "" });
-            allOptions.Add(new SelectListItem { Text = "newest", Value = "newest" });
-            allOptions.Add(new SelectListItem { Text = "oldest", Value = "oldest" });
+            allOptions.Add(new SelectListItem { Text = "Newest", Value = "newest" });
+            allOptions.Add(new SelectListItem { Text = "Oldest", Value = "oldest" });
+            allOptions.Add(new SelectListItem { Text = "Most popular", Value = "MostPopular" });
+            allOptions.Add(new SelectListItem { Text = "Least popular", Value = "LeastPopular" });
 
             ViewBag.SelectList = allOptions;
 
@@ -293,8 +295,10 @@ namespace _1640WebApp.Controllers
 
             var allOptions = new List<SelectListItem>();
             allOptions.Add(new SelectListItem { Text = " -- Select --", Value = "" });
-            allOptions.Add(new SelectListItem { Text = "newest", Value = "newest" });
-            allOptions.Add(new SelectListItem { Text = "oldest", Value = "oldest" });
+            allOptions.Add(new SelectListItem { Text = "Newest", Value = "newest" });
+            allOptions.Add(new SelectListItem { Text = "Oldest", Value = "oldest" });
+            allOptions.Add(new SelectListItem { Text = "Most popular", Value = "MostPopular" });
+            allOptions.Add(new SelectListItem { Text = "Least popular", Value = "LeastPopular" });
 
             ViewBag.SelectList = allOptions;
 
@@ -329,8 +333,10 @@ namespace _1640WebApp.Controllers
 
             var allOptions = new List<SelectListItem>();
             allOptions.Add(new SelectListItem { Text = " -- Select --", Value = "" });
-            allOptions.Add(new SelectListItem { Text = "newest", Value = "newest" });
-            allOptions.Add(new SelectListItem { Text = "oldest", Value = "oldest" });
+            allOptions.Add(new SelectListItem { Text = "Newest", Value = "newest" });
+            allOptions.Add(new SelectListItem { Text = "Oldest", Value = "oldest" });
+            allOptions.Add(new SelectListItem { Text = "Most popular", Value = "MostPopular" });
+            allOptions.Add(new SelectListItem { Text = "Least popular", Value = "LeastPopular" });
 
             ViewBag.SelectList = allOptions;
 
@@ -381,8 +387,10 @@ namespace _1640WebApp.Controllers
 
             var allOptions = new List<SelectListItem>();
             allOptions.Add(new SelectListItem { Text = " -- Select --", Value = "" });
-            allOptions.Add(new SelectListItem { Text = "newest", Value = "newest" });
-            allOptions.Add(new SelectListItem { Text = "oldest", Value = "oldest" });
+            allOptions.Add(new SelectListItem { Text = "Newest", Value = "newest" });
+            allOptions.Add(new SelectListItem { Text = "Oldest", Value = "oldest" });
+            allOptions.Add(new SelectListItem { Text = "Most popular", Value = "MostPopular" });
+            allOptions.Add(new SelectListItem { Text = "Least popular", Value = "LeastPopular" });
 
             ViewBag.SelectList = allOptions;
 
@@ -390,10 +398,8 @@ namespace _1640WebApp.Controllers
             {
                 return View("ViewIdeas", applicationDbContext);
             }
-            if(typeData == "newest")
+            if(typeData == "Newest")
             {
-                //applicationDbContext.OrderByDescending(i => i.Datatime);
-                //applicationDbContext = applicationDbContext.OrderByDescending(i => i.Datatime).ToList();
                 var a = await _context.Ideas
                                 .Include(i => i.Submission)
                                 .Include(i => i.Reacts)
@@ -402,15 +408,33 @@ namespace _1640WebApp.Controllers
                                 .ToListAsync();
                 return View("ViewIdeas", a);
             }
-            if (typeData == "oldest")
+            if (typeData == "Oldest")
             {
-                //applicationDbContext = applicationDbContext.OrderBy(i => i.Datatime).ToList();
-                //applicationDbContext.OrderBy(i => i.Datatime);
                 var a = await _context.Ideas
                 .Include(i => i.Submission)
                 .Include(i => i.Reacts)
                 .Include(i => i.User)
                 .OrderBy(i => i.Datatime)
+                .ToListAsync();
+                return View("ViewIdeas", a);
+            }
+            if (typeData == "MostPopular")
+            {
+                var a = await _context.Ideas
+                .Include(i => i.Submission)
+                .Include(i => i.Reacts)
+                .Include(i => i.User)
+                .OrderByDescending(i => i.ViewCount)
+                .ToListAsync();
+                return View("ViewIdeas", a);
+            }
+            if (typeData == "LeastPopular")
+            {
+                var a = await _context.Ideas
+                .Include(i => i.Submission)
+                .Include(i => i.Reacts)
+                .Include(i => i.User)
+                .OrderBy(i => i.ViewCount)
                 .ToListAsync();
                 return View("ViewIdeas", a);
             }

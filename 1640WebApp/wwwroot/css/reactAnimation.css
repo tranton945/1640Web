@@ -36,7 +36,26 @@
     animation: rotate 0.5s forwards;
 }
 
+.dislike-button.active {
+    color: blue;
+    animation: thumb-down 0.5s forwards;
+}
+
 @keyframes thumb-up {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes thumb-down {
     0% {
         transform: scale(1);
     }

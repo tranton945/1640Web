@@ -36,19 +36,20 @@
         text-align: center;
     }
 
-    .button1 {
+    .button1 {      
         background-color: forestgreen;
-        padding: 10px;
+        padding: 7px;
         color: white;
         border-radius: 10px;
-        margin: 10px 10px 10px 0px;
+        
     }
 
     .button2 {
         background-color: darkviolet;
-        padding: 6px;
+        padding: 7px;
         color: white;
         border-radius: 10px;
+        
     }
 
     a:hover {
@@ -113,8 +114,11 @@
                         }
                     </td>
                     <td>
-                        <a class="button2" asp-controller="Idea" asp-action="Create" asp-route-submissionId="@item.Id">Add Idea</a> |
-                        <a class="button2" asp-controller="Idea" asp-action="ViewIdeas" asp-route-submissionId="@item.Id">Viz</a>
+                        <a class="button1" asp-controller="Idea" asp-action="Create" asp-route-submissionId="@item.Id">
+                            <i style="font-size:1.2em;" class="fas fa-plus"></i></a> |
+                        <a class="button2" asp-controller="Idea" asp-action="ViewIdeas" asp-route-submissionId="@item.Id">
+                            <i style="font-size:1.2em;" class="fas fa-eye"></i></a>
+
 
                     </td>
                 </tr>

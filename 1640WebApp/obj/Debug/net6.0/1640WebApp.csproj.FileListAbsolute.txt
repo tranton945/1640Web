@@ -8,6 +8,8 @@ D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\bin\Debug\net6.0\1640WebApp.dll
 D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\bin\Debug\net6.0\1640WebApp.pdb
 D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\bin\Debug\net6.0\Antlr3.Runtime.dll
 D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\bin\Debug\net6.0\BoDi.dll
+D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\bin\Debug\net6.0\CsvHelper.dll
+D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\bin\Debug\net6.0\DotNetZip.dll
 D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\bin\Debug\net6.0\Gherkin.dll
 D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\bin\Debug\net6.0\Humanizer.dll
 D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\bin\Debug\net6.0\MailKit.dll
@@ -98,6 +100,7 @@ D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\bin\Debug\net6.0\System.Composi
 D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\bin\Debug\net6.0\System.Composition.Runtime.dll
 D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\bin\Debug\net6.0\System.Composition.TypedParts.dll
 D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
 D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\bin\Debug\net6.0\System.Drawing.Common.dll
 D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
 D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\bin\Debug\net6.0\System.Reflection.MetadataLoadContext.dll
@@ -291,6 +294,7 @@ D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\obj\Debug\net6.0\staticwebasset
 D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\obj\Debug\net6.0\staticwebassets.pack.json
 D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\obj\Debug\net6.0\staticwebassets.build.json
 D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\obj\Debug\net6.0\staticwebassets.development.json
+D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\obj\Debug\net6.0\scopedcss\Views\Shared\NewFolder\_Layout.cshtml.rz.scp.css
 D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\obj\Debug\net6.0\scopedcss\bundle\1640WebApp.styles.css
 D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\obj\Debug\net6.0\scopedcss\projectbundle\1640WebApp.bundle.scp.css
@@ -300,7 +304,3 @@ D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\obj\Debug\net6.0\refint\1640Web
 D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\obj\Debug\net6.0\1640WebApp.pdb
 D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\obj\Debug\net6.0\1640WebApp.genruntimeconfig.cache
 D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\obj\Debug\net6.0\ref\1640WebApp.dll
-D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
-D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\bin\Debug\net6.0\DotNetZip.dll
-D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\obj\Debug\net6.0\scopedcss\Views\Shared\NewFolder\_Layout.cshtml.rz.scp.css
-D:\COMP1640\New folder (3)\1640WebApp\1640WebApp\bin\Debug\net6.0\CsvHelper.dll

@@ -7,7 +7,12 @@
 @{
     Layout = "_Layout";
 }
+<head>
+    <link rel="stylesheet" href="~/css/responsive.css" />
+</head>
+
 <style>
+    
     .contain-create {
         background-image: url('https://static.vecteezy.com/system/resources/thumbnails/015/287/575/original/purple-themed-particle-form-futuristic-neon-graphic-background-science-energy-3d-abstract-art-element-illustration-technology-artificial-intelligence-shape-theme-wallpaper-animation-free-video.jpg');
         object-fit: cover;
@@ -26,6 +31,7 @@
         padding-bottom: 50px;
     }
 
+   
     table {
         color: white;
         background-color: azure;
@@ -41,7 +47,6 @@
         background-color: forestgreen;
         padding: 10px;
         color: white;
-        border-radius: 10px;
         margin: 10px 10px 10px 0px;
     }
 
@@ -49,19 +54,18 @@
         background-color: forestgreen;
         padding: 6px;
         color: white;
-        border-radius: 10px;
     }
 
     .button3 {
         background-color: darkred;
         padding: 6px;
         color: white;
-        border-radius: 10px;
 
     a:hover {
         color: red !important;
         margin: 3px;
     }
+  }
 </style>
 <div class="contain-create">
     <div style="height:50px;"></div>
@@ -133,23 +137,23 @@
                     <td>
                         @if (User.Identity.Name == item.CreatorEmail)
                         {
-                            <a class="button2" asp-action="Edit" asp-route-id="@item.Id">Edit</a> 
+                            <a class="button2" asp-action="Edit" asp-route-id="@item.Id"><i class="fas fa-edit "></i></a>
                         }
                         else
                         {
-                            <a class="button3" asp-action="Edit" asp-route-id="@item.Id">Edit</a> 
+                            <a class="button3" asp-action="Edit" asp-route-id="@item.Id"><i class="fas fa-edit "></i></a>
                         }
 
-                        | <a class="button2" asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        | <a class="button2" asp-action="Details" asp-route-id="@item.Id"><i class="fas fa-info-circle"></i></a> |
                         @if (User.Identity.Name == item.CreatorEmail)
                         {
-                            <a class="button2" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                            <a class="button2" asp-action="Delete" asp-route-id="@item.Id"><i class="fas fa-trash-alt "></i></a>
                         }
                         else
                         {
-                            <a class="button3" asp-action="Delete" asp-route-id="@item.Id">Delete</a> 
+                            <a class="button3" asp-action="Delete" asp-route-id="@item.Id"><i class="fas fa-trash-alt "></i></a>
                         }
-                        | <a class="button2" asp-action="ViewIdeaOnly" asp-controller="Idea" asp-route-ideaId="@item.Id">View</a>
+                        | <a class="button2" asp-action="ViewIdeaOnly" asp-controller="Idea" asp-route-ideaId="@item.Id"><i class="fas fa-eye"></i></a>
                     </td>
                 </tr>
             }

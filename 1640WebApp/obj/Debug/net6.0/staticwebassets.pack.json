@@ -1313,6 +1313,10 @@
       "PackagePath": "staticwebassets\\UserImages\\154e9fa9-b3cb-4e16-b5c5-193775203724.jpg"
     },
     {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\17325b59-1d32-4b8b-93b7-054d9854022b.png",
+      "PackagePath": "staticwebassets\\UserImages\\17325b59-1d32-4b8b-93b7-054d9854022b.png"
+    },
+    {
       "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\UserImages\\17e24ca3-b53b-4efe-a758-1bce0a76d6bf.jpg",
       "PackagePath": "staticwebassets\\UserImages\\17e24ca3-b53b-4efe-a758-1bce0a76d6bf.jpg"
     },
@@ -1623,6 +1627,10 @@
     {
       "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\css\\reactAnimation.css",
       "PackagePath": "staticwebassets\\css\\reactAnimation.css"
+    },
+    {
+      "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\css\\responsive.css",
+      "PackagePath": "staticwebassets\\css\\responsive.css"
     },
     {
       "Id": "D:\\COMP1640\\New folder (3)\\1640WebApp\\1640WebApp\\wwwroot\\css\\site.css",
