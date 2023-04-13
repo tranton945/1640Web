@@ -652,7 +652,7 @@ namespace _1640WebApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, Idea idea, IFormCollection form, bool anonymous)
+        public async Task<IActionResult> Edit(int id, Idea idea, IFormCollection form, bool anonymous, int[] categories)
         {
             var user = await _userManager.GetUserAsync(HttpContext.User);
             var currentUserId = user.Id;
@@ -698,6 +698,8 @@ namespace _1640WebApp.Controllers
                 }
 
                 // Cập nhật thông tin ý tưởng
+                int? categoryIdSelect = categories.FirstOrDefault();
+                idea.CatogoryId = categoryIdSelect;
                 idea.CreatorEmail = User.FindFirst(ClaimTypes.Email)?.Value;
                 var categoryIds = form["categories"].ToString().Split(",");
                 idea.Catogories = new List<Catogory>();
