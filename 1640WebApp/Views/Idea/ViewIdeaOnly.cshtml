@@ -608,15 +608,15 @@
                     <h4>Friends</h4>
                     @foreach (var user in await UserManager.Users.ToListAsync())
                     {
-                        <a class='friend' href="#">
+                        <a class="friend" href="#">
                             <div class="dp">
                                 @if (!string.IsNullOrEmpty(user.Image))
                                 {
-                                    <img src="@user.Image" alt="@user.UserName">
+                                    <img class="profile" src="/uploads/@user.Image" style="height: 100%; width: 100%; object-fit: cover;">
                                 }
                                 else
                                 {
-                                    <img src="~/images/download.png" alt="Default Avatar">
+                                    <img class="profile" src="~/images/download.png" alt="Default Avatar">
                                 }
                             </div>
                             <p class="name">@user.UserName.Split('@')[0]</p>
