@@ -344,6 +344,91 @@ namespace _1640WebApp.Data.Migrations
                     b.ToTable("Submissions");
                 });
 
+            modelBuilder.Entity("_1640WebApp.Data.Vote", b =>
+                {
+                    b.Property<int>("IdVote")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdVote"), 1L, 1);
+
+                    b.Property<DateTime?>("ClosedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool?>("IsClosed")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Option1")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Option1Count")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Option2")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Option2Count")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Option3")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Option3Count")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Option4")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Option4Count")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("IdVote");
+
+                    b.ToTable("Votes");
+                });
+
+            modelBuilder.Entity("_1640WebApp.Data.VoteOption", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("DateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Options")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("VoteCount")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("VoteIdVote")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.HasIndex("VoteIdVote");
+
+                    b.ToTable("VoteOptions");
+                });
+
             modelBuilder.Entity("_1640WebApp.Models.tNotification", b =>
                 {
                     b.Property<int>("Id")
@@ -580,6 +665,19 @@ namespace _1640WebApp.Data.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("_1640WebApp.Data.VoteOption", b =>
+                {
+                    b.HasOne("_1640WebApp.Data.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
+                    b.HasOne("_1640WebApp.Data.Vote", null)
+                        .WithMany("Options")
+                        .HasForeignKey("VoteIdVote");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -650,6 +748,11 @@ namespace _1640WebApp.Data.Migrations
             modelBuilder.Entity("_1640WebApp.Data.Submission", b =>
                 {
                     b.Navigation("Ideas");
+                });
+
+            modelBuilder.Entity("_1640WebApp.Data.Vote", b =>
+                {
+                    b.Navigation("Options");
                 });
 #pragma warning restore 612, 618
         }

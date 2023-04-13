@@ -2,4 +2,7 @@
     .contain-create {
         padding: 4px !important; /* Xóa giá trị padding-left */
     }
+    .button2 {
+        margin: 30px !important;
+    }
 }

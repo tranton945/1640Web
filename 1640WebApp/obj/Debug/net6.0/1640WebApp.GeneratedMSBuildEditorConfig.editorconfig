@@ -420,6 +420,34 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Admin/Desktop/1640Web/1640WebApp/Views/Vote/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm90ZVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/1640Web/1640WebApp/Views/Vote/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm90ZVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/1640Web/1640WebApp/Views/Vote/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm90ZVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/1640Web/1640WebApp/Views/Vote/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm90ZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/1640Web/1640WebApp/Views/Vote/ViewVote.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm90ZVxWaWV3Vm90ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/1640Web/1640WebApp/Views/Vote/ViewVoteAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm90ZVxWaWV3Vm90ZUFkbWluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/1640Web/1640WebApp/Views/Vote/ViewVoteDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm90ZVxWaWV3Vm90ZURldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Admin/Desktop/1640Web/1640WebApp/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
