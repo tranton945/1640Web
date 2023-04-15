@@ -627,7 +627,7 @@ namespace _1640WebApp.Controllers
 
                 _memoryCache.Set("IdeaNotification", notification, TimeSpan.FromMinutes(5));
 
-                var apiKey = "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";
+                var apiKey = "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";
                 var client = new SendGridClient(apiKey);
                 var from = new EmailAddress("navo7036@gmail.com", "nana");
                 var subject = $"A Staff named \"{user.Fullname_}\" just submitted an Idea titled \"{idea.Title}\"  ";

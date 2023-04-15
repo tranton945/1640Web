@@ -169,10 +169,10 @@
     <div>
         <nav>
             <div class="nav-left">
-                <a href="/Home/MainHome">
-                    <img style="width: 40px;" src="~/images/logo.png" alt="Logo">
-                </a>
-                <input type="text" placeholder="Search Mediabook..">
+                <img src="~/images/logo.png" alt="Logo">
+                <form method="get" action="@Url.Action("Search", "Idea")" style="margin: 5px">
+                    <input type="text" placeholder="Search here" name="searchString" style="padding: 6px 12px; border-radius: 12px; border: 1px solid gray;">
+                </form>
             </div>
 
             <div class="nav-middle">
@@ -257,7 +257,29 @@
                         <i class="fa fa-star"></i>
                         <p>Favourites</p>
                     </li>
+                    <li>
+                        <i class="fa fa-sort"></i>
+                        <div class="form-group border text-center border-info rounded p-0" style="padding-left: 10px">
+                            @Html.DropDownList("SelectList", (IEnumerable<SelectListItem>)ViewBag.SelectList, new { @class = "form-control", @id = "filter-sort" })
+                        </div>
+                    </li>
                 </ul>
+               @*
+                    script để lọc khi user chọn type sẽ trả về kết quả mà không cần nhấn submit
+                    sử dụng ajax thêm nó bên dưới trên thẻ </body>
+                *@        
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                <script>
+                    $(document).ready(function () {
+                        $('#filter-sort').change(function () {
+                            // lấy giá trị được chọn trong dropdown list      
+                            var type = $(this).val();
+                            // truyền gía trị user đã chọn vào controler bằng đường link
+                            // Filter sẽ nhận và sử lý data
+                            window.location.href = '@Url.Action("Filter", "Idea")?typeData=' + type;
+                        });
+                    });
+                </script>
 
 
             </div>
@@ -312,7 +334,7 @@
                 </div>
 
 
-                @foreach (var item in Model.OrderByDescending(i => i.Datatime))
+                @foreach (var item in Model)
                 {
                     <div class="post create">
                         <div class="post-top">
