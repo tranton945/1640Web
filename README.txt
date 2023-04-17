@@ -1,4 +1,3 @@
-# 1640Web
 Step 1: After clone the project go to Tool -> NuGet Package Manager -> Package Manager Console
 Step 2: In the Package Manager Console window, enter the command "Update-database"
 Bước 3: go to View -> SQL Server Object Explorer 
