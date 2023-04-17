@@ -11,7 +11,7 @@ connection.on("RecieveMessage", function (username, message) {
 
 document.getElementById("btnSend").addEventListener("click", event => {
     // const username = document.getElementById("txtUser").value;
-    const receiver = document.getElementById("receiveUser").value;
+    const receiver = document.getElementById("txtUser").value;
     const message = document.getElementById("txtMsg").value;
     connection.invoke("SendMessagetoGroup", receiver, message).catch(err => console.error(err.toString()));
     event.preventDefault();

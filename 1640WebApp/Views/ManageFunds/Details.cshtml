@@ -1,0 +1,37 @@
+﻿@model _1640WebApp.Data.Funds
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/NewFolder/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Funds</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NameFund)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NameFund)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Content)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Content)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Datetime)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Datetime)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

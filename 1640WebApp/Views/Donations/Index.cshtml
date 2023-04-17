@@ -1,0 +1,100 @@
+﻿@model IEnumerable<_1640WebApp.Data.Donation>
+
+@{
+    ViewData["Title"] = "Index";
+    
+}
+@if (TempData["AlertMessage"] != null)
+{
+    <div class="alert alert-success">
+        <strong>Success !</strong> @TempData["AlertMessage"]
+        <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+            
+        </button>
+    </div>
+}
+
+<style>
+    
+    }
+    .editbtn{
+        color: #fff;
+        width: 30px;
+    }
+
+    .deletebtn {
+        color: #fff;
+        width: 30px;
+    }
+</style>
+<div class="row" style="margin-top: 100px;">
+    <div class="col-md-8 offset-md-2">
+        <h1>List of Donors</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.AcccountNumber)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.BeneficaryName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DateTime)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Amount)
+                    </th>
+                    <th>
+                        <a asp-controller="Funds" asp-action="Index" class="btn btn-sm btn-outline-success">
+                            <i class='fas fa-donate'></i> Donation
+                        </a>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AcccountNumber)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.BeneficaryName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DateTime)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Amount)
+                        </td>
+
+                        <td>
+
+                            
+                                <div class="btn-group btn-group-sm">
+                                    <button type="submit" class="btn btn-success btnedit">
+                                        <a asp-action="Edit" asp-route-id="@item.DonateID" class="editbtn" style="color: #fff;">
+                                            <i class='far fa-edit fa-bounce'></i>
+                                        </a>
+                                    </button>
+                               <form asp-action="Delete" asp-route-id="@item.DonateID">
+                                    <button type="submit" class="btn btn-danger ms-3"
+                                        onclick="return confirm('Are you sureto delete this record???')">
+                                        <i class='far fa-trash-alt'></i>
+                                    </button>
+
+                                </form>
+                                </div>
+
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src="~/js/customjs.js"></script>
+
+
