@@ -4,34 +4,56 @@
     ViewData["Title"] = "Details";
     Layout = "~/Views/Shared/NewFolder/_Layout.cshtml";
 }
+<style>
+    .contain-create {
+        background-image: url('https://media.istockphoto.com/id/1356933529/photo/futuristic-technology-wave-digital-cyberspace-abstract-wave-with-moving-particles-on.jpg?b=1&s=170667a&w=0&k=20&c=OY4o0-8rTUd2_JXj7rQAeMGioyUjuxthyqbWuYaqGVU=');
+        object-fit: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        position: absolute;
+        top: 49px;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        overflow-y: scroll !important;
+        padding-left: 70px;
+        color: white;
+        font-weight: bold;
+    }
 
-<h1>Details</h1>
+</style>
 
-<div>
-    <h4>Funds</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.NameFund)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.NameFund)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Content)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Content)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Datetime)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Datetime)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+<div class="contain-create">
+    <div style="height:40px;"></div>
+    <h1>Details</h1>
+
+    <div>
+        <h4>Funds</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.NameFund)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.NameFund)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Content)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Content)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Datetime)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Datetime)
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+        <a asp-action="Index">Back to List</a>
+    </div>
 </div>
