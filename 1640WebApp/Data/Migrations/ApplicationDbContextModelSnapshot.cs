@@ -216,6 +216,70 @@ namespace _1640WebApp.Data.Migrations
                     b.ToTable("Departments");
                 });
 
+            modelBuilder.Entity("_1640WebApp.Data.Donation", b =>
+                {
+                    b.Property<int>("DonateID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("DonateID"), 1L, 1);
+
+                    b.Property<string>("AcccountNumber")
+                        .IsRequired()
+                        .HasMaxLength(12)
+                        .HasColumnType("nvarchar(12)");
+
+                    b.Property<int>("Amount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("BankName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("BeneficaryName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(12)");
+
+                    b.Property<DateTime>("DateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("FundsId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("SWIFTCode")
+                        .IsRequired()
+                        .HasMaxLength(12)
+                        .HasColumnType("nvarchar(12)");
+
+                    b.HasKey("DonateID");
+
+                    b.HasIndex("FundsId");
+
+                    b.ToTable("Donations");
+                });
+
+            modelBuilder.Entity("_1640WebApp.Data.Funds", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Content")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("Datetime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("NameFund")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Funds");
+                });
+
             modelBuilder.Entity("_1640WebApp.Data.Idea", b =>
                 {
                     b.Property<int>("Id")
@@ -635,6 +699,13 @@ namespace _1640WebApp.Data.Migrations
                         .HasForeignKey("ApplicationUserId");
                 });
 
+            modelBuilder.Entity("_1640WebApp.Data.Donation", b =>
+                {
+                    b.HasOne("_1640WebApp.Data.Funds", null)
+                        .WithMany("Donations")
+                        .HasForeignKey("FundsId");
+                });
+
             modelBuilder.Entity("_1640WebApp.Data.Idea", b =>
                 {
                     b.HasOne("_1640WebApp.Data.Submission", "Submission")
@@ -732,6 +803,11 @@ namespace _1640WebApp.Data.Migrations
             modelBuilder.Entity("_1640WebApp.Data.ApplicationUser", b =>
                 {
                     b.Navigation("Departments");
+                });
+
+            modelBuilder.Entity("_1640WebApp.Data.Funds", b =>
+                {
+                    b.Navigation("Donations");
                 });
 
             modelBuilder.Entity("_1640WebApp.Data.Idea", b =>
