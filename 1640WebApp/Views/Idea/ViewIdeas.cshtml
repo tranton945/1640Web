@@ -336,38 +336,47 @@
 
                 @foreach (var item in Model)
                 {
-                    <div class="post create">
-                        <div class="post-top">
-                            @if (SignInManager.IsSignedIn(User))
-                            {
-                                var user = await UserManager.GetUserAsync(User);
-                                if (!string.IsNullOrEmpty(user.Image))
-                                {
-                                    <div class="dp">
-                                        <img class="profile" src="/uploads/@user.Image">
-                                    </div>
-                                }
-                                <input type="text" placeholder="What's on your mind, @if(@user.Fullname_!=null){
-                        @user.Fullname_
-}else{}?" />
-                            }
-                        </div>
+                    @if (ViewBag.HasLooped == null || !(bool)ViewBag.HasLooped)
+                    {
+                        <div class="post create">
+                            <div class="post-top">
 
-                        <div class="post-bottom">
-                            <div class="action">
-                                <i class="fa fa-video"></i>
-                                <span>Live video</span>
+                                @if (SignInManager.IsSignedIn(User))
+                                {
+                                    var user = await UserManager.GetUserAsync(User);
+                                    if (!string.IsNullOrEmpty(user.Image))
+                                    {
+                                        <div class="dp">
+                                            <img class="profile" src="/uploads/@user.Image">
+                                        </div>
+                                    }
+
+
+                                    <input type="text" placeholder="What's on your mind, @if(@user.Fullname_!=null){
+                    @user.Fullname_
+                }else{}?" />
+                                    ViewBag.HasLooped = true;
+
+                                }
+
                             </div>
-                            <div class="action">
-                                <i class="fa fa-image"></i>
-                                <span>Photo/Video</span>
-                            </div>
-                            <div class="action">
-                                <i class="fa fa-smile"></i>
-                                <span>Feeling/Activity</span>
+
+                            <div class="post-bottom">
+                                <div class="action">
+                                    <i class="fa fa-video"></i>
+                                    <span>Live video</span>
+                                </div>
+                                <div class="action">
+                                    <i class="fa fa-image"></i>
+                                    <span>Photo/Video</span>
+                                </div>
+                                <div class="action">
+                                    <i class="fa fa-smile"></i>
+                                    <span>Feeling/Activity</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    }
                     <div class="post">
                         <div class="post-top">
                             @if (item.Anonymous == true)
@@ -434,10 +443,6 @@
                                     }
                                 </div>
                             }
-
-
-
-
                         </div>
 
                         <div class="post-content">
