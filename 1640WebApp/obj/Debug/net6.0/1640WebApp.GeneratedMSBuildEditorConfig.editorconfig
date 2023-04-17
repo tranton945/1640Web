@@ -232,8 +232,36 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Thanh Duy/Desktop/New folder/1640Web/1640WebApp/Views/Donations/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9uYXRpb25zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Thanh Duy/Desktop/New folder/1640Web/1640WebApp/Views/Donations/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9uYXRpb25zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Thanh Duy/Desktop/New folder/1640Web/1640WebApp/Views/Donations/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9uYXRpb25zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Thanh Duy/Desktop/New folder/1640Web/1640WebApp/Views/Donations/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9uYXRpb25zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Thanh Duy/Desktop/New folder/1640Web/1640WebApp/Views/Email/Form.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1haWxcRm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Thanh Duy/Desktop/New folder/1640Web/1640WebApp/Views/Funds/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuZHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Thanh Duy/Desktop/New folder/1640Web/1640WebApp/Views/Funds/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuZHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Thanh Duy/Desktop/New folder/1640Web/1640WebApp/Views/Funds/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuZHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Thanh Duy/Desktop/New folder/1640Web/1640WebApp/Views/Home/AboutUs.cshtml]
@@ -290,6 +318,26 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Thanh Duy/Desktop/New folder/1640Web/1640WebApp/Views/Idea/ViewIdeas.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWRlYVxWaWV3SWRlYXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Thanh Duy/Desktop/New folder/1640Web/1640WebApp/Views/ManageFunds/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlRnVuZHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Thanh Duy/Desktop/New folder/1640Web/1640WebApp/Views/ManageFunds/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlRnVuZHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Thanh Duy/Desktop/New folder/1640Web/1640WebApp/Views/ManageFunds/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlRnVuZHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Thanh Duy/Desktop/New folder/1640Web/1640WebApp/Views/ManageFunds/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlRnVuZHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Thanh Duy/Desktop/New folder/1640Web/1640WebApp/Views/ManageFunds/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlRnVuZHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Thanh Duy/Desktop/New folder/1640Web/1640WebApp/Views/NotificationAdmin/Create.cshtml]

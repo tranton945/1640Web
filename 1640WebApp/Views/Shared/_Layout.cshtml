@@ -105,8 +105,11 @@
                 </button>
                 <div class="navbar-collapse collapse ">
                     <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item" style="display: flex; justify-content: center; align-items: center;">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="MainHome"> <img style="width: 30px;" src="~/images/logo.png" alt="Logo"></a>
+                        </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark text-white" asp-area="" asp-controller="Home" asp-action="MainHome">Home</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="MainHome">Home</a>
                         </li>
 
                         <li class="nav-item dropdown">
@@ -128,7 +131,7 @@
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" asp-area="" asp-controller="Email" asp-action="Form">Sent Email To Staff</a>
                                 <a class="dropdown-item" asp-area="" asp-controller="Analysis" asp-action="Index">Analysis</a>
-                                <a class="dropdown-item" href="#">...</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="ManageFunds" asp-action="Index">Manage Funds</a>
                                 <a class="dropdown-item" href="#">...</a>
                                 <a class="dropdown-item" href="#">...</a>
 
@@ -164,10 +167,10 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark text-white" asp-area="" asp-controller="Home" asp-action="Chat">Chat</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Chat">Chat</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark text-white" asp-area="" asp-controller="Home" asp-action="AboutUs">AboutUs</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="AboutUs">AboutUs</a>
                         </li>
                     </ul>
                     <partial name="_LoginPartial" />

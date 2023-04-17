@@ -222,8 +222,10 @@ namespace _1640WebApp.Controllers
 
             var allOptions = new List<SelectListItem>();
             allOptions.Add(new SelectListItem { Text = " -- Select --", Value = "" });
-            allOptions.Add(new SelectListItem { Text = "newest", Value = "newest" });
-            allOptions.Add(new SelectListItem { Text = "oldest", Value = "oldest" });
+            allOptions.Add(new SelectListItem { Text = "Newest", Value = "newest" });
+            allOptions.Add(new SelectListItem { Text = "Oldest", Value = "oldest" });
+            allOptions.Add(new SelectListItem { Text = "Most popular", Value = "MostPopular" });
+            allOptions.Add(new SelectListItem { Text = "Least popular", Value = "LeastPopular" });
 
             ViewBag.SelectList = allOptions;
 
@@ -293,8 +295,10 @@ namespace _1640WebApp.Controllers
 
             var allOptions = new List<SelectListItem>();
             allOptions.Add(new SelectListItem { Text = " -- Select --", Value = "" });
-            allOptions.Add(new SelectListItem { Text = "newest", Value = "newest" });
-            allOptions.Add(new SelectListItem { Text = "oldest", Value = "oldest" });
+            allOptions.Add(new SelectListItem { Text = "Newest", Value = "newest" });
+            allOptions.Add(new SelectListItem { Text = "Oldest", Value = "oldest" });
+            allOptions.Add(new SelectListItem { Text = "Most popular", Value = "MostPopular" });
+            allOptions.Add(new SelectListItem { Text = "Least popular", Value = "LeastPopular" });
 
             ViewBag.SelectList = allOptions;
 
@@ -329,8 +333,10 @@ namespace _1640WebApp.Controllers
 
             var allOptions = new List<SelectListItem>();
             allOptions.Add(new SelectListItem { Text = " -- Select --", Value = "" });
-            allOptions.Add(new SelectListItem { Text = "newest", Value = "newest" });
-            allOptions.Add(new SelectListItem { Text = "oldest", Value = "oldest" });
+            allOptions.Add(new SelectListItem { Text = "Newest", Value = "newest" });
+            allOptions.Add(new SelectListItem { Text = "Oldest", Value = "oldest" });
+            allOptions.Add(new SelectListItem { Text = "Most popular", Value = "MostPopular" });
+            allOptions.Add(new SelectListItem { Text = "Least popular", Value = "LeastPopular" });
 
             ViewBag.SelectList = allOptions;
 
@@ -381,8 +387,10 @@ namespace _1640WebApp.Controllers
 
             var allOptions = new List<SelectListItem>();
             allOptions.Add(new SelectListItem { Text = " -- Select --", Value = "" });
-            allOptions.Add(new SelectListItem { Text = "newest", Value = "newest" });
-            allOptions.Add(new SelectListItem { Text = "oldest", Value = "oldest" });
+            allOptions.Add(new SelectListItem { Text = "Newest", Value = "newest" });
+            allOptions.Add(new SelectListItem { Text = "Oldest", Value = "oldest" });
+            allOptions.Add(new SelectListItem { Text = "Most popular", Value = "MostPopular" });
+            allOptions.Add(new SelectListItem { Text = "Least popular", Value = "LeastPopular" });
 
             ViewBag.SelectList = allOptions;
 
@@ -390,10 +398,8 @@ namespace _1640WebApp.Controllers
             {
                 return View("ViewIdeas", applicationDbContext);
             }
-            if(typeData == "newest")
+            if(typeData == "Newest")
             {
-                //applicationDbContext.OrderByDescending(i => i.Datatime);
-                //applicationDbContext = applicationDbContext.OrderByDescending(i => i.Datatime).ToList();
                 var a = await _context.Ideas
                                 .Include(i => i.Submission)
                                 .Include(i => i.Reacts)
@@ -402,15 +408,33 @@ namespace _1640WebApp.Controllers
                                 .ToListAsync();
                 return View("ViewIdeas", a);
             }
-            if (typeData == "oldest")
+            if (typeData == "Oldest")
             {
-                //applicationDbContext = applicationDbContext.OrderBy(i => i.Datatime).ToList();
-                //applicationDbContext.OrderBy(i => i.Datatime);
                 var a = await _context.Ideas
                 .Include(i => i.Submission)
                 .Include(i => i.Reacts)
                 .Include(i => i.User)
                 .OrderBy(i => i.Datatime)
+                .ToListAsync();
+                return View("ViewIdeas", a);
+            }
+            if (typeData == "MostPopular")
+            {
+                var a = await _context.Ideas
+                .Include(i => i.Submission)
+                .Include(i => i.Reacts)
+                .Include(i => i.User)
+                .OrderByDescending(i => i.ViewCount)
+                .ToListAsync();
+                return View("ViewIdeas", a);
+            }
+            if (typeData == "LeastPopular")
+            {
+                var a = await _context.Ideas
+                .Include(i => i.Submission)
+                .Include(i => i.Reacts)
+                .Include(i => i.User)
+                .OrderBy(i => i.ViewCount)
                 .ToListAsync();
                 return View("ViewIdeas", a);
             }
@@ -603,7 +627,7 @@ namespace _1640WebApp.Controllers
 
                 _memoryCache.Set("IdeaNotification", notification, TimeSpan.FromMinutes(5));
 
-                var apiKey = "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";
+                var apiKey = "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";
                 var client = new SendGridClient(apiKey);
                 var from = new EmailAddress("navo7036@gmail.com", "nana");
                 var subject = $"A Staff named \"{user.Fullname_}\" just submitted an Idea titled \"{idea.Title}\"  ";
@@ -658,7 +682,7 @@ namespace _1640WebApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, Idea idea, IFormCollection form, bool anonymous)
+        public async Task<IActionResult> Edit(int id, Idea idea, IFormCollection form, bool anonymous, int[] categories)
         {
             var user = await _userManager.GetUserAsync(HttpContext.User);
             var currentUserId = user.Id;
@@ -704,6 +728,8 @@ namespace _1640WebApp.Controllers
                 }
 
                 // Cập nhật thông tin ý tưởng
+                int? categoryIdSelect = categories.FirstOrDefault();
+                idea.CatogoryId = categoryIdSelect;
                 idea.CreatorEmail = User.FindFirst(ClaimTypes.Email)?.Value;
                 var categoryIds = form["categories"].ToString().Split(",");
                 idea.Catogories = new List<Catogory>();

@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: Arial;
 }
 
 nav {
@@ -271,6 +271,7 @@ nav {
             .post .post-top .dp > img {
                 width: 100%;
                 cursor: pointer;
+                height: 100%;
             }
 
         .post .post-top .post-info {
@@ -423,7 +424,7 @@ nav {
         width: 93vw;
     }
 
-    textarea {
+    input {
         width: 87vw !important;
     }
 

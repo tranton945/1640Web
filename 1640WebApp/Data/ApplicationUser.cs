@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.ConstrainedExecution;
@@ -146,6 +147,50 @@ namespace _1640WebApp.Data
         public virtual ICollection<Idea>? Ideas { get; set; }
     }
 
+    public class Funds
+    {
+        public int Id { get; set; }
+        public string? NameFund { get; set; }
+        public string? Content { get; set; }
+        public DateTime? Datetime { get; set; }
+        public virtual ICollection<Donation>? Donations { get; set; }
+    }
+    [Table("Donations")]
+    public class Donation
+    {
+        [Key]
+        public int DonateID { get; set; }
+
+        [Column(TypeName = "nvarchar(12)")]
+        [DisplayName("Account Number")]
+        [Required(ErrorMessage = "This field is required.")]
+        [MaxLength(12, ErrorMessage = "Maximum 12 charaters only")]
+        public string AcccountNumber { get; set; }
+
+        [Column(TypeName = "nvarchar(12)")]
+        [DisplayName("Beneficary Name")]
+        [Required(ErrorMessage = "This field is required.")]
+        public string BeneficaryName { get; set; }
+
+        [Column(TypeName = "nvarchar(100)")]
+        [DisplayName("Bank Name")]
+        [Required(ErrorMessage = "This field is required.")]
+        public string BankName { get; set; }
+
+        [Column(TypeName = "nvarchar(11)")]
+        [DisplayName("SWIFT Code")]
+        [Required(ErrorMessage = "This field is required.")]
+        [MaxLength(12, ErrorMessage = "Maximum 12 charaters only")]
+        public string SWIFTCode { get; set; }
+
+        [Required(ErrorMessage = "This field is required.")]
+        public int Amount { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:MMM-dd-yy}")]
+        public DateTime DateTime { get; set; }
+        
+
+    }
     public class Notification
     {
         public string Title { get; set; }

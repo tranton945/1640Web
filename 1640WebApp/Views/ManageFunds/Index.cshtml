@@ -1,0 +1,71 @@
+﻿@model IEnumerable<_1640WebApp.Data.Funds>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_Layout";
+}
+<style>
+        .contain-create {
+            background-image: url('https://static.vecteezy.com/system/resources/thumbnails/015/287/575/original/purple-themed-particle-form-futuristic-neon-graphic-background-science-energy-3d-abstract-art-element-illustration-technology-artificial-intelligence-shape-theme-wallpaper-animation-free-video.jpg');
+            object-fit: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            position: absolute;
+            top: 49px;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            overflow-y: scroll !important;
+            padding: 5vw;
+            color: white;
+            font-weight: bold;
+            padding-bottom: 50px;
+        }
+</style>
+<div class="contain-create">
+    <div style="height:70px;"></div>
+    <h1>Index</h1>
+
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.NameFund)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Content)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Datetime)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NameFund)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Content)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Datetime)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
