@@ -1,4 +1,4 @@
-﻿using _1640WebApp.Data;
+using _1640WebApp.Data;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -6,15 +6,17 @@ using Microsoft.VisualBasic;
 
 namespace _1640WebApp.Controllers
 {
-    [Authorize(Roles = "Manager, Admin")]
+
     public class SuperUserController : Controller
     {
         private readonly RoleManager<IdentityRole> roleManager;
 
-        public SuperUserController( RoleManager<IdentityRole> roleManager)
+        public SuperUserController(RoleManager<IdentityRole> roleManager)
         {
             this.roleManager = roleManager;
         }
+
+        [Authorize(Roles = "Manager, Admin")]
         public IActionResult Index()
         {
             var roles = roleManager.Roles.ToList();
@@ -38,6 +40,8 @@ namespace _1640WebApp.Controllers
             return View();
         }
 
+        [Authorize(Roles = "Manager, Admin")]
+
         public async Task<IActionResult> Edit(string id)
         {
             var role = await roleManager.FindByIdAsync(id);
@@ -53,6 +57,8 @@ namespace _1640WebApp.Controllers
             return View(model);
         }
 
+        [Authorize(Roles = "Manager, Admin")]
+
         [HttpPost]
         public async Task<IActionResult> Edit(AppRole model)
         {
@@ -63,13 +69,15 @@ namespace _1640WebApp.Controllers
             }
             role.Name = model.UserRole;
             var result = await roleManager.UpdateAsync(role);
-            if(!result.Succeeded)
+            if (!result.Succeeded)
             {
                 ModelState.AddModelError("", "The error occured white updating the role");
                 return View(model);
             }
             return RedirectToAction("Index");
         }
+
+        [Authorize(Roles = "Manager, Admin")]
 
         [HttpPost]
         public async Task<IActionResult> Delete(string id)
