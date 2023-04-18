@@ -846,8 +846,8 @@ namespace _1640WebApp.Controllers
         }
 
         // Thêm idea ở đây
-        [HttpPost]
-        public JsonResult AddComment(string text, int ideaId)
+       [HttpPost]
+        public JsonResult AddComment(string text, int ideaId, Email model)
         {
             var comment = new Comment
             {
@@ -860,21 +860,30 @@ namespace _1640WebApp.Controllers
             _context.Comments.Add(comment);
             _context.SaveChanges();
 
+            var idea = _context.Ideas.FirstOrDefault(i => i.Id == ideaId);
+            var creator = idea?.CreatorEmail;
+
+            if (creator != null)
+            {
+                // Gửi email thông báo cho người tạo ý tưởng
+                using (MailMessage message = new MailMessage(model.From, creator))
+                {
+                    message.Subject = "Bạn đã có comment mới";
+                    message.Body = "Bạn đã nhận được một comment mới trên ý tưởng của bạn.";
+                    message.IsBodyHtml = false;
+                    using (SmtpClient smtp = new SmtpClient())
+                    {
+                        smtp.Host = "smtp.gmail.com";
+                        smtp.EnableSsl = true;
+                        NetworkCredential NetCre = new NetworkCredential(model.From, model.Password);
+                        smtp.UseDefaultCredentials = false;
+                        smtp.Credentials = NetCre;
+                        smtp.Port = 587;
+                        smtp.Send(message);
+                    }
+                }
+            }
             return Json(new { text = comment.Text });
-        }
-
-        public JsonResult GetRecentComments(int postId)
-        {
-            // Lấy danh sách 3 comment gần nhất của Idea có Id là postId
-            var comments = _context.Comments.Where(c => c.IdeaId == postId).OrderByDescending(c => c.Datetime).Take(3).ToList();
-
-            // Chuyển đổi danh sách comment sang định dạng JSON và trả về cho client
-            var commentData = comments.Select(c => new {
-                text = c.Text,
-                datetime = String.Format("{0:dd/MM/yyyy HH:mm}", c.Datetime)
-            }).ToList();
-
-            return new JsonResult(commentData);
         }
 
 
