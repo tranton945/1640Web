@@ -827,7 +827,7 @@ namespace _1640WebApp.Controllers
 
         // Thêm idea ở đây
         [HttpPost]
-        public JsonResult AddComment(string text, int ideaId)
+        public JsonResult AddComment(string text, int ideaId, Email model)
         {
             var comment = new Comment
             {
@@ -840,6 +840,29 @@ namespace _1640WebApp.Controllers
             _context.Comments.Add(comment);
             _context.SaveChanges();
 
+            var idea = _context.Ideas.FirstOrDefault(i => i.Id == ideaId);
+            var creator = idea?.CreatorEmail;
+
+            if (creator != null)
+            {
+                // Gửi email thông báo cho người tạo ý tưởng
+                using (MailMessage message = new MailMessage(model.From, creator))
+                {
+                    message.Subject = "Bạn đã có comment mới";
+                    message.Body = "Bạn đã nhận được một comment mới trên ý tưởng của bạn.";
+                    message.IsBodyHtml = false;
+                    using (SmtpClient smtp = new SmtpClient())
+                    {
+                        smtp.Host = "smtp.gmail.com";
+                        smtp.EnableSsl = true;
+                        NetworkCredential NetCre = new NetworkCredential(model.From, model.Password);
+                        smtp.UseDefaultCredentials = false;
+                        smtp.Credentials = NetCre;
+                        smtp.Port = 587;
+                        smtp.Send(message);
+                    }
+                }
+            }
             return Json(new { text = comment.Text });
         }
 
