@@ -527,7 +527,7 @@ namespace _1640WebApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(int submissionId, Idea idea, IFormCollection form, bool anonymous, int[] categories)
+        public async Task<IActionResult> Create(int submissionId, Idea idea, IFormCollection form, bool anonymous, int[] categories, Email model)
         {
 
             if (form.Files.Count >  0)
@@ -614,8 +614,9 @@ namespace _1640WebApp.Controllers
             await _context.SaveChangesAsync();
 
             var coordinator = _context.Users
-                .Where(u => u.Email.Contains("coordinator") && u.DepartmentId == user.DepartmentId).ToList();
-            var coordinatorEmail = coordinator.Select(u => u.Email);
+                .Where(u => u.Email.Contains("coordinator") && u.DepartmentId == user.DepartmentId)
+                .ToList();
+            var coordinatorEmail = coordinator.Select(u => u.Email).FirstOrDefault();
 
             if (coordinator != null)
             {
@@ -627,15 +628,34 @@ namespace _1640WebApp.Controllers
 
                 _memoryCache.Set("IdeaNotification", notification, TimeSpan.FromMinutes(5));
 
-                var apiKey = "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";
-                var client = new SendGridClient(apiKey);
-                var from = new EmailAddress("navo7036@gmail.com", "nana");
-                var subject = $"A Staff named \"{user.Fullname_}\" just submitted an Idea titled \"{idea.Title}\"  ";
-                var to = new EmailAddress(string.Join(",", coordinatorEmail));
-                var plainTextContent = "The Idea have just submitted";
-                var htmlContent = "<strong>Please check the Idea in Submission Link</strong>";
-                var msg = MailHelper.CreateSingleEmail(from, to, subject, plainTextContent, htmlContent);
-                var response = await client.SendEmailAsync(msg);
+                //var apiKey = "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";
+                //var client = new SendGridClient(apiKey);
+                //var from = new EmailAddress("navo7036@gmail.com", "nana");
+                //var subject = $"A Staff named \"{user.Fullname_}\" just submitted an Idea titled \"{idea.Title}\"  ";
+                //var to = new EmailAddress(string.Join(",", coordinatorEmail));
+                //var plainTextContent = "The Idea have just submitted";
+                //var htmlContent = "<strong>Please check the Idea in Submission Link</strong>";
+                //var msg = MailHelper.CreateSingleEmail(from, to, subject, plainTextContent, htmlContent);
+                //var response = await client.SendEmailAsync(msg);
+                MailAddress fromAddress = new MailAddress(model.From);
+                MailAddress toAddress = new MailAddress(coordinatorEmail);
+                using (MailMessage message = new MailMessage(fromAddress, toAddress))
+                {
+                    message.Subject = $"A Staff named \"{user.Fullname_}\" just submitted an Idea titled \"{idea.Title}\"  ";
+                    message.Body = "<strong>Please check the Idea in Submission Link</strong>";
+                    message.IsBodyHtml = false;
+                    using (SmtpClient smtp = new SmtpClient())
+                    {
+                        smtp.Host = "smtp.gmail.com";
+                        smtp.EnableSsl = true;
+                        NetworkCredential NetCre = new NetworkCredential(model.From, model.Password);
+                        smtp.UseDefaultCredentials = false;
+                        smtp.Credentials = NetCre;
+                        smtp.Port = 587;
+                        smtp.Send(message);
+                    }
+                }
+
 
                 return RedirectToAction(nameof(Index));
             }
