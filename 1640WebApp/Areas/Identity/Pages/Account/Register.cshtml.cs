@@ -1,4 +1,4 @@
-﻿// Licensed to the .NET Foundation under one or more agreements.
+// Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MIT license.
 #nullable disable
 
@@ -19,6 +19,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace _1640WebApp.Areas.Identity.Pages.Account
 {
@@ -30,16 +32,20 @@ namespace _1640WebApp.Areas.Identity.Pages.Account
         private readonly IUserEmailStore<ApplicationUser> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
-        
+        private readonly RoleManager<IdentityRole> _roleManager;
+
+
 
         public RegisterModel(
             UserManager<ApplicationUser> userManager,
+            RoleManager<IdentityRole> roleManager,
             IUserStore<ApplicationUser> userStore,
             SignInManager<ApplicationUser> signInManager,
             ILogger<RegisterModel> logger,
             IEmailSender emailSender)
         {
             _userManager = userManager;
+            _roleManager = roleManager;
             _userStore = userStore;
             _emailStore = GetEmailStore();
             _signInManager = signInManager;
@@ -127,6 +133,8 @@ namespace _1640WebApp.Areas.Identity.Pages.Account
 
                 if (result.Succeeded)
                 {
+                    var userRole = await _roleManager.Roles.FirstOrDefaultAsync(r => EF.Functions.Like(user.Email, "%" + r.Name + "%"));
+
                     if (Input.Email.Contains("manager"))
                     {
                         _userManager.AddToRoleAsync(user, "Manager").Wait();
@@ -211,3 +219,4 @@ namespace _1640WebApp.Areas.Identity.Pages.Account
         }
     }
 }
+
