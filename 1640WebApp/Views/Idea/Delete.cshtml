@@ -2,44 +2,70 @@
 
 @{
     ViewData["Title"] = "Delete";
+    Layout = "_Layout";
 }
+<style>
+    .contain-create {
+        background-image: url('https://media.istockphoto.com/id/1356933529/photo/futuristic-technology-wave-digital-cyberspace-abstract-wave-with-moving-particles-on.jpg?b=1&s=170667a&w=0&k=20&c=OY4o0-8rTUd2_JXj7rQAeMGioyUjuxthyqbWuYaqGVU=');
+        object-fit: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        position: absolute;
+        top: 57px;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        overflow-y: scroll !important;
+        padding-left: 70px;
+        color: white;
+        font-weight: bold;
+    }
+
+    check-box {
+        margin: 5px 5px 5px 0px !important;
+    }
+</style>
+
 <head>
     <link href="~/css/responsive.css" rel="stylesheet"/>
 </head>
 
-<div class="re-div">
-    <div style="height:100px;"></div>
-    <h1>Delete</h1>
+<div class="contain-create">
+    <div class="re-div">
+        <div style="height:100px;"></div>
+        <h1>Delete</h1>
 
-    <h3>Are you sure you want to delete this?</h3>
-    <h4>Idea</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Title)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.User)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.User.Id)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Submission)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Submission.Id)
-        </dd>
-    </dl>
+        <h3>Are you sure you want to delete this?</h3>
+        <h4>Idea</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Title)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Title)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.User)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.User.Id)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Submission)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Submission.Id)
+            </dd>
+        </dl>
 
-    <form asp-action="Delete">
-        <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
-    </form>
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="Id" />
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            <a asp-action="Index">Back to List</a>
+        </form>
+    </div>
 </div>
 
 @*@model _1640WebApp.Data.Idea
